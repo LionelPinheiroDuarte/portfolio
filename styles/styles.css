@@ -1,3 +1,9 @@
-body {
-  background-color: tomato;
+@import "variables.css";
+
+h1,
+h2 {
+  color: var(--pf-primary);
+}
+p {
+  color: var(--pf-secondary);
 }
