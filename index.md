@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+layout: layout.njk
 title: Accueil
 eleventyNavigation:
   key: Accueil
