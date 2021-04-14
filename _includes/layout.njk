@@ -8,9 +8,8 @@
         <title>{{ title }}</title>
     </head>
     <body>
-        <header>
-            <nav>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</nav>
-        </header>
+        {% include "partials/header.njk" %}
         <section>{{ content | safe }}</section>
+        {% include "partials/footer.njk" %}
     </body>
 </html>
