@@ -7,3 +7,7 @@ eleventyNavigation:
 ---
 
 # Page d'accueil
+
+## Test H2
+
+Ceci est un paragraphe
