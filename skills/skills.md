@@ -1,5 +1,6 @@
 ---
 title: Compétences
+layout: base.njk
 eleventyNavigation:
   key: Compétences
   order: 2

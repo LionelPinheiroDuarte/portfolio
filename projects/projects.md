@@ -3,6 +3,7 @@ title: Projets
 eleventyNavigation:
   key: Projets
   order: 3
+layout: base.njk
 ---
 
 # Page des projets
