@@ -2,7 +2,7 @@
 title: Projets
 eleventyNavigation:
   key: Projets
-  order: 3
+  order: 2
 layout: base.njk
 ---
 

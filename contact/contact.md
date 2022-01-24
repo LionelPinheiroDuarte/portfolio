@@ -3,7 +3,7 @@ title: Contact
 layout: base.njk
 eleventyNavigation:
   key: Contact
-  order: 4
+  order: 3
 ---
 
 # Page de Contact
