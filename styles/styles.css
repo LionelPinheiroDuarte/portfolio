@@ -1,6 +1,7 @@
 /*--------------// Imports //-------------*/
 
 @import "header.css";
+@import "contact_section.css";
 
 /*--------------// FONTS  //-------------*/
 
@@ -69,16 +70,19 @@ ul {
 li {
   margin-bottom: 0.8rem;
 }
-a:hover,
-:focus {
+a:hover {
   background-color: hsl(175, 94%, 63%);
+}
+label,
+input {
+  font-family: var(--Font-Family);
 }
 button {
   font-family: var(--Font-Family);
   font-size: 1rem;
   padding: 0.3rem;
-  border-style: 5px solid #ffffff;
-  background-color: var(--color-content);
+  /* border-style: 5px solid #ffffff;
+  background-color: var(--color-content); */
 }
 button a {
   text-decoration: none;

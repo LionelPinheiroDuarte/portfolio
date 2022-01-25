@@ -29,4 +29,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% endfor %}
 
-## Contactez moi
+<section id="form_contact">
+    <h2>Contactez moi</h2>
+    <form>
+        <label>Nom</label>
+        <input/>
+        <label>Sujet</label>
+        <input/>
+        <label>Votre messsage</label>
+        <textarea name="textarea" rows="8"></textarea>
+        <button>Envoyez votre message</button>
+    </form>
+</section>
