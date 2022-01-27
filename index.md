@@ -16,7 +16,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 - Certificat AWS Solutions Architect
 
-## Compétences
+<h2>Compétences</h2>
+<ul>
+    {% for skill in metadata.skills %}
+    <li>  
+        <h3>{{ skill[0] }}</h3>
+        <p>{{ skill[1].description }}</p>
+    </li>
+    {% endfor %}
+
+</ul>
 
 ## Projets
 

@@ -1,0 +1,9 @@
+<ul>
+    {% for skill in metadata.skills %}
+        <li>
+            <h3>{{ skill[0] }}</h3>
+            <p>{{ skill[1].description }}</p>
+        </li>
+    {% endfor %}
+</ul>
+<p>test</p>
