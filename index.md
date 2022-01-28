@@ -4,6 +4,7 @@ title: Accueil
 eleventyNavigation:
   key: Accueil
   order: 1
+TemplateEngineOverride: njk,md
 ---
 
 # Lionel Pinheiro
@@ -17,14 +18,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 - Certificat AWS Solutions Architect
 
 <h2>Compétences</h2>
-<ul>
-    {% for skill in metadata.skills %}
-    <li>  
-        <h3>{{ skill[0] }}</h3>
-        <p>{{ skill[1].description }}</p>
-    </li>
-    {% endfor %}
 
+<ul>
+  {% for skill in skills %}
+  <li>
+    <h3>{{ skill.title }}</h3>
+    {{ skill.description }}
+  </li>
+  {% endfor %}
 </ul>
 
 ## Projets
