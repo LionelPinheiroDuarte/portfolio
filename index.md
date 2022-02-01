@@ -19,11 +19,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <h2>Compétences</h2>
 
-<ul>
+<ul id="skill">
   {% for skill in skills %}
   <li>
     <h3>{{ skill.title }}</h3>
-    {{ skill.description }}
+    <p>{{ skill.description }}</p>
   </li>
   {% endfor %}
 </ul>
