@@ -1,5 +1,5 @@
 /*--------------// Imports //-------------*/
-
+@import "variables.css";
 @import "header.css";
 @import "skill_section.css";
 @import "contact_section.css";
@@ -91,6 +91,9 @@ button {
 button a {
   text-decoration: none;
   color: white;
+}
+mark {
+  background-color: var(--pf-secondary);
 }
 /*--------------// ICON FONT //--------------*/
 i {
