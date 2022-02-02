@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: Contact page's description
 layout: base.njk
 eleventyNavigation:
   key: Contact
