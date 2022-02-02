@@ -4,6 +4,24 @@ layout: base.njk
 eleventyNavigation:
   key: Contact
   order: 3
+templateEngineOverride: njk,md
 ---
 
-# Page de Contact
+<section id="contact_section">
+<div class="contact_content">
+  <div class="contact_info">
+    <h2>Contactez-moi</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+<ul class="contact_social">
+  {% for social in socials %}
+  <li>
+    <a href="{{social.url}}">{{ social.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
+{% include "partials/contact.njk" %}
+
+</section>
