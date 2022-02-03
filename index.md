@@ -30,13 +30,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Projets
 
+<ul id="project_section">
 {% for projet in collections.projets %}
 
-  <article>
-    <a href="{{projet.url}}"><h2>{{ projet.data.title }}</h2></a>
-    <p>{{ projet.data.description  }}</p>
-  </article>
+{% include "partials/project.njk" %}
 
 {% endfor %}
+
+</ul>
 
 {% include "partials/contact.njk" %}

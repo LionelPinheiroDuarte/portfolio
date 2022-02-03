@@ -1,0 +1,16 @@
+#project_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+#project_section li {
+  list-style: none;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-width: 0px 2px 2px 0px;
+}
