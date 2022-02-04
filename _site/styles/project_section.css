@@ -1,6 +1,7 @@
 #project_section {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0px;
 }
 
@@ -13,4 +14,23 @@
   flex-direction: column;
   border: solid black;
   border-width: 0px 2px 2px 0px;
+  padding: 0px 10px 0px 0px;
+}
+
+.project_card a {
+  text-decoration: none;
+  width: 13vw;
+  padding: 0px;
+}
+
+.project_card a:hover {
+  background-color: unset;
+}
+
+.project_card img {
+  width: 13.5vw;
+}
+
+.project_card p {
+  font-size: 1rem;
 }

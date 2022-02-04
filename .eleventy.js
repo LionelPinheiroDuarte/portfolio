@@ -3,6 +3,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("styles");
+  eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   return {
     dir: {
