@@ -72,6 +72,9 @@ p {
 ul {
   font-family: var(--Font-Family);
 }
+li {
+  margin-bottom: 0.8rem;
+}
 a:hover {
   background-color: hsl(175, 94%, 63%);
 }
@@ -107,7 +110,6 @@ i {
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
-  margin-left: 3rem;
 }
 
 /*--------------// Positionnement //--------------*/
