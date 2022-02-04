@@ -1,5 +1,6 @@
 /*--------------// Imports //-------------*/
 @import "variables.css";
+@import "reset.css";
 @import "header.css";
 @import "footer.css";
 @import "project_section.css";
@@ -28,9 +29,7 @@
 }
 
 /*--------------// BALISE //--------------*/
-* {
-  margin: O;
-}
+
 body {
   background-color: #f8f8f8;
 }
@@ -73,9 +72,6 @@ p {
 ul {
   font-family: var(--Font-Family);
 }
-li {
-  margin-bottom: 0.8rem;
-}
 a:hover {
   background-color: hsl(175, 94%, 63%);
 }
@@ -111,7 +107,7 @@ i {
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
-  margin-left: -1.4rem;
+  margin-left: 3rem;
 }
 
 /*--------------// Positionnement //--------------*/
