@@ -1,9 +1,14 @@
 /*--------------// Imports //-------------*/
 @import "variables.css";
 @import "reset.css";
+
+/*---------// Layouts //--------*/
 @import "./layouts/base_layout.css";
+
+/*---------// Components //--------*/
 @import "./components/navigation.css";
 @import "./components//project_card.css";
+
 @import "header.css";
 @import "footer.css";
 @import "project_section.css";
