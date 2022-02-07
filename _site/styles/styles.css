@@ -2,6 +2,7 @@
 @import "variables.css";
 @import "reset.css";
 @import "./layouts/base_layout.css";
+@import "./components/navigation.css";
 @import "header.css";
 @import "footer.css";
 @import "project_section.css";

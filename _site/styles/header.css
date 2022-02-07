@@ -1,12 +1,1 @@
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0;
-}
-nav ul li {
-  list-style: none;
-}
 
-nav ul li a {
-  text-decoration: none;
-}
