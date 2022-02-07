@@ -1,6 +1,7 @@
 /*--------------// Imports //-------------*/
 @import "variables.css";
 @import "reset.css";
+@import "./layouts/base_layout.css";
 @import "header.css";
 @import "footer.css";
 @import "project_section.css";
@@ -105,19 +106,6 @@ i {
 }
 
 /*--------------// Positionnement //--------------*/
-body {
-  width: 50rem;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "social"
-    "situation"
-    "main"
-    "aside"
-    "footer";
-}
 header {
   grid-area: header;
 }

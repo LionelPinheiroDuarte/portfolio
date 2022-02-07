@@ -1,0 +1,13 @@
+body {
+  width: 50rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "social"
+    "situation"
+    "main"
+    "aside"
+    "footer";
+}
