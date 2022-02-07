@@ -8,6 +8,7 @@
 /*---------// Components //--------*/
 @import "./components/navigation.css";
 @import "./components//project_card.css";
+@import "./components//form.css";
 
 @import "header.css";
 @import "footer.css";
