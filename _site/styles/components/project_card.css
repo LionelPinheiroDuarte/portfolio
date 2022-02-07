@@ -1,0 +1,37 @@
+.project_card {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+#project_section li {
+  margin-right: 1rem;
+  list-style: none;
+}
+
+.project_card_content {
+  padding: 0px 10px;
+}
+.project_card a {
+  width: 13vw;
+  padding: 0px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(38, 38, 38, 0.2);
+}
+
+.project_card a:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.35);
+  top: 4px;
+  background-color: unset;
+}
+
+.project_card img {
+  width: 13vw;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.project_card p {
+  font-size: 1rem;
+}

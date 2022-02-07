@@ -3,6 +3,7 @@
 @import "reset.css";
 @import "./layouts/base_layout.css";
 @import "./components/navigation.css";
+@import "./components//project_card.css";
 @import "header.css";
 @import "footer.css";
 @import "project_section.css";
