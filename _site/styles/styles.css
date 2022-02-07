@@ -17,17 +17,6 @@
     url("./fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
-/*--------------// COLOR  //-------------*/
-/* :root {
-  --primary-color: #333333;
-} */
-:root {
-  --color-content: #333333;
-}
-:root {
-  --Font-Family: "Montserrat";
-}
-
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
