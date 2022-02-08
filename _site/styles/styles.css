@@ -125,18 +125,10 @@ i {
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
-}
-#social {
-  grid-area: social;
+  height: 2em;
 }
 main {
   grid-area: main;
-}
-aside {
-  grid-area: aside;
-}
-#situation {
-  grid-area: situation;
 }
 footer {
   grid-area: footer;
