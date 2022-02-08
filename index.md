@@ -7,18 +7,18 @@ eleventyNavigation:
 templateEngineOverride: njk,md
 ---
 
-# Lionel Pinheiro
+<section>
+  <h1>Lionel Pinheiro</h1>
+  <h2>Intégrateur Web</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex <a href="/setup" target="_blanck"><mark>environnement de travail</mark></a> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h3>Prochain objectifs</h3>
+  <ul>
+    <li>Certificat AWS Solutions Architect</li>
+  </ul>
+</section>
 
-## Intégrateur Web
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex <a href="/setup" target="_blanck"><mark>environnement de travail</mark></a> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-### Prochain objectifs
-
-- Certificat AWS Solutions Architect
-
+<section>
 <h2>Compétences</h2>
-
 <ul id="skill">
   {% for skill in skills %}
   <li>
@@ -27,9 +27,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   </li>
   {% endfor %}
 </ul>
+</section>
 
-## Projets
-
+<section>
+<h2>Projets</h2>
 <ul id="project_section">
 {% for projet in collections.projets %}
 
@@ -38,5 +39,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% endfor %}
 
 </ul>
+</section>
 
+<section>
+<h2>Contactez moi</h2>
 {% include "partials/contact.njk" %}
+</section>
