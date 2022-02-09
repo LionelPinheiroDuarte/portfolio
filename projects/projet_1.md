@@ -3,7 +3,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eius
 tags: ["projets"]
 title: test
 thumbnail: ../images/webdesign.jpg
-layout: base.njk
+layout: project_layout.njk
 ---
 
 # Frontend Mentor - Job listings with filtering solution
