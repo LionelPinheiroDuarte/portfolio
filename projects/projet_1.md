@@ -1,9 +1,13 @@
 ---
+title: test
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
-title: test
 thumbnail: ../images/webdesign.jpg
 layout: project_layout.njk
+websiteName: websiteName
+websiteUrl: websiteUrl
+username: "Liopin"
+twitterName: "lionelpinheiro_"
 ---
 
 # Frontend Mentor - Job listings with filtering solution
@@ -92,8 +96,8 @@ const proudOfThisFunc = () => {
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [{{websiteName}}]({{websiteUrl}})
+- Frontend Mentor - [@{{username}}](https://www.frontendmentor.io/profile/{{username}})
+- Twitter - [@{{twitterName}}](https://www.twitter.com/{{twitterName}})
 
 ## Acknowledgments
