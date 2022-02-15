@@ -35,3 +35,15 @@
 .project_card p {
   font-size: 1rem;
 }
+
+@media only screen and (max-width: 375px) {
+  #project_section {
+    flex-direction: column;
+  }
+  .project_card a {
+    width: 96vw;
+  }
+  .project_card img {
+    width: 96vw;
+  }
+}
