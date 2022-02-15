@@ -25,3 +25,10 @@ form input {
 form label {
   margin-bottom: 5px;
 }
+
+@media only screen and (max-width: 375px) {
+  #form_contact {
+    width: 23rem;
+    padding: 0 0.5em;
+  }
+}
