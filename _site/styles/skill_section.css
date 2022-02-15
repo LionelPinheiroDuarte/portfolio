@@ -8,3 +8,9 @@
 #skill p {
   font-size: 1rem;
 }
+
+@media only screen and (min-width: 375px) {
+  #skill {
+    flex-direction: column;
+  }
+}
