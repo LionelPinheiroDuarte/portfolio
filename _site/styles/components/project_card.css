@@ -4,13 +4,11 @@
   padding: 0px;
 }
 
-#project_section li {
-  list-style: none;
+.project_card img {
+  width: auto;
+  border-radius: 10px 10px 0px 0px;
 }
 
-.project_card_content {
-  padding: 0px 10px;
-}
 .project_card a {
   padding: 0px;
   border-radius: 10px;
@@ -25,9 +23,12 @@
   background-color: unset;
 }
 
-.project_card img {
-  width: auto;
-  border-radius: 10px 10px 0px 0px;
+.project_card_content {
+  padding: 0px 10px;
+}
+
+.project_card h3 {
+  margin: 0.5em 0em;
 }
 
 .project_card p {
@@ -39,7 +40,7 @@
     flex-direction: column;
     align-content: center;
   }
-  #project_section li {
+  .project_card {
     width: 19em;
   }
 }
@@ -48,5 +49,8 @@
   #project_section {
     justify-content: space-between;
     flex-direction: row;
+  }
+  .project_card {
+    width: 13em;
   }
 }
