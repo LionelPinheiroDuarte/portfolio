@@ -31,3 +31,15 @@ body {
     "main"
     "footer";
 }
+
+@media only screen and (min-width: 375px) {
+  body {
+    width: 23rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 46rem;
+  }
+}
