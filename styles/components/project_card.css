@@ -46,4 +46,7 @@
   .project_card img {
     width: 96vw;
   }
+  #project_section li {
+    margin-right: 0rem;
+  }
 }

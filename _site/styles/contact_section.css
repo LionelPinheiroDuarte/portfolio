@@ -19,3 +19,9 @@
 #contact_info {
   width: 25rem;
 }
+
+@media only screen and (min-width: 375px) {
+  #contact_section {
+    flex-direction: column;
+  }
+}
