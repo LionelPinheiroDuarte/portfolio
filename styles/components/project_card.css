@@ -50,3 +50,12 @@
     margin-right: 0rem;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  #project_section {
+    justify-content: space-between;
+  }
+  .project_card a {
+    width: 29vw;
+  }
+}
