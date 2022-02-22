@@ -1,5 +1,6 @@
 ---
 title: Projets
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 eleventyNavigation:
   key: Projets
   order: 2

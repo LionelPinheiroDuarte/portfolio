@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Accueil
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 eleventyNavigation:
   key: Accueil
   order: 1
