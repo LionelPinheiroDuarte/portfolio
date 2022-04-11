@@ -17,8 +17,14 @@ textarea {
   border: 2px solid var(--color-content);
 }
 
+form textarea {
+  height: 10rem;
+  border-radius: 5px;
+}
+
 form input {
-  height: 1.4rem;
+  border-radius: 5px;
+  height: 2rem;
 }
 
 form label {
