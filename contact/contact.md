@@ -16,9 +16,7 @@ templateEngineOverride: njk,md
   </div>
 <ul class="contact_social">
   {% for social in socials %}
-  <li>
-    <a href="{{social.url}}">{{ social.name }}</a>
-  </li>
+  {% include "partials/socials.njk" %}
   {% endfor %}
 </ul>
 </div>

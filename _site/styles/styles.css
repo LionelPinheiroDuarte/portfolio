@@ -108,10 +108,11 @@ section {
 }
 
 /*--------------// ICON FONT //--------------*/
-i {
-  margin-right: 0.5rem;
+ion-icon {
+  font-size: 1.5rem;
   color: var(--color-content);
 }
+
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
