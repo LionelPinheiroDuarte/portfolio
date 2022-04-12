@@ -20,7 +20,4 @@ templateEngineOverride: njk,md
   {% endfor %}
 </ul>
 </div>
-<div class="form-margin-top">
-{% include "partials/contact.njk" %}
-</div>
 </section>
