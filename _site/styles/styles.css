@@ -114,7 +114,16 @@ ion-icon {
 }
 
 /*--------------// Utility class //--------------*/
-
+#CTA {
+  margin-top: 1.5rem;
+}
+#CTA a {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-content);
+}
 .list-item-style {
   margin-left: 2em;
 }
