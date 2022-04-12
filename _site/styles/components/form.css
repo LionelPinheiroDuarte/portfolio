@@ -1,3 +1,7 @@
+#form_contact {
+  display: flex;
+}
+
 #form_contact p {
   font-size: 1rem;
 }
@@ -13,14 +17,8 @@ textarea {
   border: 2px solid var(--color-content);
 }
 
-form textarea {
-  height: 10rem;
-  border-radius: 5px;
-}
-
 form input {
-  border-radius: 5px;
-  height: 2rem;
+  height: 1.4rem;
 }
 
 form label {
@@ -28,8 +26,7 @@ form label {
 }
 
 @media only screen and (max-width: 375px) {
-  #contact_section {
-    flex-direction: column;
+  #form_contact {
     width: 23rem;
     padding: 0 0.5em;
   }
@@ -38,18 +35,5 @@ form label {
 @media only screen and (min-width: 768px) {
   #form_contact {
     width: 75%;
-  }
-}
-
-@media only screen and (min-width: 1290px) {
-  #contact_section {
-    flex-direction: row;
-    align-items: baseline;
-  }
-  #contact_content {
-    width: 45%;
-  }
-  #form_contact {
-    width: 45%;
   }
 }
