@@ -20,18 +20,6 @@ templateEngineOverride: njk,md
 </section>
 
 <section>
-<h2>Compétences</h2>
-<ul id="skill">
-  {% for skill in skills %}
-  <li>
-    <h3>{{ skill.title }}</h3>
-    <p>{{ skill.description }}</p>
-  </li>
-  {% endfor %}
-</ul>
-</section>
-
-<section>
 <h2>Projets</h2>
 <ul id="project_section">
 {% for projet in collections.projets %}
