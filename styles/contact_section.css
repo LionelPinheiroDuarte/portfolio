@@ -12,8 +12,13 @@
 }
 
 .contact_social li {
+  display: flex;
   list-style: none;
   margin-right: 2rem;
+}
+
+.contact_social li ion-icon {
+  margin-right: 0.5rem;
 }
 
 #contact_info {
