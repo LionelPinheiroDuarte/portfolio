@@ -15,7 +15,7 @@
 
 .contact_social {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   margin-top: 1rem;
 }
 
@@ -34,13 +34,10 @@
 }
 
 @media only screen and (min-width: 375px) {
-  #contact_section {
-    flex-direction: column;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  #contact_section {
-    flex-direction: column;
+  .contact_social {
+    flex-direction: row;
   }
 }
