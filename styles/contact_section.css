@@ -5,10 +5,18 @@
 .contact_content p {
   font-size: 1rem;
 }
+
+.mail {
+  margin-top: 1rem;
+}
+.mail span {
+  font-weight: bold;
+}
+
 .contact_social {
   display: flex;
   justify-content: flex-start;
-  padding: 0px;
+  margin-top: 1rem;
 }
 
 .contact_social li {

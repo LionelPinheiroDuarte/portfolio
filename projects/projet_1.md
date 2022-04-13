@@ -1,8 +1,8 @@
 ---
-title: test
+title: Resume Challenge
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
-thumbnail: ../images/webdesign.jpg
+thumbnail: ../images/resize.jpg
 layout: project_layout.njk
 websiteName: websiteName
 websiteUrl: websiteUrl

@@ -7,3 +7,60 @@
 #project_section li {
   list-style: none;
 }
+
+/*--- PROJECT CARD ----*/
+.project_card {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.project_card img {
+  width: auto;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.project_card a {
+  padding: 0px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(38, 38, 38, 0.2);
+}
+
+.project_card a:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.35);
+  top: 4px;
+  background-color: unset;
+}
+
+.project_card_content {
+  background-color: #fff;
+  padding: 0px 10px;
+}
+
+.project_card h3 {
+  margin: 0.5em 0em;
+}
+
+.project_card p {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 375px) {
+  #project_section {
+    align-content: center;
+  }
+  .project_card {
+    width: 19em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #project_section {
+    flex-direction: row;
+  }
+  .project_card {
+    width: 13em;
+  }
+}
