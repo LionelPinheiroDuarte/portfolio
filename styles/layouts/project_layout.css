@@ -6,7 +6,7 @@ h3 {
   margin: 1em 0;
 }
 h3 {
-  font-weight: gbold;
+  font-weight: bold;
 }
 p {
   margin: 1em 0;
@@ -33,13 +33,13 @@ body {
 }
 
 @media only screen and (min-width: 375px) {
-  body {
+  /* body {
     width: 23rem;
-  }
+  } */
 }
 
 @media only screen and (min-width: 768px) {
-  body {
+  /* body {
     width: 46rem;
-  }
+  } */
 }
