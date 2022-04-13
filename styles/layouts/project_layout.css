@@ -1,9 +1,5 @@
-h1 {
-  text-align: center;
-}
-h2,
-h3 {
-  margin: 1em 0;
+h2 {
+  margin-top: 1.5rem;
 }
 h3 {
   font-weight: bold;
@@ -12,17 +8,14 @@ p {
   margin: 1em 0;
 }
 
-ul {
-  margin-left: 1.7rem;
-}
-
 ul li {
   margin-bottom: 0.3rem;
 }
 
 body {
-  width: 50rem;
+  width: 20rem;
   margin: auto;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4em 1fr auto;
@@ -33,13 +26,19 @@ body {
 }
 
 @media only screen and (min-width: 375px) {
-  /* body {
-    width: 23rem;
-  } */
+  body {
+    width: 26rem;
+  }
+  ul {
+    margin-left: 1.7rem;
+  }
+  h1 {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  /* body {
+  body {
     width: 46rem;
-  } */
+  }
 }
