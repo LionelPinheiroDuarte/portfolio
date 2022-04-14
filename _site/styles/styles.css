@@ -2,10 +2,6 @@
 @import "variables.css";
 @import "reset.css";
 
-/*---------// Layouts //--------*/
-/* @import "./layouts/base_layout.css";
-@import "./layouts/project_layout.css"; */
-
 /*---------// Components //--------*/
 @import "./components/navigation.css";
 @import "./components//project_card.css";
@@ -89,8 +85,6 @@ button {
   font-family: var(--Font-Family);
   font-size: 1rem;
   padding: 0.3rem;
-  /* border-style: 5px solid #ffffff;
-  background-color: var(--color-content); */
 }
 button a {
   text-decoration: none;
