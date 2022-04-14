@@ -30,7 +30,6 @@ templateEngineOverride: njk,md
 </div>
 <div>
   <p class="mail"><ion-icon name="mail-outline"></ion-icon><a href="mailto:lionel.duarte.p@gmail.com">lionelpinheiro@gmail.com</a></p>
-<!-- <h3>Or on my socials</h3> -->
 <ul class="contact_social">
   {% for social in socials %}
   {% include "partials/socials.njk" %}
