@@ -130,6 +130,7 @@ header {
   height: 2em;
 }
 main {
+  margin-top: 2.5em;
   grid-area: main;
 }
 footer {
