@@ -1,3 +1,6 @@
+nav {
+  padding-top: 1.5em;
+}
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -12,9 +15,6 @@ nav ul li a {
 }
 
 @media only screen and (min-width: 375px) {
-  nav {
-    padding-top: 1.5em;
-  }
 }
 
 @media only screen and (min-width: 768px) {

@@ -9,6 +9,10 @@
 }
 
 /*--- PROJECT CARD ----*/
+.project_article {
+  margin-top: 1.5em;
+}
+
 .project_card {
   display: flex;
   flex-direction: column;
