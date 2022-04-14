@@ -9,10 +9,15 @@
 }
 
 /*--- PROJECT CARD ----*/
+
 .project_article {
-  margin-top: 1.5em;
+  margin-top: 1.4rem;
 }
 
+.project_article h2 {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
 .project_card {
   display: flex;
   flex-direction: column;

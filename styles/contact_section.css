@@ -4,11 +4,9 @@
 
 .contact_content p {
   font-size: 1rem;
+  margin-bottom: 1.4em;
 }
 
-/* .mail {
-  margin-top: 1rem;
-} */
 .mail span {
   font-weight: bold;
 }

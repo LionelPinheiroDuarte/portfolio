@@ -12,13 +12,15 @@ templateEngineOverride: njk,md
 <div class="contact_content">
   <div class="contact_info">
     <h2>Contactez-moi</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elitsit amet, consectetur adipiscing elit</p>
   </div>
-  <p class="mail"><span>Email : </span><a href="mailto:lionel.duarte.p@gmail.com">lionelpinheiro@gmail.com</a></p>
+  <div>
+  <p class="mail"><ion-icon name="mail-outline"></ion-icon><a href="mailto:lionel.duarte.p@gmail.com">lionelpinheiro@gmail.com</a></p>
 <ul class="contact_social">
   {% for social in socials %}
   {% include "partials/socials.njk" %}
   {% endfor %}
 </ul>
+  </div>
 </div>
 </section>
