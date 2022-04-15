@@ -1,0 +1,132 @@
+/*--------------// Imports //-------------*/
+@import "variables.css";
+@import "reset.css";
+
+/*---------// Components //--------*/
+@import "./components/navigation.css";
+@import "./components//project_card.css";
+@import "./components//form.css";
+
+@import "index.css";
+@import "header.css";
+@import "footer.css";
+@import "project_section.css";
+@import "skill_section.css";
+@import "contact_section.css";
+
+/*--------------// FONTS  //-------------*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("./fonts/Montserrat-SemiBold.ttf") format("truetype"),
+    url("./fonts/Montserrat-bold.ttf") format("truetype"),
+    url("./fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+/*--------------// BALISE //--------------*/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #fff;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--Font-Family);
+  color: var(--color-content);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 1em;
+}
+h3 {
+  margin-bottom: 0.5rem;
+}
+h2::first-letter {
+  text-transform: uppercase;
+}
+h3::first-letter {
+  text-transform: uppercase;
+}
+p,
+li,
+a {
+  font-family: var(--Font-Family);
+  color: var(--color-content);
+  font-size: 1.15rem;
+}
+p {
+  line-height: 1.5rem;
+}
+ul {
+  font-family: var(--Font-Family);
+}
+li {
+  margin-bottom: 0.8rem;
+}
+a:hover {
+  background-color: hsl(175, 94%, 63%);
+}
+label,
+input {
+  font-family: var(--Font-Family);
+}
+button {
+  font-family: var(--Font-Family);
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+mark {
+  background-color: var(--pf-secondary);
+}
+small {
+  font-family: var(--Font-Family);
+  font-size: 1rem;
+  color: var(--color-content);
+}
+section {
+  margin: 1em 0 0 0;
+}
+
+/*--------------// ICON FONT //--------------*/
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--color-content);
+}
+
+/*--------------// Utility class //--------------*/
+
+.list-item-style {
+  margin-left: 2em;
+}
+
+.form-margin-top {
+  margin-top: 2.2rem;
+}
+
+/*--------------// Positionnement //--------------*/
+header {
+  grid-area: header;
+  height: 2em;
+}
+main {
+  margin-top: 2em;
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
