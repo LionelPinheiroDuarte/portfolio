@@ -1,7 +1,8 @@
 {
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-navigation": "^0.2.0"
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-navigation": "^0.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
   },
   "dependencies": {
     "nunjucks": "^3.2.3"

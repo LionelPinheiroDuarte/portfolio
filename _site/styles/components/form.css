@@ -1,0 +1,39 @@
+#form_contact {
+  display: flex;
+}
+
+#form_contact p {
+  font-size: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+textarea {
+  margin-bottom: 0.8rem;
+  border: 2px solid var(--color-content);
+}
+
+form input {
+  height: 1.4rem;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 375px) {
+  #form_contact {
+    width: 23rem;
+    padding: 0 0.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #form_contact {
+    width: 75%;
+  }
+}

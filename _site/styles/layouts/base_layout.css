@@ -1,0 +1,27 @@
+body {
+  width: 20rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+article h2 {
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    width: 23rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 46rem;
+  }
+}

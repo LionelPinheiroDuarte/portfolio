@@ -1,6 +1,18 @@
 /*--------------// Imports //-------------*/
+@import "variables.css";
+@import "reset.css";
 
+/*---------// Components //--------*/
+@import "./components/navigation.css";
+@import "./components//project_card.css";
+@import "./components//form.css";
+
+@import "index.css";
 @import "header.css";
+@import "footer.css";
+@import "project_section.css";
+@import "skill_section.css";
+@import "contact_section.css";
 
 /*--------------// FONTS  //-------------*/
 
@@ -12,20 +24,13 @@
     url("./fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
-/*--------------// COLOR  //-------------*/
-/* :root {
-  --primary-color: #333333;
-} */
-:root {
-  --color-content: #333333;
-}
-:root {
-  --Font-Family: "Montserrat";
-}
-
 /*--------------// BALISE //--------------*/
+html {
+  height: 100%;
+}
 body {
-  background-color: #f8f8f8;
+  height: 100%;
+  background-color: #fff;
 }
 h1,
 h2,
@@ -42,9 +47,9 @@ h2 {
   font-size: 1.7rem;
   font-weight: 600;
   width: 100%;
+  margin-bottom: 1em;
 }
 h3 {
-  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 h2::first-letter {
@@ -69,60 +74,58 @@ ul {
 li {
   margin-bottom: 0.8rem;
 }
-a:hover,
-:focus {
+a:hover {
   background-color: hsl(175, 94%, 63%);
+}
+label,
+input {
+  font-family: var(--Font-Family);
 }
 button {
   font-family: var(--Font-Family);
   font-size: 1rem;
   padding: 0.3rem;
-  border-style: 5px solid #ffffff;
-  background-color: var(--color-content);
 }
 button a {
   text-decoration: none;
   color: white;
 }
-/*--------------// ICON FONT //--------------*/
-i {
-  margin-right: 0.5rem;
+mark {
+  background-color: var(--pf-secondary);
+}
+small {
+  font-family: var(--Font-Family);
+  font-size: 1rem;
   color: var(--color-content);
 }
+section {
+  margin: 1em 0 0 0;
+}
+
+/*--------------// ICON FONT //--------------*/
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--color-content);
+}
+
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
-  margin-left: -1.4rem;
+  margin-left: 2em;
+}
+
+.form-margin-top {
+  margin-top: 2.2rem;
 }
 
 /*--------------// Positionnement //--------------*/
-body {
-  width: 50rem;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "social"
-    "situation"
-    "main"
-    "aside"
-    "footer";
-}
 header {
   grid-area: header;
-}
-#social {
-  grid-area: social;
+  height: 2em;
 }
 main {
+  margin-top: 2em;
   grid-area: main;
-}
-aside {
-  grid-area: aside;
-}
-#situation {
-  grid-area: situation;
 }
 footer {
   grid-area: footer;
