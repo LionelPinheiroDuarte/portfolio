@@ -6,7 +6,7 @@
     </subtitle>
     <link href="https://lionelpinheiro.com/bootsfeed.xml" rel="self"/>
     <link href="https://example.com/"/>
-    <updated>2022-05-11T13:29:37Z</updated>
+    <updated>2022-05-11T14:32:19Z</updated>
     <id>https://example.com/</id>
     <author>
         <name>
@@ -15,4 +15,62 @@
         <email>
             contact.pinheiro.lionel@gmail.com
         </email>
-    </author></feed>
+    </author>
+        <entry>
+            <title>
+                Week 1
+            </title>
+            <link href="
+        https://example.com/boots/week1/
+        "/>
+            <updated>
+                2022-05-11T11:35:42Z
+            </updated>
+            <id>
+                
+        https://example.com/boots/week1/
+        
+            </id>
+            <content type="html">
+                &lt;h1&gt;Frontend Mentor - Job listings with filtering solution&lt;/h1&gt;
+&lt;p&gt;This is a solution to the &lt;a href=&quot;https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt&quot;&gt;Job listings with filtering challenge on Frontend Mentor&lt;/a&gt;. Frontend Mentor challenges help you improve your coding skills by building realistic projects.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;h3&gt;The challenge&lt;/h3&gt;
+&lt;p&gt;Users should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View the optimal layout for the site depending on their device&#39;s screen size&lt;/li&gt;
+&lt;li&gt;See hover states for all interactive elements on the page&lt;/li&gt;
+&lt;li&gt;Filter job listings based on the categories&lt;/li&gt;
+&lt;/ul&gt;
+
+            </content>
+        </entry>
+        <entry>
+            <title>
+                Week 2
+            </title>
+            <link href="
+        https://example.com/boots/week2/
+        "/>
+            <updated>
+                2022-05-11T13:32:01Z
+            </updated>
+            <id>
+                
+        https://example.com/boots/week2/
+        
+            </id>
+            <content type="html">
+                &lt;h1&gt;Week 2 - Job listings with filtering solution&lt;/h1&gt;
+&lt;p&gt;This is a solution to the &lt;a href=&quot;https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt&quot;&gt;Job listings with filtering challenge on Frontend Mentor&lt;/a&gt;. Frontend Mentor challenges help you improve your coding skills by building realistic projects.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;h3&gt;The challenge&lt;/h3&gt;
+&lt;p&gt;Users should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View the optimal layout for the site depending on their device&#39;s screen size&lt;/li&gt;
+&lt;li&gt;See hover states for all interactive elements on the page&lt;/li&gt;
+&lt;li&gt;Filter job listings based on the categories&lt;/li&gt;
+&lt;/ul&gt;
+
+            </content>
+        </entry></feed>

@@ -1,11 +1,12 @@
 ---
-title: Week 1
+title: Week 2
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 layout: project_layout.njk
 url: "lionelpinheiro.com/boots/week1"
+tags: ["boots"]
 ---
 
-# Frontend Mentor - Job listings with filtering solution
+# Week 2 - Job listings with filtering solution
 
 This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 

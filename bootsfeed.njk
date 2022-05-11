@@ -18,7 +18,7 @@ metadata:
     </subtitle>
     <link href="{{ metadata.feedUrl }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
-    <updated>{{ collections.boots | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ metadata.url }}</id>
     <author>
         <name>
