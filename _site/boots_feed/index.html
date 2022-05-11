@@ -1,5 +1,5 @@
 -- -json {
-    "permalink" : "boots_feed.xml",
+    "permalink" : "bootsfeed.xml",
     "eleventyExcludeFromCollections" : true,
     "metadata" : {
         "title": "Boots 2022",
@@ -24,8 +24,8 @@
             metadata.subtitle
         }
     }</subtitle>
-    <link href="{{ metadata.feedUrl }}" rel="self"/>
-    <link href="{{ metadata.url }}"/>
+    <link href="" rel="self"/>
+    <link href=""/>
     <updated> {
         {
             collections.boots | getNewestCollectionItemDate | dateToRfc3339
@@ -68,7 +68,7 @@
                 week.data.title
             }
         }</title>
-        <link href="{{ absolutePostUrl }}"/>
+        <link href=""/>
         <updated> {
             {
                 week.date | dateToRfc3339
