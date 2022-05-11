@@ -28,7 +28,7 @@
     <link href=""/>
     <updated> {
         {
-            collections.posts | getNewestCollectionItemDate | dateToRfc3339
+            collections.boots | getNewestCollectionItemDate | dateToRfc3339
         }
     }</updated>
     <id> {
@@ -49,14 +49,14 @@
         }</email>
     </author>
     {
-    % -for post in collections.posts %
+    % -for week in collections.boots %
 }
     {
     % set absolutePostUrl %
 }
     {
     {
-        post.url | url | absoluteUrl(metadata.url)
+        week.url | url | absoluteUrl(metadata.url)
     }
 }
     {
@@ -65,13 +65,13 @@
     <entry>
         <title> {
             {
-                post.data.title
+                week.data.title
             }
         }</title>
         <link href=""/>
         <updated> {
             {
-                post.date | dateToRfc3339
+                week.date | dateToRfc3339
             }
         }</updated>
         <id> {
@@ -81,7 +81,7 @@
         }</id>
         <content type="html"> {
             {
-                post.templateContent | htmlToAbsoluteUrls(absolutePostUrl)
+                week.templateContent | htmlToAbsoluteUrls(absolutePostUrl)
             }
         }</content>
     </entry>
