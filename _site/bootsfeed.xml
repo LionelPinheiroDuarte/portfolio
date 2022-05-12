@@ -1,38 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Boots 2022</title>
-    <subtitle>
-        My journey throught the rxb&#39;s boots
-    </subtitle>
-    <link href="https://lionelpinheiro.com/bootsfeed.xml" rel="self"/>
-    <link href="https://example.com/"/>
-    <updated>2022-05-11T15:01:13Z</updated>
-    <id>https://example.com/</id>
-    <author>
-        <name>
-            Lionel Pinheiro
-        </name>
-        <email>
-            contact.pinheiro.lionel@gmail.com
-        </email>
-    </author>
-        <entry>
-            <title>
-                Week 1
-            </title>
-            <link href="
-        https://example.com/boots/week1/
-        "/>
-            <updated>
-                2022-05-11T11:35:42Z
-            </updated>
-            <id>
-                
-        https://example.com/boots/week1/
-        
-            </id>
-            <content type="html">
-                &lt;h1&gt;Frontend Mentor - Job listings with filtering solution&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Lionel Pinheiro Boots 2022</title>
+        <description>My journey throught the rxb&#39;s boots</description>
+        <link href="https://lionelpinheiro.com/bootsfeed.xml" rel="self"/>
+        <link href="https://lionelpinheiro.com/boots/"/>
+        <id>https://lionelpinheiro.com/boots/</id>
+            <item>
+                <title>Week 1</title>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</description>
+                <guid>
+            https://lionelpinheiro.com/boots/week1/
+            </guid>
+                <link href="
+            https://lionelpinheiro.com/boots/week1/
+            "/>
+                <pubDate>2022-05-11T11:35:42Z</pubDate>
+                <content type="html">&lt;h1&gt;Frontend Mentor - Job listings with filtering solution&lt;/h1&gt;
 &lt;p&gt;This is a solution to the &lt;a href=&quot;https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt&quot;&gt;Job listings with filtering challenge on Frontend Mentor&lt;/a&gt;. Frontend Mentor challenges help you improve your coding skills by building realistic projects.&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;h3&gt;The challenge&lt;/h3&gt;
@@ -42,26 +26,23 @@
 &lt;li&gt;See hover states for all interactive elements on the page&lt;/li&gt;
 &lt;li&gt;Filter job listings based on the categories&lt;/li&gt;
 &lt;/ul&gt;
-
-            </content>
-        </entry>
-        <entry>
-            <title>
-                Week 2
-            </title>
-            <link href="
-        https://example.com/boots/week2/
-        "/>
-            <updated>
-                2022-05-11T13:32:01Z
-            </updated>
-            <id>
-                
-        https://example.com/boots/week2/
-        
-            </id>
-            <content type="html">
-                &lt;h1&gt;Week 2 - Job listings with filtering solution&lt;/h1&gt;
+</content>
+                <author>
+                    <name>Lionel Pinheiro</name>
+                    <email>contact.pinheiro.lionel@gmail.com</email>
+                </author>
+            </item>
+            <item>
+                <title>Week 2</title>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</description>
+                <guid>
+            https://lionelpinheiro.com/boots/week2/
+            </guid>
+                <link href="
+            https://lionelpinheiro.com/boots/week2/
+            "/>
+                <pubDate>2022-05-11T13:32:01Z</pubDate>
+                <content type="html">&lt;h1&gt;Week 2 - Job listings with filtering solution&lt;/h1&gt;
 &lt;p&gt;This is a solution to the &lt;a href=&quot;https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt&quot;&gt;Job listings with filtering challenge on Frontend Mentor&lt;/a&gt;. Frontend Mentor challenges help you improve your coding skills by building realistic projects.&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;h3&gt;The challenge&lt;/h3&gt;
@@ -71,26 +52,23 @@
 &lt;li&gt;See hover states for all interactive elements on the page&lt;/li&gt;
 &lt;li&gt;Filter job listings based on the categories&lt;/li&gt;
 &lt;/ul&gt;
-
-            </content>
-        </entry>
-        <entry>
-            <title>
-                Week 3
-            </title>
-            <link href="
-        https://example.com/boots/week3/
-        "/>
-            <updated>
-                2022-05-11T15:00:51Z
-            </updated>
-            <id>
-                
-        https://example.com/boots/week3/
-        
-            </id>
-            <content type="html">
-                &lt;h1&gt;Week 3 - Job listings with filtering solution&lt;/h1&gt;
+</content>
+                <author>
+                    <name>Lionel Pinheiro</name>
+                    <email>contact.pinheiro.lionel@gmail.com</email>
+                </author>
+            </item>
+            <item>
+                <title>Week 3</title>
+                <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</description>
+                <guid>
+            https://lionelpinheiro.com/boots/week3/
+            </guid>
+                <link href="
+            https://lionelpinheiro.com/boots/week3/
+            "/>
+                <pubDate>2022-05-11T15:00:51Z</pubDate>
+                <content type="html">&lt;h1&gt;Week 3 - Job listings with filtering solution&lt;/h1&gt;
 &lt;p&gt;This is a solution to the &lt;a href=&quot;https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt&quot;&gt;Job listings with filtering challenge on Frontend Mentor&lt;/a&gt;. Frontend Mentor challenges help you improve your coding skills by building realistic projects.&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;h3&gt;The challenge&lt;/h3&gt;
@@ -100,6 +78,10 @@
 &lt;li&gt;See hover states for all interactive elements on the page&lt;/li&gt;
 &lt;li&gt;Filter job listings based on the categories&lt;/li&gt;
 &lt;/ul&gt;
-
-            </content>
-        </entry></feed>
+</content>
+                <author>
+                    <name>Lionel Pinheiro</name>
+                    <email>contact.pinheiro.lionel@gmail.com</email>
+                </author>
+            </item></channel>
+</rss>

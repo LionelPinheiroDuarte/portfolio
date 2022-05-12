@@ -2,50 +2,38 @@
 permalink : bootsfeed.xml
 eleventyExcludeFromCollections: true
 metadata:
-    title: Boots 2022
-    subtitle: My journey throught the rxb's boots
-    url: https://example.com/
+    title: Lionel Pinheiro Boots 2022
+    description: My journey throught the rxb's boots
+    url: https://lionelpinheiro.com/boots/
     feedUrl: https://lionelpinheiro.com/bootsfeed.xml
     author:
         name: Lionel Pinheiro
         email: contact.pinheiro.lionel@gmail.com
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>{{ metadata.title }}</title>
-    <subtitle>
-        {{ metadata.subtitle }}
-    </subtitle>
-    <link href="{{ metadata.feedUrl }}" rel="self"/>
-    <link href="{{ metadata.url }}"/>
-    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{{ metadata.url }}</id>
-    <author>
-        <name>
-            {{ metadata.author.name }}
-        </name>
-        <email>
-            {{ metadata.author.email }}
-        </email>
-    </author>
-    {%- for week in collections.boots -%}
-        {% set absolutePostUrl %}
-        {{ week.url | url | absoluteUrl(metadata.url) }}
-        {% endset %}
-        <entry>
-            <title>
-                {{ week.data.title }}
-            </title>
-            <link href="{{ absolutePostUrl }}"/>
-            <updated>
-                {{ week.date | dateToRfc3339 }}
-            </updated>
-            <id>
-                {{ absolutePostUrl }}
-            </id>
-            <content type="html">
-                {{ week.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-            </content>
-        </entry>
-    {%- endfor -%}
-</feed>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>{{ metadata.title }}</title>
+        <description>{{ metadata.description }}</description>
+        <link href="{{ metadata.feedUrl }}" rel="self"/>
+        <link href="{{ metadata.url }}"/>
+        <id>{{ metadata.url }}</id>
+        {%- for week in collections.boots -%}
+            {% set absolutePostUrl %}
+            {{ week.url | url | absoluteUrl(metadata.url) }}
+            {% endset %}
+            <item>
+                <title>{{ week.data.title }}</title>
+                <description>{{ week.data.description    }}</description>
+                <guid>{{ absolutePostUrl }}</guid>
+                <link href="{{ absolutePostUrl }}"/>
+                <pubDate>{{ week.date | dateToRfc3339 }}</pubDate>
+                <content type="html">{{ week.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+                <author>
+                    <name>{{ metadata.author.name }}</name>
+                    <email>{{ metadata.author.email }}</email>
+                </author>
+            </item>
+        {%- endfor -%}
+    </channel>
+</rss>
