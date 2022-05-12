@@ -11,7 +11,7 @@ templateEngineOverride: njk,md
 <section id="contact_section">
 <div class="contact_content">
   <div class="contact_info">
-    <h2>Contactez-moi</h2>
+    <h1>Contactez-moi</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing elitsit amet, consectetur adipiscing elit</p>
   </div>
   <div>

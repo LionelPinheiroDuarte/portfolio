@@ -1,6 +1,9 @@
 .role {
   margin: 0.5em 0em;
 }
+section :is(h1, p) {
+  margin-bottom: 1rem;
+}
 #CTA {
   display: flex;
   flex-direction: column;
