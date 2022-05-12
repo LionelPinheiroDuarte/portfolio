@@ -24,10 +24,10 @@ metadata:
             {% endset %}
             <item>
                 <title>{{ week.data.title }}</title>
-                <description>{{ week.data.description    }}</description>
+                <description>{{ week.data.description }}</description>
                 <guid>{{ absolutePostUrl }}</guid>
                 <link href="{{ absolutePostUrl }}"/>
-                <pubDate>{{ week.date | dateToRfc3339 }}</pubDate>
+                <pubDate>{{ week.date.toUTCString() }}</pubDate>
                 <content type="html">{{ week.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
                 <author>
                     <name>{{ metadata.author.name }}</name>
