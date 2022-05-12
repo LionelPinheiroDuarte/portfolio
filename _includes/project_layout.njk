@@ -12,7 +12,14 @@
     </head>
     <body>
         {% include "partials/header.njk" %}
-        <main>{{ content | safe }}</main>
+        <main>
+            <section>
+                {{ content | safe }}
+            </section>
+            <div>
+                <a href="https://lionelpinheiro.com/projects">Go to the project page</a>
+            </div>
+        </main>
         {% include "partials/footer.njk" %}
     </body>
 </html>
