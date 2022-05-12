@@ -15,16 +15,17 @@ templateEngineOverride: njk,md
     <h3>Goals</h3>
     <ul>
       <li class="list-item-style">AWS Solutions Architect Certification</li>
+      <li class="list-item-style">Finishing <a href="https://github.com/rwxrob/boost/tree/2022#readme" target="_blank">rwxrob boots</a> you can follow my journey <a href="https://lionelpinheiro.com/boots/" target="_blanck">here</a> or follow it from a <a href="https://lionelpinheiro.com/bootsfeed.xml">RSS feed</a></li>
     </ul>
   </section >
   <section id="CTA">
-    <p><span>Want to know more</span> you can check my <mark><a href="http://resume.lionelpinheiro.com" target="_blank">resume</a></mark> here</p></p>
+    <p><span>Want to know more ?</span> You can check my <mark><a href="http://resume.lionelpinheiro.com" target="_blank">resume</a></mark> here</p></p>
   </section>
 </section>
  
 <section id="contact">
 <div>
-  <h3>Want to contact me</h3>
+  <h3>Want to contact me ?</h3>
 </div>
 <div>
   <p class="mail"><ion-icon name="mail-outline"></ion-icon><a href="mailto:lionel.duarte.p@gmail.com">lionelpinheiro@gmail.com</a></p>
