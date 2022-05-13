@@ -9,14 +9,10 @@ templateEngineOverride: njk,md
 ---
 <section>
   <h1>Lionel Pinheiro</h1>
-  <p>where iam from ?
-     what i do right now ?
-     what are my interrest ?
-     what i like to do ?
-     what iam looking for ?
+  <p>Hi !</br> I'm junior web developper based in France.</br> Right now I'm focusing on improving my understanding of linux and learning more about the cloud.</br>
+  But I'm also interrested in optimizing my workflow, front-end development, accessibility   and golang. 
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </p>
   <section id="goals">
     <h3>Goals</h3>
     <ul>
