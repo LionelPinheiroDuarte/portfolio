@@ -68,6 +68,9 @@ a {
 p {
   line-height: 1.5rem;
 }
+section p{
+  line-height: 1.8rem;
+}
 ul {
   font-family: var(--Font-Family);
 }
