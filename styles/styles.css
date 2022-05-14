@@ -124,10 +124,9 @@ ion-icon {
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
-  height: 2em;
 }
 main {
-  margin-top: 2em;
+  margin-top: 1em;
   grid-area: main;
 }
 footer {
