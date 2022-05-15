@@ -11,9 +11,6 @@ layout: base.njk
 <p>Even it's nice to see an experienced software developer and also an infrastructure engineer showing how he works, and giving his thoughts on the industry my goals are to become more comfortable with linux and the command line but also english isn't my native language and even so, I think I have a good understanding of it. I never really expressed myself with it that's why I'm writing these articles to document my journey and practice my writing.</p>
 
 {% for week in collections.boots %}
-  <article class="project_article">
-    <a href="{{week.url}}"><h2>{{ week.data.title }}</h2></a>
-    <p>{{ week.data.description  }}</p>
-  </article>
+<p><a href="{{week.url}}">{{ week.data.title }}</a></p>
 {% endfor %}
 </section>
