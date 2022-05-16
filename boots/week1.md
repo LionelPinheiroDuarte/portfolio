@@ -10,6 +10,13 @@ tags: ["boots"]
 
 ## Zettelkasten
 
+Zettlekasten is a method created by Niklas Luhmann a very prolific German sociologist and philosopher, the method consist in building a box of notes. Each note has to be about one subject only if I have to explain something else related to the topic I should create another card, and link them with tags. Every note/card contains a unique identifier, a title, the content, and tags. The content length should have 25 maximum writing lines but can also have images or code snippets.
+
+The advantage of this method? Using my own words to better assimilate knowledge and easier to revue the idea is appealing but I feel it requires a lot of discipline to do it regularly and maintain it. Using English can also be time-consuming and draining maybe I should do it in french it's something I should think about.
+I will still give it a shot.
+
+It was recommended to host it on github because it offers some functionalities a build-in editor, displays markdown, and a search functionality.
+
 ## VM - Ubuntu Server
 
 One of the main tasks during this week was creating a lab where we could practice safely whithout the fear of breaking a system. For doing so at my understanding we could have choose between containers with docker but as beginners I think the learning curve could be to harsh, dualbooting but some mistakes can happen for example deleting a operating system already present on the machine (personnal experience).
@@ -26,4 +33,4 @@ I found a couple of videos on the [linode](https://www.youtube.com/c/linode/sear
 
 ## Mardown
 
-We also aboard the subject of markdown a markup language that can be convert in HTML. I was already famillar with it because I'm using [eleventy](https://www.11ty.dev/) as framework to build this website that uses markdown format file to create pages.  
+We also aboard the subject of markdown a markup language that can be converted into HTML. I was already familiar with it because I'm using eleventy a framework to build this website that uses markdown format files to create pages.  

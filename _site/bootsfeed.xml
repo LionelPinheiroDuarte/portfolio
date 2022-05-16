@@ -17,6 +17,10 @@
                 <pubDate>Sun, 15 May 2022 08:45:02 GMT</pubDate>
                 <description type="html">&lt;h1&gt;Week 1 - VM Ubuntu Server Markdown Zettelkasten&lt;/h1&gt;
 &lt;h2&gt;Zettelkasten&lt;/h2&gt;
+&lt;p&gt;Zettlekasten is a method created by Niklas Luhmann a very prolific German sociologist and philosopher, the method consist in building a box of notes. Each note has to be about one subject only if I have to explain something else related to the topic I should create another card, and link them with tags. Every note/card contains a unique identifier, a title, the content, and tags. The content length should have 25 maximum writing lines but can also have images or code snippets.&lt;/p&gt;
+&lt;p&gt;The advantage of this method? Using my own words to better assimilate knowledge and easier to revue the idea is appealing but I feel it requires a lot of discipline to do it regularly and maintain it. Using English can also be time-consuming and draining maybe I should do it in french it&#39;s something I should think about.
+I will still give it a shot.&lt;/p&gt;
+&lt;p&gt;It was recommended to host it on github because it offers some functionalities a build-in editor, displays markdown, and a search functionality.&lt;/p&gt;
 &lt;h2&gt;VM - Ubuntu Server&lt;/h2&gt;
 &lt;p&gt;One of the main tasks during this week was creating a lab where we could practice safely whithout the fear of breaking a system. For doing so at my understanding we could have choose between containers with docker but as beginners I think the learning curve could be to harsh, dualbooting but some mistakes can happen for example deleting a operating system already present on the machine (personnal experience).&lt;/p&gt;
 &lt;p&gt;So we use a virtual machine with &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;virtualbox&lt;/a&gt;, thing that I have never done before, and I can see why it was recommended easy to install, I can create delete VM at ease.
@@ -30,7 +34,7 @@ I found a couple of videos on the &lt;a href=&quot;https://www.youtube.com/c/lin
 &lt;li&gt;SSH agent ?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Mardown&lt;/h2&gt;
-&lt;p&gt;We also aboard the subject of markdown a markup language that can be convert in HTML. I was already famillar with it because I&#39;m using &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;eleventy&lt;/a&gt; as framework to build this website that uses markdown format file to create pages.&lt;/p&gt;
+&lt;p&gt;We also aboard the subject of markdown a markup language that can be converted into HTML. I was already familiar with it because I&#39;m using eleventy a framework to build this website that uses markdown format files to create pages.&lt;/p&gt;
 </description>
                 <author>
                     <name>Lionel Pinheiro</name>
