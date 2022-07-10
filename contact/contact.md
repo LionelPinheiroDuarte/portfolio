@@ -2,10 +2,10 @@
 title: Contact
 description: Contact page's description
 layout: base.njk
-eleventyNavigation:
-  key: Contact
-  order: 3
-templateEngineOverride: njk,md
+# eleventyNavigation:
+#   key: Contact
+#   order: 3
+# templateEngineOverride: njk,md
 ---
 
 <section id="contact_section">

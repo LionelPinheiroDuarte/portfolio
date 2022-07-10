@@ -14,7 +14,7 @@
                 <link href="
             https://lionelpinheiro.com/boots/week1/
             "/>
-                <pubDate>Sun, 15 May 2022 08:45:02 GMT</pubDate>
+                <pubDate>Mon, 16 May 2022 12:19:35 GMT</pubDate>
                 <description type="html">&lt;h1&gt;Week 1 - VM Ubuntu Server Markdown Zettelkasten&lt;/h1&gt;
 &lt;h2&gt;Zettelkasten&lt;/h2&gt;
 &lt;p&gt;Zettlekasten is a method created by Niklas Luhmann a very prolific German sociologist and philosopher, the method consist in building a box of notes. Each note has to be about one subject only if I have to explain something else related to the topic I should create another card, and link them with tags. Every note/card contains a unique identifier, a title, the content, and tags. The content length should have 25 maximum writing lines but can also have images or code snippets.&lt;/p&gt;
@@ -35,6 +35,38 @@ I found a couple of videos on the &lt;a href=&quot;https://www.youtube.com/c/lin
 &lt;/ul&gt;
 &lt;h2&gt;Mardown&lt;/h2&gt;
 &lt;p&gt;We also aboard the subject of markdown a markup language that can be converted into HTML. I was already familiar with it because I&#39;m using eleventy a framework to build this website that uses markdown format files to create pages.&lt;/p&gt;
+</description>
+                <author>
+                    <name>Lionel Pinheiro</name>
+                    <email>contact.pinheiro.lionel@gmail.com</email>
+                </author>
+            </item>
+            <item>
+                <title>Week 2 - Command Line, Teletype, Linux file system, package management</title>
+                <guid>
+            https://lionelpinheiro.com/boots/week2/
+            </guid>
+                <link href="
+            https://lionelpinheiro.com/boots/week2/
+            "/>
+                <pubDate>Wed, 25 May 2022 12:50:21 GMT</pubDate>
+                <description type="html">&lt;h1&gt;Week 2 - Command Line, Teletype, Linux file system, package management&lt;/h1&gt;
+&lt;h2&gt;Command Line&lt;/h2&gt;
+&lt;p&gt;What&#39;s the difference between a CLI a terminal and the shell ?
+A terminal&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;is a program that opens a window and lets you interact with the shell &lt;em&gt;by Willian Shotts from The Linux command line book&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CLI = Command Line Interface&lt;/li&gt;
+&lt;li&gt;shell  = interractive programm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Linux file system&lt;/h2&gt;
+&lt;h2&gt;Package management&lt;/h2&gt;
+&lt;p&gt;A package are a collections of compressed files once installed the package will become a program.&lt;/p&gt;
+&lt;p&gt;How do I know I&#39;m not downloading a dangerous package ? Every packages in Ubuntu main are audited by the ubuntu security team and thos packages are also maintained and support by the Ubuntu project.
+You can found information about all the packages available in Ubuntu &lt;a href=&quot;https://packages.ubuntu.com/en/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We have been through the process of managing the installation, deletion, and updating of a package.&lt;/p&gt;
 </description>
                 <author>
                     <name>Lionel Pinheiro</name>
