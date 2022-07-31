@@ -42,3 +42,9 @@ body {
     width: 45rem;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    width: 55rem;
+  }
+}
