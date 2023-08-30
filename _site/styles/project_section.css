@@ -1,3 +1,8 @@
+#experimentation > p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
 #project_section {
   display: flex;
   flex-wrap: wrap;
@@ -26,6 +31,10 @@
 
 .project_card a {
   text-decoration: none;
+}
+
+.project_card_content p {
+  line-height: 1.5rem;
 }
 
 .project_card a:hover {
