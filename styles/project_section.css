@@ -28,6 +28,10 @@
   text-decoration: none;
 }
 
+.project_card_content p {
+  line-height: 1.5rem;
+}
+
 .project_card a:hover {
   transition: all 0.2s ease-out;
   box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.35);
