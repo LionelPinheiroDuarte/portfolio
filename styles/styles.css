@@ -69,9 +69,6 @@ a {
 p {
   line-height: 1.5rem;
 }
-section p{
-  line-height: 1.8rem;
-}
 ul {
   font-family: var(--Font-Family);
 }
@@ -103,7 +100,7 @@ small {
   color: var(--color-content);
 }
 section {
-  margin: 1em 0 0 0;
+  margin: 0 0 1rem 0;
 }
 
 /*--------------// ICON FONT //--------------*/
@@ -127,7 +124,7 @@ header {
   grid-area: header;
 }
 main {
-  margin-top: 1em;
+  margin-top: 2em;
   grid-area: main;
 }
 footer {
