@@ -13,9 +13,6 @@ templateEngineOverride: njk,md
   <p>Right now I'm focusing on improving my understanding of linux and learning more
 about the cloud.</p>
   <p>I'm currently looking for a job so if you're interrested, contact me.</p>
-  <section id="CTA">
-    <p><span>Want to know more ?</span> You can check my <mark><a href="http://resume.lionelpinheiro.com" target="_blank">resume</a></mark> here</p></p>
-  </section>
 </section>
  
 <section id="contact">
