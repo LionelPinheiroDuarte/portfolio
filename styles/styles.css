@@ -42,7 +42,7 @@ h3 {
 h1 {
   font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 h2 {
   font-size: 1.7rem;
