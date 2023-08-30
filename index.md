@@ -29,8 +29,10 @@ about the cloud.</p>
 </div>
 </section>
 
-<section>
-<h3>See what I can do </h3>
+<section id="experimentation">
+<h3>Experimentations</h3>
+<p>List of projects based on challenges or courses that covers that
+technologies, languages I'm interrested in.
 <ul id="project_section">
 {% for projet in collections.projets %}
 
