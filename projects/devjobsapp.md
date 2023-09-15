@@ -1,5 +1,5 @@
 ---
-title: Resume Challenge
+title: Devjobs app
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
 # thumbnail: ../images/resize.jpg
