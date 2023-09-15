@@ -68,4 +68,7 @@
 }
 
 @media only screen and (min-width: 768px) {
+  #project_section li {
+    width: 23em;
+  }
 }
