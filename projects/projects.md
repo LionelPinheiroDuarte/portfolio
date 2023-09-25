@@ -8,11 +8,22 @@ layout: base.njk
 ---
 
 <section>
-<h1>Projects</h1>
-{% for projet in collections.projets %}
-  <article class="project_article">
-    <a href="{{projet.url}}"><h2>{{ projet.data.title }}</h2></a>
-    <p>{{ projet.data.description  }}</p>
-  </article>
-{% endfor %}
+<h1>Projets</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Projet</th>
+      <th>Description</th>
+      <th>Liens</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for projet in collections.projets %}%
+    <tr>
+      <td>{{projet.data.title}}</td>
+      <td>{{projet.data.description}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 </section>
