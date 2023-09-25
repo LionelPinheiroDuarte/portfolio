@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Projet</th>
+      <th>Description</th>
+      <th>Liens</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for projet in collections.projets %}
+    <tr>
+      <td>{{ projet.data.title }}</td>
+      <td>{{ projet.data.description}}</td>
+      <td>{{ projet.data.links}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+

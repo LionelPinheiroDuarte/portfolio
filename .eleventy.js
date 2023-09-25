@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       // ⚠️ These values are both relative to your input directory.
-      markdownTemplateEngine: ["njk", "md"],
+      markdownTemplateEngine: ["njk"],
       htmlTemplateEngine: "njk",
       templateFormats: ["html", "njk", "md"],
       includes: "_includes",
