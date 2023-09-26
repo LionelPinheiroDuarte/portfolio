@@ -1,0 +1,19 @@
+table,th,tr {
+  font-family: var(--Font-Family);
+  color: var(--color-content);
+}
+table{
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  color: gray;
+}
+td {
+  padding-block: 0.5rem;
+  border-bottom: 1px solid gray;
+}
+
+td:nth-child(1){
+  font-weight:bold;
+}

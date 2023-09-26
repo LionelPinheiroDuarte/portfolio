@@ -4,6 +4,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eius
 tags: ["projets"]
 # thumbnail: ../images/resize.jpg
 layout: project_layout.njk
+links:
+  - github.com
+  - github.com
 websiteName: websiteName
 websiteUrl: websiteUrl
 username: "Liopin"

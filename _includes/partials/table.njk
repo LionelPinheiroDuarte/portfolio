@@ -9,9 +9,11 @@
   <tbody>
     {% for projet in collections.projets %}
     <tr>
-      <td>{{ projet.data.title }}</td>
+      <td><a href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>
-      <td>{{ projet.data.links}}</td>
+      {% for lien in projet.data.links %}
+      <td><a href="{{ projet.data.links}}">Lien</a></td>
+      {% endfor %}
     </tr>
     {% endfor %}
   </tbody>
