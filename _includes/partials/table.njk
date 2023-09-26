@@ -11,9 +11,14 @@
     <tr>
       <td><a href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>
-      {% for lien in projet.data.links %}
-      <td><a href="{{ projet.data.links}}">Lien</a></td>
-      {% endfor %}
+      <td>
+        <a href="{{ projet.data.repos }}">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="{{ projet.websiteUrl }}">
+          <ion-icon name="link-outline"></ion-icon>
+        </a>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
