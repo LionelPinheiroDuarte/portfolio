@@ -4,8 +4,9 @@
 
 /*---------// Components //--------*/
 @import "./components/navigation.css";
-@import "./components//project_card.css";
-@import "./components//form.css";
+@import "./components/project_card.css";
+@import "./components/form.css";
+@import "./components/table.css";
 
 @import "index.css";
 @import "header.css";
