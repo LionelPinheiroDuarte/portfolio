@@ -5,6 +5,9 @@ table,th,tr {
 table{
   border-collapse: collapse;
 }
+td > a {
+    text-decoration:none;
+}
 th {
   text-align: left;
   color: gray;
@@ -17,3 +20,14 @@ td {
 td:nth-child(1){
   font-weight:bold;
 }
+td:last-child{
+  width: 3.5rem;
+  display: flex;
+  margin-top: 1.1rem;
+  justify-content: space-around;
+}
+
+.ionicon:hover{
+  background-color: red;
+}
+  
