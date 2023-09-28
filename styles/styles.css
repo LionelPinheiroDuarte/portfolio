@@ -5,7 +5,6 @@
 /*---------// Components //--------*/
 @import "./components/navigation.css";
 @import "./components/project_card.css";
-@import "./components/form.css";
 @import "./components/table.css";
 
 @import "index.css";
@@ -113,10 +112,6 @@ ion-icon {
   margin-left: 2em;
 }
 
-.form-margin-top {
-  margin-top: 2.2rem;
-}
-
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
@@ -127,4 +122,4 @@ main {
 }
 footer {
   grid-area: footer;
-}
+
