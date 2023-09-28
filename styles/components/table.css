@@ -22,12 +22,5 @@ td:nth-child(1){
 }
 td:last-child{
   width: 3.5rem;
-  display: flex;
-  margin-top: 1.1rem;
-  justify-content: space-around;
 }
 
-.ionicon:hover{
-  background-color: red;
-}
-  
