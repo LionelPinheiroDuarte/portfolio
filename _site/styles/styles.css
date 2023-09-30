@@ -5,7 +5,6 @@
 /*---------// Components //--------*/
 @import "./components/navigation.css";
 @import "./components/project_card.css";
-@import "./components/form.css";
 @import "./components/table.css";
 
 @import "index.css";
@@ -18,11 +17,11 @@
 /*--------------// FONTS  //-------------*/
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat-Regular.ttf") format("truetype"),
-    url("./fonts/Montserrat-SemiBold.ttf") format("truetype"),
-    url("./fonts/Montserrat-bold.ttf") format("truetype"),
-    url("./fonts/Montserrat-Medium.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("./fonts/Inter/Inter-Regular.ttf") format("truetype"),
+    url("./fonts/Inter/Inter.ttf") format("truetype"),
+    url("./fonts/Inter/Inter.ttf") format("truetype"),
+    url("./fonts/Inter/Inter.ttf") format("truetype");
 }
 
 /*--------------// BALISE //--------------*/
@@ -113,18 +112,14 @@ ion-icon {
   margin-left: 2em;
 }
 
-.form-margin-top {
-  margin-top: 2.2rem;
-}
-
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
 }
 main {
-  margin-top: 2em;
+  margin: 2rem 0.5rem;
   grid-area: main;
 }
 footer {
   grid-area: footer;
-}
+
