@@ -6,6 +6,7 @@
 #project_section {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
   padding: 0px;
 }
 
@@ -37,21 +38,12 @@
   line-height: 1.5rem;
 }
 
-.project_card a:hover {
-  transition: all 0.2s ease-out;
-  box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.35);
-  top: 4px;
-  background-color: unset;
-}
-
 .project_card_content {
   background-color: #fff;
-  padding: 0.5em 0.5em;
 }
 
 .project_card h3 {
   font-size: 1.1rem;
-  margin: 0.5em 0em;
 }
 
 .project_card p {
