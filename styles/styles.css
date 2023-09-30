@@ -74,13 +74,12 @@ a::before {
   transform: scaleX(0);
   transition: transform .3s ease-in-out;
 }
-
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
 p {
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 }
 ul {
   font-family: var(--Font-Family);
