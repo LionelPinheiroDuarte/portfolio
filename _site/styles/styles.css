@@ -42,13 +42,10 @@ h3 {
 h1 {
   font-size: 2rem;
   text-transform: capitalize;
-  margin-bottom:1rem;
+  margin-bottom:0.5rem;
 }
 h2 {
   font-size: 1.3rem;
-}
-h3 {
-  margin-bottom: 0.5rem;
 }
 h2::first-letter {
   text-transform: uppercase;
@@ -59,9 +56,28 @@ h3::first-letter {
 p,
 li,
 a {
+  position:relative;
   font-family: var(--Font-Family);
   color: var(--color-content);
   font-size: 1.15rem;
+}
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--color-content);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 p {
   line-height: 1.8rem;
@@ -71,9 +87,6 @@ ul {
 }
 li {
   margin-bottom: 0.8rem;
-}
-a:hover {
-  background-color: hsl(175, 94%, 63%);
 }
 label,
 input {
@@ -97,7 +110,7 @@ small {
   color: var(--color-content);
 }
 section {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 /*--------------// ICON FONT //--------------*/
