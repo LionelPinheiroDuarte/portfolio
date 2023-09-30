@@ -42,13 +42,10 @@ h3 {
 h1 {
   font-size: 2rem;
   text-transform: capitalize;
-  margin-bottom:1rem;
+  margin-bottom:0.5rem;
 }
 h2 {
   font-size: 1.3rem;
-}
-h3 {
-  margin-bottom: 0.5rem;
 }
 h2::first-letter {
   text-transform: uppercase;
@@ -97,7 +94,7 @@ small {
   color: var(--color-content);
 }
 section {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 /*--------------// ICON FONT //--------------*/
