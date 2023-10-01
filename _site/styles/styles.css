@@ -79,7 +79,7 @@ a:hover::before {
   transform: scaleX(1);
 }
 p {
-  line-height: 1.6rem;
+  line-height: var(--line-heigth);
 }
 ul {
   font-family: var(--Font-Family);
