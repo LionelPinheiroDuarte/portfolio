@@ -7,7 +7,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 0.5rem;
-  padding: 0px;
 }
 
 #project_section li {
@@ -27,7 +26,6 @@
 .project_card {
   display: flex;
   flex-direction: column;
-  padding: 0px;
 }
 
 .project_card a {
@@ -36,6 +34,7 @@
 
 .project_card_content p {
   line-height: 1.5rem;
+  padding: 0.5rem 0;
 }
 
 .project_card_content {
