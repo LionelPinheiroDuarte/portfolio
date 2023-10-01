@@ -35,7 +35,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   color: var(--color-content);
 }
 
@@ -57,7 +57,7 @@ p,
 li,
 a {
   position:relative;
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   color: var(--color-content);
   font-size: 1.15rem;
 }
@@ -82,17 +82,17 @@ p {
   line-height: var(--line-heigth);
 }
 ul {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
 }
 li {
   margin-bottom: 0.8rem;
 }
 label,
 input {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
 }
 button {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   font-size: 1rem;
   padding: 0.3rem;
 }
@@ -101,10 +101,10 @@ button a {
   color: white;
 }
 mark {
-  background-color: var(--pf-secondary);
+  background-color: var(--color-secondary);
 }
 small {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   font-size: 1rem;
   color: var(--color-content);
 }
