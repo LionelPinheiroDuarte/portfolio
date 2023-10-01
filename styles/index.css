@@ -1,44 +1,16 @@
-.role {
-  margin: 0.5em 0em;
+.heading{
+  font-size:3.5em;
+  text-transform: uppercase;
+  margin-bottom: 0rem;
 }
-#CTA {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#CTA a {
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-content);
+.sub-heading-2{
+  font-size:2.5em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
-#CTA p > span {
-  font-weight: bold;
-}
-#goals {
-  margin-top: 1rem;
-}
-
-.mail {
-  display: flex;
-}
-.mail ion-icon {
-  margin-right: 0.5rem;
-}
 @media only screen and (min-width: 375px) {
-  #CTA {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: unset;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  #contact {
-    display: flex;
-  }
-  #contact div:nth-child(2) {
-    margin-left: 0.5rem;
-  }
 }

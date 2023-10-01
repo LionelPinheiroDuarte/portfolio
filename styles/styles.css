@@ -8,7 +8,6 @@
 @import "./components/table.css";
 
 @import "index.css";
-@import "header.css";
 @import "footer.css";
 @import "project_section.css";
 @import "skill_section.css";
@@ -35,14 +34,12 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   color: var(--color-content);
 }
 
 h1 {
   font-size: 2rem;
-  text-transform: capitalize;
-  margin-bottom:0.5rem;
 }
 h2 {
   font-size: 1.3rem;
@@ -57,7 +54,7 @@ p,
 li,
 a {
   position:relative;
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   color: var(--color-content);
   font-size: 1.15rem;
 }
@@ -74,26 +71,25 @@ a::before {
   transform: scaleX(0);
   transition: transform .3s ease-in-out;
 }
-
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
 p {
-  line-height: 1.8rem;
+  line-height: var(--line-heigth);
 }
 ul {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
 }
 li {
   margin-bottom: 0.8rem;
 }
 label,
 input {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
 }
 button {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   font-size: 1rem;
   padding: 0.3rem;
 }
@@ -102,10 +98,10 @@ button a {
   color: white;
 }
 mark {
-  background-color: var(--pf-secondary);
+  background-color: var(--color-secondary);
 }
 small {
-  font-family: var(--Font-Family);
+  font-family: var(--font-family);
   font-size: 1rem;
   color: var(--color-content);
 }
