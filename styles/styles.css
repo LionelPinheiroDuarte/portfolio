@@ -9,6 +9,7 @@
 
 @import "index.css";
 @import "footer.css";
+@import "layouts/base_layout.css";
 @import "project_section.css";
 @import "skill_section.css";
 @import "contact_section.css";
@@ -21,6 +22,7 @@
     url("./fonts/Inter/Inter.ttf") format("truetype"),
     url("./fonts/Inter/Inter.ttf") format("truetype"),
     url("./fonts/Inter/Inter.ttf") format("truetype");
+  font-display: swap;
 }
 
 /*--------------// BALISE //--------------*/
