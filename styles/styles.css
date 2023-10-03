@@ -111,6 +111,12 @@ section {
   margin: 0 0 1.5rem 0;
 }
 
+
+/*--------------//  Project documentation styles //--------------*/
+#documentation h1{
+  margin-bottom:1rem;
+}
+
 /*--------------// ICON FONT //--------------*/
 ion-icon {
   font-size: 1.5rem;
