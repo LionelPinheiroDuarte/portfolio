@@ -9,6 +9,7 @@
 
 @import "index.css";
 @import "footer.css";
+@import "layouts/base_layout.css";
 @import "project_section.css";
 @import "skill_section.css";
 @import "contact_section.css";
@@ -21,6 +22,7 @@
     url("./fonts/Inter/Inter.ttf") format("truetype"),
     url("./fonts/Inter/Inter.ttf") format("truetype"),
     url("./fonts/Inter/Inter.ttf") format("truetype");
+  font-display: swap;
 }
 
 /*--------------// BALISE //--------------*/
@@ -109,6 +111,12 @@ section {
   margin: 0 0 1.5rem 0;
 }
 
+
+/*--------------//  Project documentation styles //--------------*/
+#documentation h1{
+  margin-bottom:1rem;
+}
+
 /*--------------// ICON FONT //--------------*/
 ion-icon {
   font-size: 1.5rem;
@@ -121,6 +129,19 @@ ion-icon {
   margin-left: 2em;
 }
 
+/*--------------// Dark mode //--------------*/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
+  :root{
+    --color-content: #fff;
+  }
+  th{
+    color: #fff;
+  }
+}
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
