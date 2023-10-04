@@ -129,6 +129,19 @@ ion-icon {
   margin-left: 2em;
 }
 
+/*--------------// Dark mode //--------------*/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
+  :root{
+    --color-content: #fff;
+  }
+  th{
+    color: #fff;
+  }
+}
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
