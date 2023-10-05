@@ -1,12 +1,13 @@
 nav {
   padding-top: 1.5em;
+  margin:0em 0.5em;
 }
 nav ul {
   display: flex;
-  justify-content: space-evenly;
-  padding: 0;
+  justify-content: end;
 }
 nav ul li {
+  margin-left:1rem;
   list-style: none;
 }
 
@@ -20,8 +21,5 @@ nav ul li a {
 @media only screen and (min-width: 768px) {
   nav ul {
     justify-content: flex-end;
-  }
-  nav ul li {
-    margin-left: 3em;
   }
 }
