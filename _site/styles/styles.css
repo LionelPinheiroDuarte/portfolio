@@ -34,6 +34,7 @@
   src:
     url("./fonts/Inter/Inter-Bold.woff") format('woff'),
     url("./fonts/Inter/Inter-Bold.woff2") format('woff2');
+}
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
