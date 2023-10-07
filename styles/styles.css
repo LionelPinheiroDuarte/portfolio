@@ -86,7 +86,7 @@ a:hover::before {
   transform: scaleX(1);
 }
 p {
-  line-height: var(--line-heigth);
+  line-height: var(--line-height);
 }
 ul {
   font-family: var(--font-family);
