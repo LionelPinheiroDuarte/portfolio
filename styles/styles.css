@@ -18,13 +18,22 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/Inter/Inter-Regular.ttf") format("truetype"),
-    url("./fonts/Inter/Inter.ttf") format("truetype"),
-    url("./fonts/Inter/Inter.ttf") format("truetype"),
-    url("./fonts/Inter/Inter.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
   font-display: swap;
+  src:
+    url("./fonts/Inter/Inter-Regular.woff") format('woff'),
+    url("./fonts/Inter/Inter-Regular.woff2") format('woff2');
 }
 
+@font-face {
+  font-family: "Inter";
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("./fonts/Inter/Inter-Bold.woff") format('woff'),
+    url("./fonts/Inter/Inter-Bold.woff2") format('woff2');
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
@@ -32,6 +41,7 @@ html {
 body {
   height: 100%;
   background-color: #fff;
+  font-family: var(--font-family); 
 }
 h1,
 h2,
