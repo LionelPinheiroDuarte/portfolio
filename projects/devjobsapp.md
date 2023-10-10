@@ -27,7 +27,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<figure class="center">
+  <img class="round_borders" src="../../images/bird.jpg" alt="Slack desktop app using skeleton screens while loading">
+  <figcaption>Holy moly to you too, Slack.</figcaption>
+</figure>
 
 ### Links
 

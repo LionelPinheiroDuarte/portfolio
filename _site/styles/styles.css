@@ -11,8 +11,6 @@
 @import "footer.css";
 @import "layouts/base_layout.css";
 @import "project_section.css";
-@import "skill_section.css";
-@import "contact_section.css";
 
 /*--------------// FONTS  //-------------*/
 
@@ -38,6 +36,7 @@
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
+  font-size: 16px;
 }
 body {
   height: 100%;
@@ -88,7 +87,7 @@ a:hover::before {
   transform: scaleX(1);
 }
 p {
-  line-height: var(--line-heigth);
+  line-height: var(--line-height);
 }
 ul {
   font-family: var(--font-family);
@@ -120,7 +119,9 @@ small {
 section {
   margin: 0 0 1.5rem 0;
 }
-
+figcaption {
+  font-family: var(--font-family);
+}
 
 /*--------------//  Project documentation styles //--------------*/
 #documentation h1{
@@ -138,7 +139,15 @@ ion-icon {
 .list-item-style {
   margin-left: 2em;
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.round_borders {
+  border-radius: 10px;
+}
 /*--------------// Dark mode //--------------*/
 
 @media (prefers-color-scheme: dark) {
@@ -149,6 +158,9 @@ ion-icon {
     --color-content: #fff;
   }
   th{
+    color: #fff;
+  }
+  figcaption{
     color: #fff;
   }
 }
