@@ -27,11 +27,6 @@ Users should be able to:
 
 ### Screenshot
 
-<figure class="center">
-  <img class="round_borders" src="../../images/bird.jpg" alt="Slack desktop app using skeleton screens while loading">
-  <figcaption>Holy moly to you too, Slack.</figcaption>
-</figure>
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
