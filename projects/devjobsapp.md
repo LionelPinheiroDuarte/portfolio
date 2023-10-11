@@ -4,9 +4,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eius
 tags: ["projets"]
 # thumbnail: ../images/resize.jpg
 layout: project_layout.njk
-repos: github.com
+repo: devjobs-webapp 
 websiteName: websiteName
-websiteUrl: websiteUrl
+websiteUrl: https://google.com 
 username: "Liopin"
 twitterName: "lionelpinheiro_"
 ---
