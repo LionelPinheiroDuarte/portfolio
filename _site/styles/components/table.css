@@ -4,6 +4,7 @@ table,th,tr {
 }
 table{
   border-collapse: collapse;
+  margin-top: 1rem;
 }
 td > a {
     text-decoration:none;
