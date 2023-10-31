@@ -9,7 +9,6 @@ templateEngineOverride: njk,md
 ---
 <section>
   <h1 class="heading">lionel pinheiro duarte</h1>
-  <h2 class="sub-heading-2">Dév front end</h2>
   <p>Hi ! I'm junior web developper based in France.</p>
   <p>Right now I'm focusing on improving my understanding of linux and learning more
 about the cloud.</p>
