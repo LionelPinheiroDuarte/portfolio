@@ -47,19 +47,7 @@ h2,
 h3 {
   font-family: var(--font-family);
   color: var(--color-content);
-}
-
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.3rem;
-}
-h2::first-letter {
-  text-transform: uppercase;
-}
-h3::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 p,
 li,
