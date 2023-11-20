@@ -124,6 +124,10 @@ figcaption {
 }
 
 /*--------------//  Project documentation styles //--------------*/
+#documentation h1{
+  font-size: 3rem;
+}
+
 
 /*--------------// ICON FONT //--------------*/
 ion-icon {
