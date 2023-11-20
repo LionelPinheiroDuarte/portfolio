@@ -1,12 +1,10 @@
 .heading{
   font-size:3em;
   text-transform: uppercase;
-  margin-bottom: 0rem;
 }
 .sub-heading-2{
   font-size:2em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 375px) {

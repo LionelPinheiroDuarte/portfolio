@@ -148,6 +148,9 @@ ion-icon {
 .round_borders {
   border-radius: 10px;
 }
+.mb {
+  margin-bottom: var(--margin-bottom);
+}
 /*--------------// Dark mode //--------------*/
 
 @media (prefers-color-scheme: dark) {
