@@ -3,10 +3,10 @@ title: Devjobs app
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
 # thumbnail: ../images/resize.jpg
-layout: project_layout.njk
-repo: devjobs-webapp 
+layout: project.njk
+repo: devjobs-webapp
 websiteName: websiteName
-websiteUrl: https://google.com 
+websiteUrl: https://google.com
 username: "Liopin"
 twitterName: "lionelpinheiro_"
 ---

@@ -3,7 +3,7 @@ title: WordPress Theme
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
 # thumbnail: ../images/resize.jpg
-layout: project_layout.njk
+layout: project.njk
 websiteName: websiteName
 websiteUrl: websiteUrl
 username: "Liopin"
