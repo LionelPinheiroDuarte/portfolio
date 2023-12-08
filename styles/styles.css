@@ -116,6 +116,7 @@ figcaption {
 /*--------------//  Project documentation styles //--------------*/
 #documentation h1{
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 
@@ -141,6 +142,13 @@ ion-icon {
 }
 .mb {
   margin-bottom: var(--margin-bottom);
+}
+.heading{
+  font-size:3em;
+  text-transform: uppercase;
+}
+.sub-heading-2{
+  font-size:2em;
 }
 /*--------------// Dark mode //--------------*/
 
