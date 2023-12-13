@@ -1,6 +1,7 @@
 /*--------------// Imports //-------------*/
 @import "variables.css";
 @import "reset.css";
+@import "prism.css";
 
 /*---------// Components //--------*/
 @import "./components/navigation.css";
@@ -127,6 +128,10 @@ ion-icon {
   color: var(--color-content);
 }
 
+/*--------------// Prims Syntax Highlight //--------------*/
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+    color: #fd971f;
+}
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
