@@ -40,17 +40,15 @@
 html {
   height: 100%;
   font-size: 16px;
+  font-family: var(--font-family);
 }
 body {
   height: 100%;
   background-color: #fff;
-}
-h1,
-h2,
-h3 {
-  font-family: var(--font-family);
   color: var(--color-content);
-  text-transform: capitalize;
+}
+h1,h2 {
+  text-transform:uppercase;
 }
 p,
 li,
