@@ -128,7 +128,10 @@ ion-icon {
 
 /*--------------// Prims Syntax Highlight //--------------*/
 .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
-    color: #fd971f;
+    color: #fd971f !important;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: #000 !important;
 }
 /*--------------// Utility class //--------------*/
 
