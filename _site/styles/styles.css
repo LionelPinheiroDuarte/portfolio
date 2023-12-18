@@ -1,6 +1,7 @@
 /*--------------// Imports //-------------*/
 @import "variables.css";
 @import "reset.css";
+@import "prism.css";
 
 /*---------// Components //--------*/
 @import "./components/navigation.css";
@@ -39,17 +40,15 @@
 html {
   height: 100%;
   font-size: 16px;
+  font-family: var(--font-family);
 }
 body {
   height: 100%;
   background-color: #fff;
-}
-h1,
-h2,
-h3 {
-  font-family: var(--font-family);
   color: var(--color-content);
-  text-transform: capitalize;
+}
+h1,h2 {
+  text-transform:uppercase;
 }
 p,
 li,
@@ -116,6 +115,8 @@ figcaption {
 /*--------------//  Project documentation styles //--------------*/
 #documentation h1{
   font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 
@@ -125,6 +126,13 @@ ion-icon {
   color: var(--color-content);
 }
 
+/*--------------// Prims Syntax Highlight //--------------*/
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+    color: #fd971f !important;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: #000 !important;
+}
 /*--------------// Utility class //--------------*/
 
 .list-item-style {
@@ -141,6 +149,13 @@ ion-icon {
 }
 .mb {
   margin-bottom: var(--margin-bottom);
+}
+.heading{
+  font-size:3em;
+  text-transform: uppercase;
+}
+.sub-heading-2{
+  font-size:2em;
 }
 /*--------------// Dark mode //--------------*/
 
