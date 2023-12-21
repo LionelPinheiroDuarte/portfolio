@@ -9,7 +9,7 @@
   <tbody>
     {% for projet in collections.projets %}
     <tr>
-      <td><a href="{{ projet.url }}">{{ projet.data.title }}</a></td>
+      <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>
       <td>
         <a href="https://github.com/liopin/{{ projet.data.repo }}" target="_blank">

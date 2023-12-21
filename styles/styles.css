@@ -58,7 +58,13 @@ a {
   color: var(--color-content);
   font-size: 1.15rem;
 }
-a::before {
+.animation,{
+  position:relative;
+  font-family: var(--font-family);
+  color: var(--color-content);
+  font-size: 1.15rem;
+}
+.animation::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -71,6 +77,7 @@ a::before {
   transform: scaleX(0);
   transition: transform .3s ease-in-out;
 }
+
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
