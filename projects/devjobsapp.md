@@ -6,7 +6,6 @@ tags: ["projets"]
 layout: project.njk
 repo: devjobs-webapp
 websiteName: websiteName
-websiteUrl: https://google.com
 username: "Liopin"
 twitterName: "lionelpinheiro_"
 ---

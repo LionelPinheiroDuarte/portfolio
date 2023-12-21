@@ -6,6 +6,7 @@ tags: ["projets"]
 layout: project.njk
 websiteName: websiteName
 websiteUrl: websiteUrl
+repo: websiteUrl
 username: "Liopin"
 twitterName: "lionelpinheiro_"
 ---
