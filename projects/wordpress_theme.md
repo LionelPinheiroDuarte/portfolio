@@ -2,7 +2,6 @@
 title: WordPress Theme
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
-# thumbnail: ../images/resize.jpg
 layout: project.njk
 websiteName: websiteName
 websiteUrl: websiteUrl
@@ -11,13 +10,13 @@ username: "Liopin"
 twitterName: "lionelpinheiro_"
 ---
 
-# Frontend Mentor - Job listings with filtering solution
+# Frontend Mentor
 
 This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Overview
+## Aperçu
 
-### The challenge
+### Le défi
 
 Users should be able to:
 
@@ -29,14 +28,14 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-### Links
+### Liens
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+## Le procédé
 
-### Built with
+### Construit avec
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -47,7 +46,7 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
+### Qu'est ce que j'ai appris
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
@@ -69,22 +68,20 @@ const proudOfThisFunc = () => {
 };
 ```
 
-### Continued development
+### Axe d'amélioration
 
 - [ ] Mercury
 - [x] Venus
 - [x] Earth (Orbit/Moon)
 - [x] Mars
 
-### Useful resources
+### Ressources utiles
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-## Author
+## Liens
 
 - Website - [{{websiteName}}]({{websiteUrl}})
 - Frontend Mentor - [@{{username}}](https://www.frontendmentor.io/profile/{{username}})
 - Twitter - [@{{twitterName}}](https://www.twitter.com/{{twitterName}})
-
-## Acknowledgments
