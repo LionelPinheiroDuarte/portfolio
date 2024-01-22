@@ -8,39 +8,59 @@
 @import "./components/project_card.css";
 @import "./components/table.css";
 
-@import "index.css";
 @import "footer.css";
 @import "layouts/base_layout.css";
 @import "project_section.css";
 
 /*--------------// FONTS  //-------------*/
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-feature-settings: var(--font-feature);
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("./fonts/Poppins/Poppins-Regular.woff") format('woff'),
+    url("./fonts/Poppins/Poppins-Regular.woff2") format('woff2');
+}
 
 @font-face {
-  font-family: var(--font-family);
+  font-family: 'Poppins';
   font-style: normal;
   font-feature-settings: var(--font-feature);
   font-weight: 500;
   font-display: swap;
   src:
-    url("./fonts/Inter/Inter-Regular.woff") format('woff'),
-    url("./fonts/Inter/Inter-Regular.woff2") format('woff2');
+    url("./fonts/Poppins/Poppins-Medium.woff") format('woff'),
+    url("./fonts/Poppins/Poppins-Medium.woff2") format('woff2');
 }
 
 @font-face {
-  font-family: var(--font-family);
+  font-family: 'Poppins';
+  font-style: semibold;
+  font-feature-settings: var(--font-feature);
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("./fonts/Poppins/Poppins-SemiBold.woff") format('woff'),
+    url("./fonts/Poppins/Poppins-SemiBold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
   font-style: bold;
   font-feature-settings: var(--font-feature);
   font-weight: 700;
   font-display: swap;
   src:
-    url("./fonts/Inter/Inter-Bold.woff") format('woff'),
-    url("./fonts/Inter/Inter-Bold.woff2") format('woff2');
+    url("./fonts/Poppins/Poppins-Bold.woff") format('woff'),
+    url("./fonts/Poppins/Poppins-Bold.woff2") format('woff2');
 }
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
   font-size: 16px;
-  font-family: var(--font-family);
+  font-family: 'Poppins';
 }
 body {
   height: 100%;
@@ -190,4 +210,3 @@ main {
 }
 footer {
   grid-area: footer;
-

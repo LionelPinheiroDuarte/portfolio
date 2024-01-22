@@ -8,7 +8,8 @@ eleventyNavigation:
 templateEngineOverride: njk,md
 ---
 <section>
-  <h1 class="heading mb">lionel pinheiro duarte</h1>
+  <h1 class="heading mb">lionel</br> pinheiro duarte</h1>
+  <h2 class="mb">Intégrateur web - Webmaster</h2>
   <p>Hi ! I'm junior web developper based in France.</p>
   <p>Right now I'm focusing on improving my understanding of linux and learning more
 about the cloud.</p>
@@ -16,9 +17,7 @@ about the cloud.</p>
 </section>
  
 <section id="experimentation">
-<h2 class="sub-heading-2 mb">Projets</h2>
-<p>List of projects based on challenges or courses that covers that
-technologies, languages I'm interrested in.
+<h2 class="">Projets</h2>
 <ul id="project_section">
 {% for projet in collections.projets %}
 

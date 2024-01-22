@@ -1,6 +1,6 @@
 :root {
   --color-content: #000000;
-  --font-family: Inter, sans-serif;
+  --font-family: "Poppins", sans-serif;
   --font-feature: 'liga' 1, 'calt' 1; /* fix for Chrome */
   --line-height: 1.4em;
   --margin-bottom: 5px;
