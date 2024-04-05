@@ -39,7 +39,7 @@
   font-family: 'Poppins';
   font-style: semibold;
   font-feature-settings: var(--font-feature);
-  font-weight: 600;
+  font-weight: 6  00;
   font-display: swap;
   src:
     url("./fonts/Poppins/Poppins-SemiBold.woff") format('woff'),
