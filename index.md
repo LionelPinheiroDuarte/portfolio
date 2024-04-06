@@ -8,7 +8,8 @@ eleventyNavigation:
 templateEngineOverride: njk,md
 ---
 <section>
-  <h1 class="heading mb">lionel</br> pinheiro duarte</h1>
+  <h1 class="">lionel</h1>
+  <h1 class="negative-mt mb">pinheiro duarte</h1>
   <h2 class="mb">Intégrateur web - Webmaster</h2>
   <p>Hi ! I'm junior web developper based in France.</p>
   <p>Right now I'm focusing on improving my understanding of linux and learning more
@@ -19,9 +20,8 @@ about the cloud.</p>
 <section id="experimentation">
 <h2 class="">Projets</h2>
 <ul id="project_section">
-{% for projet in collections.projets %}
+{% for skill in skills %}
 
-{% include "partials/project.njk" %}
 
 {% endfor %}
 

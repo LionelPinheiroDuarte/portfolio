@@ -15,7 +15,7 @@
 /*--------------// FONTS  //-------------*/
 @font-face {
   font-family: 'Poppins';
-  font-style: normal;
+  font-style: regular;
   font-feature-settings: var(--font-feature);
   font-weight: 400;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  font-style: normal;
+  font-style: medium;
   font-feature-settings: var(--font-feature);
   font-weight: 500;
   font-display: swap;
@@ -39,7 +39,7 @@
   font-family: 'Poppins';
   font-style: semibold;
   font-feature-settings: var(--font-feature);
-  font-weight: 6  00;
+  font-weight: 600;
   font-display: swap;
   src:
     url("./fonts/Poppins/Poppins-SemiBold.woff") format('woff'),
@@ -67,9 +67,22 @@ body {
   background-color: #fff;
   color: var(--color-content);
 }
-h1,h2 {
-  text-transform:uppercase;
+h1,h2,h3{
+  text-transform: capitalize;
 }
+h1{
+  font-size: 2rem;
+  font-weight: 600;
+}
+h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h3{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 p,
 li,
 a {
@@ -77,8 +90,9 @@ a {
   font-family: var(--font-family);
   color: var(--color-content);
   font-size: 1.15rem;
+  font-weight: 400;
 }
-.animation,{
+.animation{
   position:relative;
   font-family: var(--font-family);
   color: var(--color-content);
@@ -139,13 +153,6 @@ figcaption {
   font-family: var(--font-family);
 }
 
-/*--------------//  Project documentation styles //--------------*/
-#documentation h1{
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
 
 /*--------------// ICON FONT //--------------*/
 ion-icon {
@@ -161,7 +168,9 @@ ion-icon {
 	background: #000 !important;
 }
 /*--------------// Utility class //--------------*/
-
+.negative-mt{
+  margin-top: -1rem;
+}
 .list-item-style {
   margin-left: 2em;
 }
@@ -179,7 +188,7 @@ ion-icon {
 }
 .heading{
   font-size:2.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .sub-heading-2{
   font-size:2em;
@@ -210,3 +219,4 @@ main {
 }
 footer {
   grid-area: footer;
+}
