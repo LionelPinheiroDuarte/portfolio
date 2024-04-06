@@ -11,6 +11,8 @@ td > a {
 th {
   text-align: left;
   color: #535151;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 td {
   padding-block: 0.5rem;
