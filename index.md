@@ -19,11 +19,4 @@ about the cloud.</p>
  
 <section id="experimentation">
 <h2 class="">Projets</h2>
-<ul id="project_section">
-{% for skill in skills %}
-
-
-{% endfor %}
-
-</ul>
 </section>
