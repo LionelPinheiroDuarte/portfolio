@@ -5,18 +5,20 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 eleventyNavigation:
   key: accueil
   order: 1
-templateEngineOverride: njk,md
 ---
 <section>
-  <h1 class="">lionel</h1>
-  <h1 class="negative-mt mb">pinheiro duarte</h1>
-  <h2 class="mb">Intégrateur web - Webmaster</h2>
+  <h1>{{ meta.firstName }}</h1>
+  <h1 class="negative-mt mb">{{ meta.lastName}}</h1>
+  <h2 class="mb">{{ meta.job }}</h2>
   <p>Hi ! I'm junior web developper based in France.</p>
   <p>Right now I'm focusing on improving my understanding of linux and learning more
 about the cloud.</p>
   <p>I'm currently looking for a job so if you're interrested, contact me.</p>
 </section>
  
-<section id="experimentation">
-<h2 class="">Projets</h2>
+<section> 
+  <h2 class="mb">compétences</h2>
+  {% for skill in skills %}
+    {% include "partials/skill.njk" %}
+  {% endfor %}
 </section>

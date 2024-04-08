@@ -1,6 +1,9 @@
-<li class="">
-        <p>{{skill.skillName}}
-        <div class="project_card_content">
-            <p>{{ skill.url }}</p>
-        </div>
-</li>
+<ul>
+{% for s in skills %}
+        <li>
+        {%for l in s.des %}
+            {{ l }}
+        {%endfor%}
+        </li>
+{% endfor %}
+</ul>
