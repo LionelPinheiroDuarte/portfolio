@@ -20,15 +20,9 @@ article h2 {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    width: 45rem;
-  }
-}
-
 
 @media only screen and (min-width: 1024px) {
   body {
-    width: 55rem;
+    width: 45rem;
   }
 }
