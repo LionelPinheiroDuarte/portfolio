@@ -5,6 +5,6 @@ module.exports = [
   },
   {
     name: "github",
-    url: "https://github.com/Liopin",
+    url: "https://github.com/LionelPinheiroDuarte",
   }
 ];
