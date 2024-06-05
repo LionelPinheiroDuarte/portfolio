@@ -45,10 +45,6 @@
  align-items: baseline;
 }
 
-
-
-
-
 .project_card_content p {
   line-height: 1.5rem;
   padding: 0.5rem 0;
@@ -61,18 +57,3 @@
 .project_card p {
   font-size: 1rem;
 }
-
-/* @media only screen and (min-width: 375px) {
-  #project_section {
-    justify-content: space-between;
-  }
-  #project_section li {
-    width: 20em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #project_section li {
-    width: 23em;
-  }
-} */
