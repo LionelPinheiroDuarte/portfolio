@@ -6,11 +6,6 @@ var minify = require('html-minifier').minify;
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginRss, {
-    posthtmlRenderOptions: {
-      closingSingleTag: "default", // opt-out of <img/>-style XHTML single tags
-    },
-  });
   if (process.env.NODE_ENV === 'production') {
     config.addTransform('htmlmin', (content, path) =>
       path.endsWith('.html')
