@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -10,6 +11,7 @@ module.exports = function (eleventyConfig) {
       closingSingleTag: "default", // opt-out of <img/>-style XHTML single tags
     },
   });
+  eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("scripts.js");
