@@ -1,6 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 var minify = require('html-minifier').minify;
 
 module.exports = function (eleventyConfig) {
