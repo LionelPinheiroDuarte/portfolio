@@ -3,10 +3,11 @@
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.2.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "@sherby/eleventy-plugin-files-minifier": "^1.1.1"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
   },
   "dependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier": "^4.0.0",
     "nunjucks": "^3.2.3"
   }
 }
