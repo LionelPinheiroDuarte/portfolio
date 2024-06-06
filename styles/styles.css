@@ -5,7 +5,6 @@
 
 /*---------// Components //--------*/
 @import "./components/navigation.css";
-@import "./components/project_card.css";
 @import "./components/table.css";
 
 @import "footer.css";
