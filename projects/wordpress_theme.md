@@ -26,8 +26,6 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
 ### Liens
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)

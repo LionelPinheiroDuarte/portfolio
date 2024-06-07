@@ -2,7 +2,6 @@
 title: Job listing
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 tags: ["projets"]
-# thumbnail: ../images/resize.jpg
 layout: project.njk
 websiteName: websiteName
 websiteUrl: websiteUrl
@@ -25,8 +24,6 @@ Users should be able to:
 - Filter job listings based on the categories
 
 ### Screenshot
-
-![](./screenshot.jpg)
 
 ### Links
 
