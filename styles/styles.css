@@ -153,12 +153,6 @@ figcaption {
 }
 
 
-/*--------------// ICON FONT //--------------*/
-ion-icon {
-  font-size: 1.5rem;
-  color: var(--color-content);
-}
-
 /*--------------// Prims Syntax Highlight //--------------*/
 .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
     color: #fd971f !important;
