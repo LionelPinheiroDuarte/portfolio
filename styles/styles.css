@@ -1,13 +1,8 @@
 /*--------------// Imports //-------------*/
-@import "variables.css";
 @import "reset.css";
 @import "prism.css";
 
 /*---------// Components //--------*/
-@import "./components/navigation.css";
-@import "./components/table.css";
-
-@import "footer.css";
 @import "layouts/base_layout.css";
 @import "project_section.css";
 
@@ -55,6 +50,16 @@
     url("./fonts/Poppins/Poppins-Bold.woff") format('woff'),
     url("./fonts/Poppins/Poppins-Bold.woff2") format('woff2');
 }
+
+/*--------------// Root //--------------*/
+:root {
+  --color-content: #000000;
+  --font-family: "Poppins", sans-serif;
+  --font-feature: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  --line-height: 1.4em;
+  --margin-bottom: 5px;
+}
+
 /*--------------// BALISE //--------------*/
 html {
   height: 100%;
@@ -150,6 +155,65 @@ section {
 }
 figcaption {
   font-family: var(--font-family);
+}
+table,th,tr {
+  font-family: var(--font-family);
+  color: var(--color-content);
+}
+table{
+  border-collapse: collapse;
+}
+td > a {
+    text-decoration:none;
+}
+th {
+  text-align: left;
+  color: #535151;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+td {
+  padding-block: 0.5rem;
+  border-bottom: 1px solid gray;
+}
+td:nth-child(1){
+  font-weight:bold;
+}
+td:last-child{
+  width: 3.5rem;
+}
+nav {
+  padding-top: 1.5em;
+  margin:0em 0.5em;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+nav ul li {
+  margin-left:1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) {
+}
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    justify-content: flex-end;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 
 
