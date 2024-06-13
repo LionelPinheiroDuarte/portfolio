@@ -4,24 +4,9 @@ h2,h3{
 h3{
   font-size: 1.10rem;
 }
-nav ul {
-  margin:0;
-}
+
 ul li {
   margin-bottom: 0.3rem;
-}
-
-body {
-  width: 20rem;
-  margin: auto;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4em 1fr auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
 }
 
 @media only screen and (min-width: 375px) {
@@ -29,7 +14,7 @@ body {
     width: 26rem;
   }
   ul {
-    margin-left: 1.7rem;
+    margin-left: 0.5rem;
   }
 }
 

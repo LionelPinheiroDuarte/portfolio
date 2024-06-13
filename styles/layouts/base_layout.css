@@ -9,8 +9,9 @@ body {
     "footer";
 }
 
-article h2 {
-  margin-bottom: 0.5em;
+ul li {
+  margin-bottom: 0.3rem;
+  margin-left: 1.5rem;
 }
 
 @media only screen and (min-width: 375px, max-width: 768px) {
