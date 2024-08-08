@@ -58,6 +58,7 @@
   --font-feature: 'liga' 1, 'calt' 1; /* fix for Chrome */
   --line-height: 1.4em;
   --margin-bottom: 5px;
+  --accent: #4e75ba;
 }
 
 /*--------------// BALISE //--------------*/
@@ -200,7 +201,9 @@ nav ul li {
   margin-left:1rem;
   list-style: none;
 }
-
+strong {
+  color: var(--accent);
+}
 nav ul li a {
   text-decoration: none;
 }
