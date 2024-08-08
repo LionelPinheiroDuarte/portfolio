@@ -13,9 +13,6 @@ ul li {
   body {
     width: 26rem;
   }
-  ul {
-    margin-left: 0.5rem;
-  }
 }
 
 @media only screen and (min-width: 768px) {
