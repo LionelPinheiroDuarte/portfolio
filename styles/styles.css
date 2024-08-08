@@ -87,7 +87,7 @@ h3{
   font-size: 1rem;
   font-weight: 400;
 }
-h2,h3{
+h2{
   margin: 1rem 0;
 }
 p,
@@ -131,9 +131,6 @@ ul {
 }
 li {
   margin-bottom: 0.8rem;
-}
-ul li {
-  margin-bottom: 0.3rem;
 }
 label,
 input {
@@ -205,9 +202,6 @@ strong {
 }
 nav ul li a {
   text-decoration: none;
-}
-#documentation h2{
-  font-weight: 500;
 }
 @media only screen and (min-width: 375px) {
 }
