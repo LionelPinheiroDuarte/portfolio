@@ -26,6 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
+This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
 ### Liens
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
