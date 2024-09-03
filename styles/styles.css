@@ -181,7 +181,7 @@ td {
   border-bottom: 1px solid gray;
 }
 td:nth-child(1){
-  font-weight:bold;
+  padding-right: 1rem;
 }
 td:last-child{
   width: 3.5rem;
