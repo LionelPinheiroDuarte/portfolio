@@ -9,17 +9,17 @@ websiteUrl: lionelpinheiroduarte
 ---
 
 # **Portfolio**
-Projet visant à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
+Projet vise à faire la promotion de mes compétences et à me présenter aux pret de futur recruteurs.
 
 ## Aperçu 
 
 ### Buts 
 
-Users should be able to:
+Les utilisateurs ont acccès à:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Filter job listings based on the categories
+- A une page de présentation /acceuil.
+- A une page listant mes projets /projets.
+- A une page montrant mes outils et ma manière de travaillé /use.
 
 ### Liens
 - Lien Github: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
@@ -47,7 +47,7 @@ Use this section to recap over some of your major learnings while working throug
 - [ ] Avoir un sommaire pour chaque projet 
 - [ ] Avoir un site multilingue 
 - [ ] Intégrer des images/vidéos/gif pour les projets
-### Ressources qui m'ont été utiles 
+## Liens
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
