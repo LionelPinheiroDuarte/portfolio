@@ -11,7 +11,7 @@ body {
 
 ul li {
   margin-bottom: 0.3rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 @media only screen and (min-width: 375px, max-width: 768px) {

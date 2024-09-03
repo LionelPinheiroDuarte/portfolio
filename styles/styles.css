@@ -254,6 +254,9 @@ ion-icon {
 .mb {
   margin-bottom: var(--margin-bottom);
 }
+.lh {
+  line-height: 1em;
+}
 .heading{
   font-size:2.5rem;
   text-transform: capitalize;
