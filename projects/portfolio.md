@@ -9,13 +9,13 @@ websiteUrl: lionelpinheiroduarte
 ---
 
 # **Portfolio**
-Projet vise à faire la promotion de mes compétences et à me présenter aux pret de futur recruteurs.
+Projet vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
 
 ## Aperçu 
 
 ### Buts 
 
-Les utilisateurs ont acccès à:
+Les utilisateurs ont accès à:
 
 - A une page de présentation /acceuil.
 - A une page listant mes projets /projets.
@@ -29,26 +29,10 @@ Les utilisateurs ont acccès à:
 
 ### Front-End
 
-- Eleventy Static site generator 
-
-### Qu'est ce que j'ai appris
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-
-### Infra
-
-- Azure
-
-### Qu'est ce que j'ai appris
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
+- **Eleventy** Static site generator 
+    - Utilisation **nunjucks** comme langage de templating.
+    - L'usage du format **markdown** me permet de me passer de base de données et d'avoir un contenu formaté. 
 ### Idées d'améliorations
-
-- [ ] Avoir un sommaire pour chaque projet 
-- [ ] Avoir un site multilingue 
-- [ ] Intégrer des images/vidéos/gif pour les projets
-## Liens
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [ ] Avoir un sommaire pour chaque projet.
+- [ ] Avoir un site multilingue.
+- [ ] Intégrer des images/vidéos/gif pour les projets.
