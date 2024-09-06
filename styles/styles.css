@@ -227,6 +227,9 @@ ion-icon {
   font-size: 1.5rem;
   color: var(--bck-color); 
 }
+ion-icon:hover {
+  color: var(--accent); 
+}
 
 /*--------------// Prims Syntax Highlight //--------------*/
 .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
