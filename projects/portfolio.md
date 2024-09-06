@@ -9,7 +9,7 @@ websiteUrl: lionelpinheiroduarte
 ---
 
 # **Portfolio**
-Projet vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
+Ce projet vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
 
 ## Aperçu 
 
