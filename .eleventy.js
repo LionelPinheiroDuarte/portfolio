@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const minify = require('html-minifier').minify;
+const {EleventyI18nPlugin} = require('@11ty/eleventy');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -12,6 +13,9 @@ module.exports = function (eleventyConfig) {
         : content
     )
   }
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: 'fr'
+  });
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("scripts.js");
