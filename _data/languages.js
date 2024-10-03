@@ -4,7 +4,6 @@ module.exports = {
       availableText: 'Cette page est disponible en:'
     },
     en: {
-      dir: '', // stands for the direction of the language set in the head, defaults to LTR (left to right)
       availableText: 'This page is also available in:'
     },
   };
