@@ -4,6 +4,7 @@
 
 /*---------// Components //--------*/
 @import "layouts/base_layout.css";
+@import "layouts/project_layout.css";
 @import "project_section.css";
 
 /*--------------// FONTS  //-------------*/

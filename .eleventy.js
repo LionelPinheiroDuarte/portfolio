@@ -6,20 +6,21 @@ module.exports = function (eleventyConfig) {
     defaultLanguage: 'fr'
   });
   eleventyConfig.addCollection("projects_en", function(collection) {
-    return collection.getFilteredByGlob("./en/projects/*.md");
+    return collection.getFilteredByGlob("src/en/projects/*.md");
   });
   eleventyConfig.addCollection("projects_fr", function(collection) {
-    return collection.getFilteredByGlob("./fr/projects/*.md");
+    return collection.getFilteredByGlob("src/fr/projects/*.md");
   });
-  eleventyConfig.addPassthroughCopy("styles");
+  eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("scripts.js");
+  eleventyConfig.addPassthroughCopy("/src/scripts.js");
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   return {
     dir: {
       markdownTemplateEngine: ["njk"],
       htmlTemplateEngine: "njk",
       templateFormats: ["html", "njk", "md"],
+      input: "src",
       includes: "_includes",
     },
   };
