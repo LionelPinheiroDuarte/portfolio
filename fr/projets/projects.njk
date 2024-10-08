@@ -2,6 +2,7 @@
 title: Mes projets
 description: Voici une liste de mes projets les plus aboutis.
 layout: base.njk
+permalink: /fr/projets/
 ---
 
 <h1 class="mb"><strong>Projets</strong></h1>
@@ -14,7 +15,7 @@ layout: base.njk
     </tr>
   </thead>
   <tbody>
-  {% for projet in collections.projects_en%}
+  {% for projet in collections.projects_fr%}
     <tr>
       <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>

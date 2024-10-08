@@ -16,6 +16,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: 'fr'
   });
+  eleventyConfig.addCollection("projects_en", function(collection) {
+    return collection.getFilteredByGlob("./en/projects/*.md");
+  });
+  eleventyConfig.addCollection("projects_fr", function(collection) {
+    return collection.getFilteredByGlob("./fr/projects/*.md");
+  });
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("scripts.js");

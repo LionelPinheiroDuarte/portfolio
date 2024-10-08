@@ -1,15 +1,15 @@
 ---
 title: Portfolio
-description: Projet visant à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
+description: This project à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
 layout: project.njk
 repo: portfolio
-tags: ["projets"]
+tags: ["projects_en"]
 websiteName: lionelpinheiroduarte
 websiteUrl: lionelpinheiroduarte
 ---
 
 # **Portfolio**
-Ce projet vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
+This project vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
 
 ## Aperçu 
 
