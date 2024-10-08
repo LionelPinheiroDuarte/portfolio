@@ -1,22 +1,22 @@
 module.exports = {
     en: [
       {
-        text: 'Home',
-        url: '/en/'
+        text: 'home',
+        url: '/en/home'
       },
       {
-        text: 'About me',
+        text: 'projects',
         url: '/en/projects/'
       }
     ],
     fr: [
       {
         text: 'accueil',
-        url: '/fr/'
+        url: '/fr/accueil'
       },
       {
         text: 'projets',
-        url: '/fr/projets'
+        url: '/fr/projets/'
       },
     ]
 };

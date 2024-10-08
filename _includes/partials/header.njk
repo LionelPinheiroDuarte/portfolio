@@ -1,3 +1,11 @@
 <header>
-    <nav>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}</nav>
+    <nav aria-label="Primary">
+        <ul>
+        {% for item in navigation[page.lang] %}
+        <li>
+            <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+    </nav>
 </header>
