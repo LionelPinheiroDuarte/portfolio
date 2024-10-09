@@ -12,8 +12,8 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("src/fr/projects/*.md");
   });
   eleventyConfig.addPassthroughCopy("./src/styles");
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("/src/scripts.js");
+  eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy("./src/scripts.js");
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   return {
     dir: {
