@@ -1,13 +1,13 @@
 <table>
   <thead>
     <tr>
-      <th>Projet</th>
-      <th>Description</th>
-      <th>Liens</th>
+      {% for th  in  languages[page.lang].th %}
+      <th>{{ th }}</th>
+      {%endfor%}
     </tr>
   </thead>
   <tbody>
-  {% for projet in collections.projects_fr%}
+  {% for projet in collections.projects_en%}
     <tr>
       <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>
@@ -27,4 +27,3 @@
     {% endfor %}
   </tbody>
 </table>
-
