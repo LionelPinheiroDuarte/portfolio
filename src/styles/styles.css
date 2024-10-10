@@ -216,7 +216,7 @@ nav ul li a {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
   padding-top: 2em;
   padding-bottom: 1em;

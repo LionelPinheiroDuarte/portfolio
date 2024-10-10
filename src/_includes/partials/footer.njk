@@ -1,9 +1,11 @@
 <footer>
-    <small>&copy; Lionel Pinheiro Duarte {% year %}</small>
-    {{ languages[page.lang].availableText }}
+    <div></div>
+    <p>&copy; Lionel Pinheiro Duarte {% year %}</p>
+    <div>
         {% for link in page.url | locale_links %} {%-if not loop.first %}/{% endif %}
-        <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+        <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}" title="{{languages[page.lang].availableText}}">
             {{ link.label }}
         </a>
     {% endfor %}
+    </div>
 </footer>
