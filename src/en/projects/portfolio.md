@@ -1,6 +1,6 @@
 ---
-title: Portfolio
-description: This project à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
+title: portfolio
+description: The goals of this project are to show case my work and skills. Use of a static site generator and deployed in Azure.
 layout: project.njk
 repo: portfolio
 tags: ["projects_en"]
@@ -9,30 +9,30 @@ websiteUrl: lionelpinheiroduarte
 ---
 
 # **Portfolio**
-This project vise à faire la promotion de mes compétences et à me présenter aux prêt de futurs recruteurs.
+The goals of this project are to show case my work and skills to potential recruiters.
 
-## Aperçu 
+## Overview 
 
-### Buts 
+### Goals 
 
-Les utilisateurs ont accès à:
+Users can access :
 
-- A une page de présentation /acceuil.
-- A une page listant mes projets /projets.
-- A une page montrant mes outils et ma manière de travaillé /use.
+- A presentation page /home where I present myself and what I can do.
+- A project page /project to show work I have done. 
+- A use page /use that show how I work or my workflow. 
 
-### Liens
-- Lien Github: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
-- Lien du site: [Portfolio](https://lionelpinheiroduarte.com)
+### Links 
+- Github link : [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
+- Project link: [Portfolio](https://lionelpinheiroduarte.com)
 
-## Construit avec 
+## Build with 
 
 ### Front-End
 
 - **Eleventy** Static site generator 
-    - Utilisation **nunjucks** comme langage de templating.
-    - L'usage du format **markdown** me permet de me passer de base de données et d'avoir un contenu formaté. 
-### Idées d'améliorations
-- [ ] Avoir un sommaire pour chaque projet.
-- [ ] Avoir un site multilingue.
-- [ ] Intégrer des images/vidéos/gif pour les projets.
+    - Use of **nunjucks** has a template language. 
+    - Use of the **markdown** format that permits me to not use a database and to have a formated content. 
+### Ideas of improvment 
+- [ ] Add a summary to each project.
+- [ ] Have a multilingual website.
+- [ ] Include images/gifs/videos to projects. 

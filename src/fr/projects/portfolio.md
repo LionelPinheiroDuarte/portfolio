@@ -1,5 +1,5 @@
 ---
-title: Portfolio
+title: portfolio
 description: Projet visant à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
 layout: project.njk
 repo: portfolio
