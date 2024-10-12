@@ -5,7 +5,7 @@ layout: project.njk
 repo: portfolio
 tags: ["projects_fr"]
 websiteName: lionelpinheiroduarte
-websiteUrl: lionelpinheiroduarte
+websiteUrl: lionelpinheiroduarteo
 ---
 
 # **Portfolio**
