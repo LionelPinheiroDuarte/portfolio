@@ -9,7 +9,7 @@
   <tbody>
   {% for projet in collections["projects_" + [page.lang]] %}
     <tr>
-      <td><a href="{{ projet.url }}">{{ projet.data.title }}</a></td>
+      <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}} {{[page.lang]}}</td>
       <td class="flex-inline">
       {% if projet.data.repo %}
