@@ -179,7 +179,6 @@ th {
 }
 td {
   padding-block: 0.5rem;
-  border-bottom: 1px solid gray;
 }
 td:nth-child(1){
   padding-right: 1rem;
