@@ -7,10 +7,10 @@
     </tr>
   </thead>
   <tbody>
-  {% for projet in collections.projects_en%}
+  {% for projet in collections["projects_" + [page.lang]] %}
     <tr>
       <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
-      <td>{{ projet.data.description}}</td>
+      <td>{{ projet.data.description}} {{[page.lang]}}</td>
       <td>
       {% if projet.data.repo %}
         <a href="https://github.com/lionelpinheiroduarte/{{ projet.data.repo }}" target="_blank">

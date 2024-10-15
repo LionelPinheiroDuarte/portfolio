@@ -6,32 +6,4 @@ permalink: /fr/projets/
 ---
 
 <h1 class="mb"><strong>Projets</strong></h1>
-<table>
-  <thead>
-    <tr>
-      <th>Projet</th>
-      <th>Description</th>
-      <th>Liens</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for projet in collections.projects_fr%}
-    <tr>
-      <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
-      <td>{{ projet.data.description}}</td>
-      <td>
-      {% if projet.data.repo %}
-        <a href="https://github.com/lionelpinheiroduarte/{{ projet.data.repo }}" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      {% endif %}
-      {% if projet.data.websiteUrl %}
-        <a href="{{ projet.data.websiteUrl }}">
-          <ion-icon name="link-outline"></ion-icon>
-        </a>
-      {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+{% include 'partials/projects.njk' %}
