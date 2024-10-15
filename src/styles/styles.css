@@ -267,6 +267,9 @@ ion-icon:hover {
 .sub-heading-2{
   font-size:2em;
 }
+.flex-inline{
+  display: inline-flex;
+}
 /*--------------// Dark mode //--------------*/
 
 @media (prefers-color-scheme: dark) {
