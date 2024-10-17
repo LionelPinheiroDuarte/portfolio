@@ -176,15 +176,11 @@ th {
   color: #000;
   font-size: 1.1rem;
   font-weight: 600;
+  padding-right: 1rem;
 }
 td {
   padding-block: 0.5rem;
-}
-td:nth-child(1){
   padding-right: 1rem;
-}
-td:last-child{
-  width: 3.5rem;
 }
 nav {
   padding-top: 1.5em;
