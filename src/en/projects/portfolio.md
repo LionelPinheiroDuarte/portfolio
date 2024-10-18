@@ -6,6 +6,7 @@ repo: portfolio
 tags: ["projects_en"]
 websiteName: lionelpinheiroduarte
 websiteUrl: lionelpinheiroduarte
+permalink: /en/project/{{title}}
 ---
 
 # **Portfolio**
