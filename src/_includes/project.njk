@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir}}">
+    <head>
+        {% include 'partials/head.njk' %}
+        <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    </head>
+    <body>
+        {% include "partials/header.njk" %}
+        <main>
+            <section id="documentation">
+                {{ content | safe }}
+            </section>
+        </main>
+        {% include "partials/footer.njk" %}
+    </body>
+    <script type="text/javascript" src="/scripts.js"></script>
+</html>

@@ -1,17 +1,17 @@
 <table>
   <thead>
     <tr>
-      <th>Projet</th>
-      <th>Description</th>
-      <th>Liens</th>
+      {% for th  in  languages[page.lang].th %}
+      <th>{{ th }}</th>
+      {%endfor%}
     </tr>
   </thead>
   <tbody>
-    {% for projet in collections.projets %}
+  {% for projet in collections["projects_" + [page.lang]] %}
     <tr>
       <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
       <td>{{ projet.data.description}}</td>
-      <td>
+      <td class="flex-inline">
       {% if projet.data.repo %}
         <a href="https://github.com/lionelpinheiroduarte/{{ projet.data.repo }}" target="_blank">
           <ion-icon name="logo-github"></ion-icon>
@@ -27,4 +27,3 @@
     {% endfor %}
   </tbody>
 </table>
-

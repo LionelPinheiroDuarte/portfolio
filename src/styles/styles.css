@@ -4,6 +4,7 @@
 
 /*---------// Components //--------*/
 @import "layouts/base_layout.css";
+@import "layouts/project_layout.css";
 @import "project_section.css";
 
 /*--------------// FONTS  //-------------*/
@@ -175,16 +176,11 @@ th {
   color: #000;
   font-size: 1.1rem;
   font-weight: 600;
+  padding-right: 1rem;
 }
 td {
   padding-block: 0.5rem;
-  border-bottom: 1px solid gray;
-}
-td:nth-child(1){
   padding-right: 1rem;
-}
-td:last-child{
-  width: 3.5rem;
 }
 nav {
   padding-top: 1.5em;
@@ -215,7 +211,7 @@ nav ul li a {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -266,6 +262,9 @@ ion-icon:hover {
 }
 .sub-heading-2{
   font-size:2em;
+}
+.flex-inline{
+  display: inline-flex;
 }
 /*--------------// Dark mode //--------------*/
 
