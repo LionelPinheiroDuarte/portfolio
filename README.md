@@ -6,7 +6,7 @@ The goals of this project are to show case my work and skills to potential recru
 
 ### Goals 🎯
 
-### Ides of improvments 📝
+### Ideas of improvments 📝
 - [x] Multilingual website
 - [ ] Add a summary to the project pages
 - [ ] Include images/gifs/videos to projects. 
