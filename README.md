@@ -1,7 +1,18 @@
-## Getting start
+# Welcome to my portfolio 🎉
+The goals of this project are to show case my work and skills to potential recruiters.
+## Build with 🛠
+- [Eleventy](https://www.11ty.dev/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
+### Goals
+
+### Ides of improvments 📝
+- [x] Multilingual website
+- [ ] Add a summary to the project pages
+- [ ] Include images/gifs/videos to projects. 
+## Getting start
 ### Prerequisites
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com)
 - [Node](https://nodejs.org/en)
 
 ### Installation
