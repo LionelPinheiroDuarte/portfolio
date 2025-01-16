@@ -169,7 +169,7 @@ table{
   border-collapse: collapse;
 }
 p ~ h2{
-  margin: 1rem 0 0.5rem 0;
+  margin: 2rem 0 0.5rem 0;
 }
 td > a {
     text-decoration:none;
