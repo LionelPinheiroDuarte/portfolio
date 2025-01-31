@@ -1,0 +1,5 @@
+<ul> 
+    {%for link in links[page.lang] %}
+    <li><a href="{{link.link}}" target="_blanck">{{link.emoji}}</a> {{link.desc}}</li>
+    {% endfor %}
+</ul>
