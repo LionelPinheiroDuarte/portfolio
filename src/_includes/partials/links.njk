@@ -1,5 +1,7 @@
-<ul> 
+<ul class="mt"> 
     {%for link in links[page.lang] %}
-    <li><a href="{{link.link}}" target="_blanck">{{link.emoji}}</a> {{link.desc}}</li>
+    <li class="unstyle-li">{{link.emoji}} 
+        <a href="{{link.link}}" target="_blanck" class="unstyle-a animation">{{link.desc}}</a>
+    </li>
     {% endfor %}
 </ul>

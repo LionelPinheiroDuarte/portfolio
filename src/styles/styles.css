@@ -256,6 +256,9 @@ ion-icon:hover {
 .round_borders {
   border-radius: 10px;
 }
+.mt {
+  margin-top:1rem;
+}
 .mb {
   margin-bottom: var(--margin-bottom);
 }
@@ -271,6 +274,13 @@ ion-icon:hover {
 }
 .flex-inline{
   display: inline-flex;
+}
+.unstyle-a{
+  text-decoration: none;
+}
+.unstyle-li{
+  list-style: none;
+  margin-left: 0rem;
 }
 /*--------------// Dark mode //--------------*/
 
