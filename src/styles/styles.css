@@ -225,11 +225,11 @@ footer a {
 
 
 /*--------------// ICON FONT //--------------*/
-ion-icon {
+.icon {
   font-size: 1.5rem;
   color: var(--bck-color); 
 }
-ion-icon:hover {
+.icon:hover {
   color: var(--accent); 
 }
 
