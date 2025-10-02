@@ -168,6 +168,9 @@ table,th,tr {
 table{
   border-collapse: collapse;
 }
+p ~ h2{
+  margin: 2rem 0 0.5rem 0;
+}
 td > a {
     text-decoration:none;
 }
@@ -216,14 +219,17 @@ footer {
   padding-top: 2em;
   padding-bottom: 1em;
 }
+footer a {
+  text-decoration: none;
+}
 
 
 /*--------------// ICON FONT //--------------*/
-ion-icon {
+.icon {
   font-size: 1.5rem;
   color: var(--bck-color); 
 }
-ion-icon:hover {
+.icon:hover {
   color: var(--accent); 
 }
 
@@ -250,6 +256,9 @@ ion-icon:hover {
 .round_borders {
   border-radius: 10px;
 }
+.mt {
+  margin-top:1rem;
+}
 .mb {
   margin-bottom: var(--margin-bottom);
 }
@@ -265,6 +274,13 @@ ion-icon:hover {
 }
 .flex-inline{
   display: inline-flex;
+}
+.unstyle-a{
+  text-decoration: none;
+}
+.unstyle-li{
+  list-style: none;
+  margin-left: 0rem;
 }
 /*--------------// Dark mode //--------------*/
 
