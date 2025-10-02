@@ -12,7 +12,6 @@ permalink: en/projet/{{title}}
 # **Brain** 🧠
 A place where I put my notes.
 
-![imz](./../../images/screen.png)
 
 ## Overview 
 
