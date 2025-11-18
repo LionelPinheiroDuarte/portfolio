@@ -8,5 +8,6 @@
   },
   "scripts": {
   "build": "eleventy"
-  }
+  },
+  "homepage": "."
 }
