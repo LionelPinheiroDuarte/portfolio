@@ -9,5 +9,5 @@
   "scripts": {
   "build": "eleventy"
   },
-  "homepage": "."
+  "homepage": "./fr/accueil"
 }
