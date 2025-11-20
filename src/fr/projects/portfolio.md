@@ -4,7 +4,7 @@ description: Projet visant à faire la promotion de mes compétences et à me pr
 layout: project.njk
 repo: portfolio
 tags: ["projects_fr"]
-websiteName: lionelpinheiroduarte
+websiteName: portfolio
 websiteUrl: https://lionelpinheiroduarte.com
 permalink: fr/projet/{{title}}
 ---

@@ -4,8 +4,8 @@ description: The goals of this project are to show case my work and skills. Use 
 layout: project.njk
 repo: portfolio
 tags: ["projects_en"]
-websiteName: lionelpinheiroduarte
-websiteUrl: lionelpinheiroduarte
+websiteName: Portfolio
+websiteUrl: https://lionelpinheiroduarte.com
 permalink: /en/project/{{title}}
 ---
 
