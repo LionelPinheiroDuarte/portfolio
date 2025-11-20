@@ -3,7 +3,7 @@ name: Build and Deploy Eleventy to O2Switch with ftp
 on:
   push:
     branches:
-      - dev
+      - master
 
 jobs:
   deploy:
