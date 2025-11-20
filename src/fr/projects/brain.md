@@ -5,7 +5,7 @@ layout: project.njk
 repo: brain 
 tags: ["projects_fr"]
 websiteName: lionelpinheiroduarte
-websiteUrl: lionelpinheiroduarte
+websiteUrl: https://lionelpinheiroduarte.github.io/brain/
 permalink: fr/projet/{{title}}
 ---
 
