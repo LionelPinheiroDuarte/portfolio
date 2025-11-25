@@ -2,7 +2,7 @@ module.exports = {
     fr: [
         {
             emoji: '📧',
-            link: 'contact.pinheiro.lionel@gmail.com',
+            link: 'https://www.linkedin.com/in/lionel-pinheiro/',
             desc: 'Si mon profil vous interrese, contactez moi'
         },
         {
@@ -14,7 +14,7 @@ module.exports = {
     en: [
         {
             emoji: '📧',
-            link: 'contact.pinheiro.lionel@gmail.com',
+            link: 'https://www.linkedin.com/in/lionel-pinheiro/',
             desc: 'If my profile interests you, feel free to contact me.'
         },
         {
