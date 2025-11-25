@@ -1,6 +1,6 @@
 ---
 title: portfolio
-description: Projet visant à faire la promotion de mes compétences et à me présenter, en utilisant un static site generator et en le déployant sur Azure.
+description: Portfolio responsive multilingue développé avec Eleventy et hébergé sur o2switch, mettant en valeur mes projets et compétences.
 layout: project.njk
 repo: portfolio
 tags: ["projects_fr"]

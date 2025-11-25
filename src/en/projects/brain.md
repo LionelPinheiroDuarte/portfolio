@@ -1,6 +1,6 @@
 ---
 title: brain
-description: A place where I put my notes. 
+description: A space where I keep my notes, developed with MkDocs.
 layout: project.njk
 repo: brain 
 tags: ["projects_en"]

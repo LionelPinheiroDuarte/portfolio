@@ -1,6 +1,6 @@
 ---
 title: portfolio
-description: The goals of this project are to show case my work and skills. Use of a static site generator and deployed in Azure.
+description: Multilingual responsive portfolio built with Eleventy and hosted on o2switch to showcase my projects and expertise.
 layout: project.njk
 repo: portfolio
 tags: ["projects_en"]
