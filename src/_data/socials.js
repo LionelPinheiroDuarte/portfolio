@@ -1,7 +1,7 @@
 module.exports = [
   {
-    name: "twitter",
-    url: "https://twitter.com/Lionelpinheiro_",
+    name: "linkedIn",
+    url: "https://www.linkedin.com/in/lionel-pinheiro/",
   },
   {
     name: "github",

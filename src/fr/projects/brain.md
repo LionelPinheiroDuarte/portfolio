@@ -1,11 +1,11 @@
 ---
 title: brain
-description: Site où je rassemble mes notes. 
+description: Site où je rassemble mes notes, développé avec Mkdocs. 
 layout: project.njk
 repo: brain 
 tags: ["projects_fr"]
-websiteName: lionelpinheiroduarte
-websiteUrl: lionelpinheiroduarte
+websiteName: Brain
+websiteUrl: https://lionelpinheiroduarte.github.io/brain/
 permalink: fr/projet/{{title}}
 ---
 
