@@ -3,7 +3,7 @@ title: scripts
 description: Tous mes scripts 
 layout: project.njk
 repo: dotfiles
-tags: ["projects_fr"]
+tags: ["projects_fr", "automatisation"]
 websiteName: Brain
 permalink: fr/projet/{{title}}
 ---

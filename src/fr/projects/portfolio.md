@@ -3,7 +3,7 @@ title: portfolio
 description: Portfolio responsive multilingue développé avec Eleventy et hébergé sur o2switch, mettant en valeur mes projets et compétences.
 layout: project.njk
 repo: portfolio
-tags: ["projects_fr"]
+tags: ["projects_fr", "webdev"]
 websiteName: portfolio
 websiteUrl: https://lionelpinheiroduarte.com
 permalink: fr/projet/{{title}}
