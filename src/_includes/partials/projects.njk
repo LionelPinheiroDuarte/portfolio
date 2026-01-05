@@ -2,6 +2,11 @@
 {% if collection %}
 <h2>{{ languages[lang].sections[sectionKey] }}</h2>
 <table>
+  <colgroup>
+    <col style="width: 15%">
+    <col style="width: 80%">
+    <col style="width: 5%">
+  </colgroup>
   <thead>
     <tr>
       {% for th  in  languages[lang].th %}
