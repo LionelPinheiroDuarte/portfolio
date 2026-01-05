@@ -1,8 +1,15 @@
 {% macro projectSection(collection, title) %}
-  {% if collection %}
-    <tr class="section-header">
-      <td><h2><strong>{{ title }}</strong></h2></td>
+{% if collection %}
+<h2>{{title}}</h2>
+<table>
+  <thead>
+    <tr>
+      {% for th  in  languages[page.lang].th %}
+      <th>{{ th }}</th>
+      {%endfor%}
     </tr>
+  </thead>
+  <tbody>
     {% for projet in collection %}
       <tr>
         <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
@@ -25,13 +32,10 @@
         </td>
       </tr>
     {% endfor %}
-  {% endif %}
+ </tbody>
+</table>
+{% endif %}
 {% endmacro %}
 
-<table>
-  <thead></thead>
-  <tbody>
-    {{ projectSection(collections.webdev, "WebDev") }}
-    {{ projectSection(collections.automatisation, "Automatisation") }}
-  </tbody>
-</table>
+{{ projectSection(collections.automatisation, "Automatisation") }}
+{{ projectSection(collections.webdev, "Web Development") }}
