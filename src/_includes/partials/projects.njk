@@ -4,7 +4,7 @@
 <table>
   <thead>
     <tr>
-      {% for th  in  languages[page.lang].th %}
+      {% for th  in  languages[lang].th %}
       <th>{{ th }}</th>
       {%endfor%}
     </tr>
@@ -37,5 +37,5 @@
 {% endif %}
 {% endmacro %}
 
-{{ projectSection(collections.automatisation, "Automatisation", page.lang) }}
+{{ projectSection(collections.automatisation, "automatisation", page.lang) }}
 {{ projectSection(collections.webdev, "webdev", page.lang) }}

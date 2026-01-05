@@ -3,7 +3,7 @@ module.exports = {
       dir: '', // stands for the direction of the language set in the head, defaults to LTR (left to right)
 	availableText: 'Cette page est disponible en:',
 	th: ['Projet', 'Description', 'Liens'],
-	section: {
+	sections: {
 	    webdev: 'Développement Web',
 	    script: 'Scripts',
 	    automatisation: 'Automatisation'
@@ -12,7 +12,7 @@ module.exports = {
     en: {
 	availableText: 'This page is also available in:',
 	th: ['Project', 'Description', 'Links'],
-	section: {
+	sections: {
 	    webdev: 'Web Development',
 	    script: 'Scripts',
 	    automatisation: 'Automatisation'
