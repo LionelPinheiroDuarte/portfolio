@@ -1,6 +1,6 @@
-{% macro projectSection(collection, title) %}
+{% macro projectSection(collection, sectionKey, lang) %}
 {% if collection %}
-<h2>{{title}}</h2>
+<h2>{{ languages[lang].sections[sectionKey] }}</h2>
 <table>
   <thead>
     <tr>
@@ -37,5 +37,5 @@
 {% endif %}
 {% endmacro %}
 
-{{ projectSection(collections.automatisation, "Automatisation") }}
-{{ projectSection(collections.webdev, "Web Development") }}
+{{ projectSection(collections.automatisation, "Automatisation", page.lang) }}
+{{ projectSection(collections.webdev, "webdev", page.lang) }}
