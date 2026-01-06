@@ -3,7 +3,7 @@ title: brain
 description: Site où je rassemble mes notes, développé avec Mkdocs. 
 layout: project.njk
 repo: brain 
-tags: ["projects_fr", "webdev"]
+tags: ["projects_fr", "webdev", "star"]
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/
 permalink: fr/projet/{{title}}

@@ -3,7 +3,7 @@ title: scripts
 description: Collection de scripts d'automatisation pour optimiser les tâches répétitives et améliorer la productivité au quotidien. 
 layout: project.njk
 repo: dotfiles
-tags: ["projects_fr", "automatisation"]
+tags: ["projects_fr", "automatisation", "star"]
 websiteName: Brain
 permalink: fr/projet/{{title}}
 ---
