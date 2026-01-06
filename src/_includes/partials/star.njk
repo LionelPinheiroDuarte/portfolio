@@ -1,5 +1,14 @@
 {% macro projectSection(collection, sectionKey, lang) %}
 {% if collection %}
+  {% set filteredProjects = [] %}
+  {% for projet in collection %}
+    {% set urlParts = projet.url.split('/') %}
+    {% set projectLang = urlParts[1] %}
+    {% if projectLang == lang %}
+      {% set filteredProjects = (filteredProjects.push(projet), filteredProjects) %}
+    {% endif %}
+  {% endfor %}
+{% if filteredProjects.length > 0 %}
 <table>
   <colgroup>
     <col style="width: 15%">
@@ -14,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for projet in collection %}
+    {% for projet in filteredProjects %}
       <tr>
         <td><a class="animation" href="{{ projet.url }}">{{ projet.data.title }}</a></td>
         <td>{{ projet.data.description }}</td>
@@ -39,6 +48,11 @@
  </tbody>
 </table>
 {% endif %}
+{% endif %}
 {% endmacro %}
 
-{{ projectSection(collections.star, "star", page.lang) }}
+{% if page.lang == "fr" %}
+  {{ projectSection(collections.star, "star", "fr") }}
+{% else %}
+  {{ projectSection(collections.star, "star", "en") }}
+{% endif %}
