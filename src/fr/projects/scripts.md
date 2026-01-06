@@ -10,7 +10,7 @@ permalink: fr/projet/{{title}}
 
 # **Scripts**
 
-Listes de scripts que j'ai crée me faciliter dans le quotidien.
+Listes de scripts que j'ai crées afin de me faciliter dans le quotidien.
 
 ## Home
 
