@@ -24,4 +24,24 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
     },
   };
+
+
+  const categories = ["webdev", "automatisation", "script"];
+  const languages = ["fr", "en"];
+  
+  // Create a collection for each category and language
+  categories.forEach(category => {
+    languages.forEach(lang => {
+      eleventyConfig.addCollection(`${category}_${lang}`, function(collectionApi) {
+        return collectionApi.getAll().filter(item => {
+          return item.data.tags && 
+                 item.data.tags.includes(category) && 
+                 item.url.startsWith(`/${lang}/`);
+        });
+      });
+    });
+  });
+
+
+    
 };
