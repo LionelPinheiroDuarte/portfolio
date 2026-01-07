@@ -6,7 +6,7 @@ repo: portfolio
 tags: ["projects_fr", "webdev"]
 websiteName: portfolio
 websiteUrl: https://lionelpinheiroduarte.com
-permalink: fr/projet/{{title}}
+permalink: fr/projet/{{title}}/
 ---
 
 # **Portfolio**
