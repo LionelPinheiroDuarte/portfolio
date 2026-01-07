@@ -5,7 +5,7 @@ layout: project.njk
 repo: dotfiles
 tags: ["projects_fr", "automatisation", "star"]
 websiteName: Brain
-permalink: fr/projet/{{title}}
+permalink: fr/projet/{{title}}/
 ---
 
 # **Scripts**
