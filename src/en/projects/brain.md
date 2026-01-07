@@ -3,10 +3,10 @@ title: brain
 description: A space where I keep my notes, developed with MkDocs.
 layout: project.njk
 repo: brain 
-tags: ["projects_en"]
+tags: ["projects_en", "webdev", "star"]
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/ 
-permalink: en/projet/{{title}}
+permalink: en/project/{{title}}/
 ---
 
 # **Brain** 🧠

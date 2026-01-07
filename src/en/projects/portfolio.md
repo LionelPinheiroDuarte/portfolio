@@ -3,10 +3,10 @@ title: portfolio
 description: Multilingual responsive portfolio built with Eleventy and hosted on o2switch to showcase my projects and expertise.
 layout: project.njk
 repo: portfolio
-tags: ["projects_en"]
+tags: ["projects_en", "webdev"]
 websiteName: Portfolio
 websiteUrl: https://lionelpinheiroduarte.com
-permalink: /en/project/{{title}}
+permalink: /en/project/{{title}}/
 ---
 
 # **Portfolio**
