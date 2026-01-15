@@ -58,7 +58,7 @@
   --font-family: "Poppins", sans-serif;
   --font-feature: 'liga' 1, 'calt' 1; /* fix for Chrome */
   --line-height: 1.4em;
-  --margin-bottom: 5px;
+  --margin-bottom: 1rem;
   --accent: #4e75ba;
   --bck-color: #1f2127;
 }
@@ -78,7 +78,7 @@ h1,h2{
   text-transform: capitalize;
 }
 h1{
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 h2{
@@ -302,9 +302,14 @@ header {
   grid-area: header;
 }
 main {
-  margin: 2rem 0.5rem;
+  margin: 2rem 0rem;
   grid-area: main;
 }
+@media only screen and (max-width: 768px) {
+  main {
+      margin: 2rem 0.5rem;
+  }
+
 footer {
   grid-area: footer;
 }
