@@ -1,6 +1,6 @@
 ---
 title: job-listing
-description: Pipeline DevOps production-ready démontrant des pratiques professionnelles pour une plateforme de gestion de talents. Construit avec Go, Docker, Kubernetes et un stack d'observabilité complet.
+description: Pipeline DevOps production-ready démontrant des pratiques professionnelles pour une plateforme de gestion de talents. Construit avec Go, Docker, Terraform et un stack d'observabilité complet.
 layout: project.njk
 repo: job-listing
 tags: ["projects_fr", "automatisation", "star"]
@@ -72,7 +72,6 @@ job-listing/
 ## Idées d'améliorations
 
 - [ ] Pipeline CI/CD avec GitHub Actions
-- [ ] Cluster Kubernetes sur AWS EKS
 - [ ] Infrastructure as Code avec Terraform
 - [ ] Base de données PostgreSQL sur RDS
 - [ ] GitOps avec ArgoCD
