@@ -1,6 +1,6 @@
 ---
 title: toolbox
-description: Un outil en ligne de commande personnel alimenté par l'IA. La commande `wtf` capture les commandes échouées et les explique via un LLM.
+description: Un outil en ligne de commande personnel développé en Python, regroupant mes commandes d'automatisation sous un seul point d'entrée.
 layout: project.njk
 repo: toolbox
 tags: ["projects_fr", "automatisation", "star"]
@@ -8,7 +8,7 @@ permalink: fr/projet/{{title}}/
 ---
 
 # **Toolbox**
-Un outil en ligne de commande unifié et extensible, développé en Python. Toutes mes commandes personnelles sont regroupées sous un seul point d'entrée — à commencer par `wtf`, qui capture et explique automatiquement la dernière commande échouée grâce à l'IA.
+Un outil en ligne de commande unifié et extensible, développé en Python. Mes commandes personnelles sont regroupées sous un unique point d'entrée `x`, conçu pour s'enrichir avec le temps.
 
 ## Aperçu
 

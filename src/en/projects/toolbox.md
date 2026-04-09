@@ -1,6 +1,6 @@
 ---
 title: toolbox
-description: A personal CLI toolkit powered by AI. The `wtf` command captures failed terminal commands and explains them using an LLM.
+description: A personal CLI toolkit built in Python, grouping automation commands under a single entry point.
 layout: project.njk
 repo: toolbox
 tags: ["projects_en", "automatisation", "star"]
@@ -8,7 +8,7 @@ permalink: en/project/{{title}}/
 ---
 
 # **Toolbox**
-A unified, extensible command-line toolkit built in Python. All personal commands live under a single entry point — starting with `wtf`, which automatically captures and explains the last failed terminal command using AI.
+A unified, extensible command-line toolkit built in Python. Personal commands live under a single `x` entry point, designed to grow alongside my workflow.
 
 ## Overview
 
