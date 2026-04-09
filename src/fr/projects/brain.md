@@ -5,7 +5,7 @@ layout: project.njk
 repo: brain 
 tags: ["projects_fr", "webdev", "star"]
 websiteName: Brain
-websiteUrl: https://lionelpinheiroduarte.github.io/brain/
+websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
 permalink: fr/projet/{{title}}
 ---
 
@@ -21,7 +21,7 @@ Le site me permets:
 
 ### Liens
 - Lien Github: [Repo](https://github.com/LionelPinheiroDuarte/brain)
-- Lien du site: [Brain](https://lionelpinheiroduarte.github.io/brain/)
+- Lien du site: [Brain](https://lionelpinheiroduarte.github.io/brain/index.en/)
 
 ## Construit avec 
 
