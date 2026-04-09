@@ -3,7 +3,7 @@ title: scripts
 description: Collection of automation scripts to optimize repetitive tasks and improve daily productivity.
 layout: project.njk
 repo: dotfiles
-tags: ["projects_en", "automatisation", "star"]
+tags: ["projects_en", "automatisation"]
 websiteName: Scripts
 permalink: en/project/{{title}}/
 ---
