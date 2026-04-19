@@ -1,15 +1,15 @@
 ---
-title: job-listing
+title: infra-lab
 description: Pipeline DevOps production-ready démontrant des pratiques professionnelles pour une plateforme de gestion de talents. Construit avec Go, Docker, Terraform et un stack d'observabilité complet.
 layout: project.njk
-repo: job-listing
+repo: infra-lab
 tags: ["projects_fr", "automatisation", "star"]
-websiteName: job-listing
-websiteUrl: https://lionelpinheiroduarte.github.io/job-listing/
+websiteName: infra-lab
+websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
 permalink: fr/projet/{{title}}/
 ---
 
-# **Job-listing**
+# **infra-lab**
 
 Une plateforme de gestion de talents cloud-native, construite pour pratiquer et démontrer des compétences DevOps concrètes — de la conteneurisation à l'observabilité.
 
@@ -20,8 +20,8 @@ Une plateforme de gestion de talents cloud-native, construite pour pratiquer et 
 Construire une infrastructure DevOps complète, en progressant du développement local vers un déploiement AWS en production, en appliquant des standards de production dès le départ.
 
 ### Liens
-- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/job-listing)
-- Documentation : [job-listing](https://lionelpinheiroduarte.github.io/job-listing/)
+- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/infra-lab)
+- Documentation : [infra-lab](https://lionelpinheiroduarte.github.io/infra-lab/)
 
 
 ## Architecture technique
@@ -59,7 +59,7 @@ Construire une infrastructure DevOps complète, en progressant du développement
 ## Structure du projet
 
 ```
-job-listing/
+
 ├── deployments/           # Configurations Docker Compose
 ├── monitoring/            # Configuration Prometheus
 ├── main.go               # Application Go instrumentée
