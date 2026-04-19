@@ -1,6 +1,6 @@
 ---
 title: infra-lab
-description: Pipeline DevOps production-ready démontrant des pratiques professionnelles pour une plateforme de gestion de talents. Construit avec Go, Docker, Terraform et un stack d'observabilité complet.
+description: Projet d'apprentissage DevOps documentant la progression d'un déploiement VM traditionnel vers l'orchestration de conteneurs. Construit avec Go, Docker, Terraform et AWS.
 layout: project.njk
 repo: infra-lab
 tags: ["projects_fr", "automatisation", "star"]
@@ -11,7 +11,7 @@ permalink: fr/projet/{{title}}/
 
 # **infra-lab**
 
-Une plateforme de gestion de talents cloud-native, construite pour pratiquer et démontrer des compétences DevOps concrètes — de la conteneurisation à l'observabilité.
+Un projet DevOps documentant le déploiement d'une application Go à travers trois paradigmes d'infrastructure — VM, Docker, Kubernetes — pour comprendre pourquoi chaque technologie existe en rencontrant les problèmes qu'elle résout.
 
 ## Aperçu
 
