@@ -14,7 +14,7 @@ Un outil en ligne de commande unifié et extensible, développé en Python. Mes 
 
 ### Objectif du projet
 
-Construire un CLI personnel qui s'enrichit au fil du temps, en regroupant des commandes d'automatisation utiles sous un unique point d'entrée `x`. La première commande, `wtf`, résout une friction quotidienne réelle : quand une commande échoue dans le terminal, au lieu de chercher l'erreur manuellement, il suffit de lancer `x wtf`.
+Un CLI personnel qui s'enrichit avec le temps. Deux commandes disponibles : `x wtf` explique les erreurs du terminal via l'IA, `x notes` ouvre l'entrée du jour de mon journal personnel directement dans le terminal.
 
 ### Liens
 - GitHub : [Repo](https://github.com/LionelPinheiroDuarte/toolbox)
@@ -37,7 +37,7 @@ log_output() {
 PROMPT_COMMAND='log_output'
 ```
 
-Ensuite, `x wtf` lit ces fichiers et les envoie à un LLM pour analyse :
+Ensuite, `x wtf` lit ces fichiers et les envoie à un LLM pour analyse via l'API OpenRouter (modèle `openrouter/auto`) :
 
 ```bash
 $ ls ~/dossier-inexistant
@@ -51,13 +51,31 @@ Analyse en cours...
 [Explication de l'erreur et comment la corriger]
 ```
 
+### `x notes` — Journal quotidien dans le terminal
+
+Ouvre la note du jour avec `batcat` et une mise en couleur syntaxique. Supporte deux options :
+
+```bash
+$ x notes           # Ouvrir la note du jour
+$ x notes --last    # Ouvrir la note la plus récente
+$ x notes --tasks   # Ouvrir la note des tâches
+```
+
+<img src="/images/toolbox-notes.gif" alt="x notes demo" style="width: 100%;" />
+
 ## Construit avec
 
 - **Python 3.8+** — langage principal
 - **Click** — framework CLI pour les commandes et la gestion des arguments
-- **OpenAI SDK** — communication avec le LLM via l'API OpenRouter
+- **API OpenRouter** — backend IA avec le modèle `openrouter/auto`
+- **batcat** — affichage des notes avec coloration syntaxique (`x notes`)
 - **Gruvbox Dark** — thème de couleurs terminal pour un affichage formaté
 - **pyproject.toml** — packaging Python moderne
+
+## Prérequis
+
+- Variable d'environnement `OPENROUTER_API_KEY` — requise pour `x wtf`
+- `batcat` installé — requis pour `x notes`
 
 ## Structure du projet
 
@@ -67,15 +85,19 @@ toolbox/
 │   ├── main.py           # Point d'entrée du CLI
 │   ├── commands/
 │   │   ├── wtf.py        # Capture d'erreur et analyse IA
+│   │   ├── notes.py      # Commande de journal quotidien
 │   │   └── hello.py      # Commande de test
 │   └── utils/
 │       ├── ai.py         # Wrapper d'appel LLM (OpenRouter)
 │       └── colors.py     # Formatage couleur du terminal
+├── assets/
+│   └── notes.gif         # Démo de x notes
 └── pyproject.toml
 ```
 
-## Idées d'améliorations
+## Feuille de route
 
-- [ ] Migrer vers l'API Claude
+- [x] `x wtf` — analyse d'erreurs par l'IA
+- [x] `x notes` — journal quotidien dans le terminal
 - [ ] `x explain <commande>` — expliquer une commande shell avant de l'exécuter
 - [ ] `install.sh` — script d'installation en une ligne

@@ -14,7 +14,7 @@ A unified, extensible command-line toolkit built in Python. Personal commands li
 
 ### Project Goal
 
-Build a personal CLI that grows over time, grouping useful automation commands under a single `x` entry point. The first command, `wtf`, solves a real daily friction: when a terminal command fails, instead of manually searching the error, you just run `x wtf`.
+A personal CLI that grows alongside my workflow. Two commands so far: `x wtf` explains failed terminal commands via AI, `x notes` opens today's entry from my personal journal directly in the terminal.
 
 ### Links
 - GitHub: [Repository](https://github.com/LionelPinheiroDuarte/toolbox)
@@ -37,7 +37,7 @@ log_output() {
 PROMPT_COMMAND='log_output'
 ```
 
-Then `x wtf` reads those files and sends them to an LLM for analysis:
+Then `x wtf` reads those files and sends them to an LLM for analysis via the OpenRouter API (`openrouter/auto` model):
 
 ```bash
 $ ls ~/non-existent-folder
@@ -51,13 +51,31 @@ Analyzing...
 [AI explanation of the error and how to fix it]
 ```
 
+### `x notes` — Daily journal in the terminal
+
+Opens today's journal note using `batcat` with syntax highlighting. Supports two flags:
+
+```bash
+$ x notes           # Open today's note
+$ x notes --last    # Open the most recent note
+$ x notes --tasks   # Open the tasks note
+```
+
+<img src="/images/toolbox-notes.gif" alt="x notes demo" style="width: 100%;" />
+
 ## Built With
 
 - **Python 3.8+** — main language
 - **Click** — CLI framework for commands and argument parsing
-- **OpenAI SDK** — communicates with the LLM via OpenRouter API
+- **OpenRouter API** — AI backend using `openrouter/auto` model
+- **batcat** — syntax-highlighted note viewing (`x notes`)
 - **Gruvbox Dark** — terminal color theme for formatted output
 - **pyproject.toml** — modern Python packaging
+
+## Requirements
+
+- `OPENROUTER_API_KEY` env var — required for `x wtf`
+- `batcat` installed — required for `x notes`
 
 ## Project Structure
 
@@ -67,15 +85,19 @@ toolbox/
 │   ├── main.py           # CLI entry point
 │   ├── commands/
 │   │   ├── wtf.py        # Error capture and AI analysis
+│   │   ├── notes.py      # Daily journal command
 │   │   └── hello.py      # Greeting command
 │   └── utils/
 │       ├── ai.py         # LLM query wrapper (OpenRouter)
 │       └── colors.py     # Terminal color formatting
+├── assets/
+│   └── notes.gif         # Demo of x notes
 └── pyproject.toml
 ```
 
-## Ideas for Improvement
+## Roadmap
 
-- [ ] Switch AI backend to Claude API
+- [x] `x wtf` — AI-powered error analysis
+- [x] `x notes` — daily journal in the terminal
 - [ ] `x explain <command>` — explain any shell command before running it
 - [ ] `install.sh` — one-line installation script
