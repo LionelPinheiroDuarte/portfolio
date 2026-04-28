@@ -8,15 +8,9 @@ permalink: fr/projet/{{title}}/
 ---
 
 # **Toolbox**
-Un outil en ligne de commande unifié et extensible, développé en Python. Mes commandes personnelles sont regroupées sous un unique point d'entrée `x`, conçu pour s'enrichir avec le temps.
+Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs par l'IA, la navigation dans le journal, le clonage de repos GitHub et la sauvegarde cloud.
 
 ## Aperçu
-
-### Objectif du projet
-
-Un CLI personnel qui grandit avec mon workflow. Chaque commande vit dans son propre dossier avec son code et sa documentation. Les commandes couvrent mes besoins quotidiens : analyse d'erreurs par l'IA, navigation dans le journal, clonage de repos GitHub et sauvegarde cloud.
-
-### Commandes
 
 | Commande | Description |
 |----------|-------------|
@@ -25,7 +19,6 @@ Un CLI personnel qui grandit avec mon workflow. Chaque commande vit dans son pro
 | `x repos` | Cloner des repos GitHub avec des filtres |
 | `x sync` | Synchroniser la mémoire Claude et le journal vers Nextcloud |
 
-### Liens
 - GitHub : [Repo](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## Comment ça fonctionne
@@ -34,52 +27,7 @@ Un CLI personnel qui grandit avec mon workflow. Chaque commande vit dans son pro
 
 Envoie les fichiers de mémoire Claude et les notes Markdown du journal vers Nextcloud via WebDAV. Les identifiants sont stockés dans le trousseau système — jamais en clair.
 
-```bash
-x sync --configure   # configuration initiale : URL, identifiant, app password
-x sync               # tout synchroniser
-x sync --claude      # fichiers Claude uniquement
-x sync --journal     # notes de journal uniquement
-```
-
 <img src="/images/toolbox-sync.gif" alt="démo x sync" style="width: 100%;" />
-
-### `x wtf` — Analyse d'erreurs par l'IA
-
-Le shell capture automatiquement chaque commande échouée via `PROMPT_COMMAND`. Quand une commande se termine avec un code non nul, elle écrit la commande et sa sortie stderr dans `/tmp/`. Ensuite, `x wtf` lit ces fichiers et les envoie à un LLM pour analyse via l'API OpenRouter :
-
-```bash
-$ ls ~/dossier-inexistant
-ls: cannot access '/home/user/dossier-inexistant': No such file or directory
-
-$ x wtf
-Commande : ls ~/dossier-inexistant
-Erreur : ls: cannot access '...': No such file or directory
-
-Analyse en cours...
-[Explication de l'erreur et comment la corriger]
-```
-
-### `x notes` — Journal quotidien dans le terminal
-
-Ouvre la note du jour avec `batcat` et une mise en couleur syntaxique Markdown.
-
-```bash
-x notes           # ouvrir la note du jour
-x notes --last    # ouvrir la note la plus récente
-x notes --tasks   # ouvrir le fichier de tâches
-```
-
-<img src="/images/toolbox-notes.gif" alt="démo x notes" style="width: 100%;" />
-
-### `x repos` — Clonage de repos GitHub
-
-Clone des dépôts depuis GitHub via le CLI `gh`, avec des filtres par nom ou par langage.
-
-```bash
-x repos --single LionelPinheiroDuarte/toolbox   # cloner un repo
-x repos --language python                       # cloner tous les repos Python
-x repos --all                                   # tout cloner
-```
 
 ## Construit avec
 
