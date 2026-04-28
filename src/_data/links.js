@@ -11,6 +11,6 @@ module.exports = {
             emoji: '📧',
             link: 'https://www.linkedin.com/in/lionel-pinheiro/',
             desc: 'If my profile interests you, feel free to contact me.'
-        },
-       ]
+        }
+    ]
 }
