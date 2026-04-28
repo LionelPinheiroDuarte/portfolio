@@ -14,30 +14,38 @@ A unified, extensible command-line toolkit built in Python. Personal commands li
 
 ### Project Goal
 
-A personal CLI that grows alongside my workflow. Two commands so far: `x wtf` explains failed terminal commands via AI, `x notes` opens today's entry from my personal journal directly in the terminal.
+A personal CLI that grows with my workflow. Each command lives in its own folder with its code and documentation. Commands cover daily needs: AI-powered error analysis, journal browsing, GitHub repo cloning, and cloud backup.
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `x wtf` | Analyze the last failed shell command via AI |
+| `x notes` | Browse journal notes with syntax highlighting |
+| `x repos` | Clone GitHub repos with optional filters |
+| `x sync` | Sync Claude memory and journal notes to Nextcloud |
 
 ### Links
 - GitHub: [Repository](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## How It Works
 
-### `x wtf` — AI-powered error analysis
+### `x sync` — Cloud backup to Nextcloud
 
-The shell captures every failed command automatically via `PROMPT_COMMAND`. When a command exits with a non-zero code, it writes the command and its stderr output to `/tmp/`:
+Uploads Claude memory files and Markdown journal notes to Nextcloud via WebDAV. Credentials are stored in the system keyring — never in plaintext.
 
 ```bash
-# Intercept any failed command
-log_output() {
-    local exit_code=$?
-    if [ $exit_code -ne 0 ]; then
-        echo "$last_cmd" > /tmp/last_command.txt
-        eval "$last_cmd" 2>/tmp/last_error.txt
-    fi
-}
-PROMPT_COMMAND='log_output'
+x sync --configure   # first-time setup: URL, username, app password
+x sync               # sync everything
+x sync --claude      # Claude memory files only
+x sync --journal     # journal notes only
 ```
 
-Then `x wtf` reads those files and sends them to an LLM for analysis via the OpenRouter API (`openrouter/auto` model):
+<img src="/images/toolbox-sync.gif" alt="x sync demo" style="width: 100%;" />
+
+### `x wtf` — AI-powered error analysis
+
+The shell captures every failed command automatically via `PROMPT_COMMAND`. When a command exits with a non-zero code, it writes the command and its stderr output to `/tmp/`. Then `x wtf` reads those files and sends them to an LLM for analysis via the OpenRouter API:
 
 ```bash
 $ ls ~/non-existent-folder
@@ -53,45 +61,53 @@ Analyzing...
 
 ### `x notes` — Daily journal in the terminal
 
-Opens today's journal note using `batcat` with syntax highlighting. Supports two flags:
+Opens today's journal note using `batcat` with Markdown syntax highlighting.
 
 ```bash
-$ x notes           # Open today's note
-$ x notes --last    # Open the most recent note
-$ x notes --tasks   # Open the tasks note
+x notes           # open today's note
+x notes --last    # open the most recent note
+x notes --tasks   # open the tasks file
 ```
 
 <img src="/images/toolbox-notes.gif" alt="x notes demo" style="width: 100%;" />
+
+### `x repos` — GitHub repo cloning
+
+Clones repositories from GitHub using the `gh` CLI, with filters by name or language.
+
+```bash
+x repos --single LionelPinheiroDuarte/toolbox   # clone one repo
+x repos --language python                       # clone all Python repos
+x repos --all                                   # clone everything
+```
 
 ## Built With
 
 - **Python 3.8+** — main language
 - **Click** — CLI framework for commands and argument parsing
-- **OpenRouter API** — AI backend using `openrouter/auto` model
-- **batcat** — syntax-highlighted note viewing (`x notes`)
-- **Gruvbox Dark** — terminal color theme for formatted output
-- **pyproject.toml** — modern Python packaging
-
-## Requirements
-
-- `OPENROUTER_API_KEY` env var — required for `x wtf`
-- `batcat` installed — required for `x notes`
+- **OpenRouter API** — AI backend for `x wtf`
+- **requests + keyring** — WebDAV uploads and secure credential storage for `x sync`
+- **batcat** — syntax-highlighted note viewing for `x notes`
+- **gh CLI** — GitHub repo cloning for `x repos`
+- **Gruvbox Dark** — terminal color theme across all commands
 
 ## Project Structure
 
 ```
 toolbox/
 ├── x/
-│   ├── main.py           # CLI entry point
+│   ├── main.py
 │   ├── commands/
-│   │   ├── wtf.py        # Error capture and AI analysis
-│   │   ├── notes.py      # Daily journal command
-│   │   └── hello.py      # Greeting command
+│   │   ├── wtf/        # __init__.py + README.md
+│   │   ├── notes/      # __init__.py + README.md
+│   │   ├── repos/      # __init__.py + README.md
+│   │   └── sync/       # __init__.py + README.md
 │   └── utils/
-│       ├── ai.py         # LLM query wrapper (OpenRouter)
-│       └── colors.py     # Terminal color formatting
+│       ├── ai.py
+│       └── colors.py
 ├── assets/
-│   └── notes.gif         # Demo of x notes
+│   ├── notes.gif
+│   └── sync.gif
 └── pyproject.toml
 ```
 
@@ -99,5 +115,7 @@ toolbox/
 
 - [x] `x wtf` — AI-powered error analysis
 - [x] `x notes` — daily journal in the terminal
-- [ ] `x explain <command>` — explain any shell command before running it
+- [x] `x repos` — clone GitHub repos with filters
+- [x] `x sync` — sync Claude memory and journal notes to Nextcloud
+- [ ] `x history` — browse past errors
 - [ ] `install.sh` — one-line installation script
