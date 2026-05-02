@@ -6,7 +6,8 @@ module.exports = {
 	sections: {
 	    webdev: 'Développement Web',
 	    script: 'Scripts',
-	    automatisation: 'Automatisation'
+	    automatisation: 'Automatisation',
+	    star: 'Projets'
 	},
 	skipToContent: 'Aller au contenu principal',
 	githubRepo: 'Voir le dépôt {title} sur GitHub (nouvel onglet)',
@@ -19,7 +20,8 @@ module.exports = {
 	sections: {
 	    webdev: 'Web Development',
 	    script: 'Scripts',
-	    automatisation: 'Automatisation'
+	    automatisation: 'Automatisation',
+	    star: 'Projects'
 	},
 	skipToContent: 'Skip to main content',
 	githubRepo: 'View {title} repository on GitHub (opens in new tab)',
