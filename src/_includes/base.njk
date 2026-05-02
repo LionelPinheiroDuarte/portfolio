@@ -4,8 +4,9 @@
     {% include "partials/head.njk" %}
     </head>
     <body>
+        <a href="#main-content" class="skip-link">{{ languages[page.lang].skipToContent }}</a>
         {% include "partials/header.njk" %}
-        <main>{{ content | safe }}</main>
+        <main id="main-content">{{ content | safe }}</main>
         {% include "partials/footer.njk" %}
     </body>
     <script type="text/javascript" src="/scripts.js"></script>
