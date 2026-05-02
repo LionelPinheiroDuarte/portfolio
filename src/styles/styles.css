@@ -129,6 +129,12 @@ a {
   transition: transform .3s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animation::before {
+    transition: none;
+  }
+}
+
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
@@ -252,6 +258,22 @@ footer a {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
 	background: var(--bck-color) !important;
 }
+/*--------------// Focus visible //--------------*/
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/*--------------// Print //--------------*/
+@media print {
+  header, footer, .skip-link { display: none; }
+  body { color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.85rem; }
+}
+
 /*--------------// Accessibility //--------------*/
 .visually-hidden {
   position: absolute;
