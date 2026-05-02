@@ -3,9 +3,12 @@
         <ul>
         {% for item in navigation[page.lang] %}
         <li>
-            <a href="{{ item.url }}">{{ item.text }}</a>
+            <a href="{{ item.url }}" {% if page.url | startsWith(item.prefix) %}aria-current="page"{% endif %}>{{ item.text }}</a>
         </li>
         {% endfor %}
+        <li>
+            <button id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+        </li>
         </ul>
     </nav>
 </header>

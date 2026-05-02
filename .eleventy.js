@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/scripts.js");
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addFilter("isoDate", (date) => new Date(date).toISOString().substring(0, 10));
+  eleventyConfig.addFilter("startsWith", (str, prefix) => str.startsWith(prefix));
 
   const categories = ["webdev", "automatisation", "script"];
   const languages = ["fr", "en"];
