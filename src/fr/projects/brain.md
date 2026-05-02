@@ -1,12 +1,12 @@
 ---
-title: brain
+title: Brain
 description: Site où je rassemble mes notes, développé avec Mkdocs. 
 layout: project.njk
 repo: brain 
 tags: ["projects_fr", "webdev", "star"]
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
-permalink: fr/projet/{{title}}
+permalink: fr/projet/brain
 ---
 
 # **Brain** 🧠
@@ -25,9 +25,9 @@ Le site me permets:
 
 ## Construit avec 
 
-- **Mkdocs** Static site generator [lien](https://www.mkdocs.org/).
-    - **+** Un déploiement facile avec  **github page.
-    - **+** L'utilisation de fichier **markdown** me permet de me passer de base de données et d'avoir un contenu formaté.
+- **Mkdocs** — <span lang="en"><abbr title="Static Site Generator">SSG</abbr></span> [lien](https://www.mkdocs.org/).
+    - **+** Un déploiement facile avec <span lang="en">GitHub Pages</span>.
+    - **+** L'utilisation de fichiers <span lang="en">**Markdown**</span> me permet de me passer de base de données et d'avoir un contenu formaté.
     - **-** Il semblerait qu'à partir d'un certain nombre de page le temps de build augmente considérablement.
 - **Material** comme extension [lien](https://squidfunk.github.io/mkdocs-material/).
     - **+** Un grand nombre d'extension comme

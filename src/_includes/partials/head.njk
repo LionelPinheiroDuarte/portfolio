@@ -5,6 +5,17 @@
 <meta name="language" content="{{ page.lang }}">
 <meta name="keywords" content="Developper, Golang, GO, HTML, CSS, AZURE, AWS">
 <meta name="author" content="Lionel Pinheiro Duarte">
-<link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ meta.siteUrl }}{{ page.url }}">
+<meta property="og:image" content="{{ meta.siteUrl }}{{ meta.ogImage }}">
+<meta property="og:locale" content="{% if page.lang == 'fr' %}fr_FR{% else %}en_US{% endif %}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<link rel="preload" href="/styles/fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/styles/fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 <link href="{{ '/styles/styles.css' | url }}" rel="stylesheet">
 <title>{{ title }}</title>

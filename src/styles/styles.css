@@ -129,6 +129,12 @@ a {
   transition: transform .3s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animation::before {
+    transition: none;
+  }
+}
+
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
@@ -252,6 +258,52 @@ footer a {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
 	background: var(--bck-color) !important;
 }
+
+/*--------------// Focus visible //--------------*/
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/*--------------// Print //--------------*/
+@media print {
+  header, footer, .skip-link { display: none; }
+  body { color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.85rem; }
+}
+
+/*--------------// Accessibility //--------------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-3);
+  background: var(--accent);
+  color: #fff;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: var(--space-2);
+}
+
 /*--------------// Utility class //--------------*/
 .negative-mt{
   margin-top: -1rem;
@@ -297,19 +349,31 @@ footer a {
 /*--------------// Dark mode //--------------*/
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-  }
-  :root{
-    --color-content: #fff;
-    --border-color: rgba(255, 255, 255, 0.08);
-  }
-  th{
-    color: #fff;
-  }
-  figcaption{
-    color: #fff;
-  }
+  html:not(.light) body { background-color: #121212; }
+  html:not(.light) { --color-content: #fff; --border-color: rgba(255, 255, 255, 0.08); --accent: #88b4e8; }
+  html:not(.light) th { color: #fff; }
+  html:not(.light) figcaption { color: #fff; }
+}
+
+html.dark body { background-color: #121212; }
+html.dark { --color-content: #fff; --border-color: rgba(255, 255, 255, 0.08); --accent: #88b4e8; }
+html.dark th { color: #fff; }
+html.dark figcaption { color: #fff; }
+
+/*--------------// Theme toggle button //--------------*/
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-content);
+  border-radius: var(--radius);
+  line-height: 1;
+}
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 /*--------------// Positionnement //--------------*/
 header {
