@@ -2,7 +2,6 @@
 <html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir}}">
     <head>
         {% include 'partials/head.njk' %}
-        <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     </head>
     <body>
         <a href="#main-content" class="skip-link">{{ languages[page.lang].skipToContent }}</a>
@@ -13,6 +12,6 @@
             </section>
         </main>
         {% include "partials/footer.njk" %}
+        <script src="/scripts.js" defer></script>
     </body>
-    <script type="text/javascript" src="/scripts.js"></script>
 </html>
