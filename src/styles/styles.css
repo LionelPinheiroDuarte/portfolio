@@ -61,6 +61,14 @@
   --margin-bottom: 1rem;
   --accent: #4e75ba;
   --bck-color: #1f2127;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --radius: 4px;
+  --border-color: rgba(0, 0, 0, 0.08);
 }
 
 /*--------------// BALISE //--------------*/
@@ -82,12 +90,12 @@ h1{
   font-weight: 600;
 }
 h2{
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.35rem;
+  font-weight: 500;
 }
 h3{
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 h2{
   margin: 1rem 0;
@@ -156,7 +164,7 @@ small {
   color: var(--color-content);
 }
 section {
-  margin: 0 0 1rem 0;
+  margin: 0 0 var(--space-5) 0;
 }
 figcaption {
   font-family: var(--font-family);
@@ -186,15 +194,20 @@ td {
   padding-right: 1rem;
 }
 nav {
-  padding-top: 1.5em;
+  padding-top: var(--space-4);
 }
 nav ul {
   display: flex;
   justify-content: end;
 }
 nav ul li {
-  margin-left:1rem;
+  margin-left: var(--space-4);
   list-style: none;
+}
+nav ul li a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
 }
 strong {
   color: var(--accent);
@@ -289,6 +302,7 @@ footer a {
   }
   :root{
     --color-content: #fff;
+    --border-color: rgba(255, 255, 255, 0.08);
   }
   th{
     color: #fff;
@@ -300,16 +314,18 @@ footer a {
 /*--------------// Positionnement //--------------*/
 header {
   grid-area: header;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-3);
 }
 main {
-  margin: 2rem 0rem;
+  margin: var(--space-5) 0;
   grid-area: main;
+}
+footer {
+  grid-area: footer;
 }
 @media only screen and (max-width: 768px) {
   main {
-      margin: 2rem 0.5rem;
+    margin: var(--space-5) var(--space-2);
   }
-
-footer {
-  grid-area: footer;
 }
