@@ -8,7 +8,7 @@
       {% set filteredProjects = (filteredProjects.push(projet), filteredProjects) %}
     {% endif %}
   {% endfor %}
-  
+
   {% if filteredProjects.length > 0 %}
 <h2 id="section-{{ sectionKey }}">{{ languages[lang].sections[sectionKey] }}</h2>
 <table aria-labelledby="section-{{ sectionKey }}">

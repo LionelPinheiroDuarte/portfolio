@@ -9,5 +9,6 @@
         <main id="main-content">{{ content | safe }}</main>
         {% include "partials/footer.njk" %}
         <script src="/scripts.js" defer></script>
+        {% if carousel %}<script src="/carousel.js" defer></script>{% endif %}
     </body>
 </html>

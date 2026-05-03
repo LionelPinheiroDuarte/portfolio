@@ -6,7 +6,13 @@ repo: infra-lab
 tags: ["projects_en", "automatisation", "star"]
 websiteName: infra-lab
 websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
+screenshots:
+  - src: "/images/projects/infra-lab.png"
+    alt: "infra-lab — VM deployment overview"
+  - src: "/images/projects/infra-lab-2.png"
+    alt: "infra-lab — Docker setup"
 permalink: en/project/{{title}}/
+templateEngineOverride: njk, md
 ---
 
 # **infra-lab**
@@ -14,6 +20,8 @@ permalink: en/project/{{title}}/
 A DevOps project documenting the deployment of a Go application across three infrastructure paradigms — VM, Docker, Kubernetes — to understand why each technology exists by experiencing the problems it solves.
 
 ## Overview
+
+{% include "partials/carousel.njk" %}
 
 ### Project Goal
 
