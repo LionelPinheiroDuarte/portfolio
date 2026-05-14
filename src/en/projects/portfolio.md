@@ -6,11 +6,19 @@ repo: portfolio
 tags: ["projects_en", "webdev"]
 websiteName: Portfolio
 websiteUrl: https://lionelpinheiroduarte.com
+screenshots:
+  - src: "/images/projects/portfolio-home.webp"
+    alt: "Portfolio — home page"
+  - src: "/images/projects/portfolio-project.webp"
+    alt: "Portfolio — project page"
 permalink: /en/project/{{title}}/
+templateEngineOverride: njk, md
 ---
 
 # **Portfolio**
 The goals of this project are to show case my work and skills to potential recruiters.
+
+{% include "partials/carousel.njk" %}
 
 ## Overview 
 

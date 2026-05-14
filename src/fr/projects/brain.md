@@ -6,11 +6,19 @@ repo: brain
 tags: ["projects_fr", "webdev", "star"]
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
+screenshots:
+  - src: "/images/projects/brain-home.webp"
+    alt: "Brain — page d'accueil"
+  - src: "/images/projects/brain-note.webp"
+    alt: "Brain — page de note"
 permalink: fr/projet/brain
+templateEngineOverride: njk, md
 ---
 
 # **Brain** 🧠
 Site où je rassemble mes notes.
+
+{% include "partials/carousel.njk" %}
 
 ## Aperçu 
 
