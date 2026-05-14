@@ -21,7 +21,7 @@ Un projet DevOps documentant le déploiement d'une application Go à travers tro
 ## Progression
 
 **Phase 1 — Déploiement sur VM AWS** ✓ Terminée
-Infrastructure EC2 provisionnée avec Terraform (VPC, security groups). Déploiement manuel de l'application Go pour comprendre les points de friction — erreurs de permissions, conflits de ports, fichiers manquants — puis automatisation du processus de 15–20 minutes à 1m37s via un script bash. Gestion du service avec systemd et bonnes pratiques de sécurité (utilisateur non-root).
+Infrastructure EC2 provisionnée avec Terraform (VPC, security groups). Déploiement manuel de l'application Go pour comprendre les points de friction, puis automatisation du processus via un script bash.
 
 &nbsp;
 

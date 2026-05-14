@@ -40,7 +40,7 @@ A DevOps project documenting the deployment of a Go application across three inf
 ## Progression
 
 **Phase 1 — Bare Metal on AWS** ✓ Complete
-Provisioned EC2 infrastructure with Terraform (VPC, security groups). Deployed the Go app manually to understand failure modes — permission errors, port conflicts, missing files — then automated the process down from 15–20 minutes to 1m37s with a bash script. Introduced systemd service management and non-root user security practices.
+Provisioned EC2 infrastructure with Terraform (VPC, security groups). Deployed the Go app manually to understand failure modes, then automated the process with a bash script.
 
 &nbsp;
 
