@@ -27,8 +27,10 @@ test('la page projects liste les projets', async ({ page }) => {
   await expect(table.first()).toBeVisible();
 
   // Vérification des titres de projets attendus
+  // On cible le lien dans la 1ère colonne (td:first-child) pour éviter
+  // le strict mode violation avec les icônes GitHub/website qui partagent le même nom
   for (const project of ['brain', 'infra-lab', 'toolbox']) {
-    await expect(page.getByRole('link', { name: project })).toBeVisible();
+    await expect(page.locator(`td:first-child a[href*="/project/${project}/"]`)).toBeVisible();
   }
 });
 
