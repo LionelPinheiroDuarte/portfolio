@@ -218,6 +218,9 @@ nav ul li a:focus-visible {
 strong {
   color: var(--accent);
 }
+p strong, li strong {
+  font-weight: 600;
+}
 nav ul li a {
   text-decoration: none;
 }

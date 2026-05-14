@@ -7,12 +7,12 @@
         <a href="#main-content" class="skip-link">{{ languages[page.lang].skipToContent }}</a>
         {% include "partials/header.njk" %}
         <main id="main-content">
-
             <section id="documentation">
                 {{ content | safe }}
             </section>
         </main>
         {% include "partials/footer.njk" %}
         <script src="/scripts.js" defer></script>
+        {% if screenshots and screenshots.length > 1 %}<script src="/carousel.js" defer></script>{% endif %}
     </body>
 </html>

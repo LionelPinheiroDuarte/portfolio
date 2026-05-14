@@ -1,0 +1,25 @@
+{%- if screenshots and screenshots.length > 0 -%}
+<section class="carousel" role="region" aria-roledescription="carousel" aria-label="{{ languages[page.lang].carousel.regionLabel | replace('{section}', title) }}" aria-labelledby="">
+<div class="carousel__track-container">
+<div class="carousel__track">
+{%- for shot in screenshots %}
+<div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="{{ languages[page.lang].carousel.slideLabel | replace('{current}', loop.index) | replace('{total}', screenshots.length) }}">
+<img src="{{ shot.src }}" alt="{{ shot.alt if shot.alt else title }}" class="carousel__img" loading="{% if loop.first %}eager{% else %}lazy{% endif %}" width="720" height="405">
+</div>
+{%- endfor %}
+</div>
+</div>
+{%- if screenshots.length > 1 %}
+<div class="carousel__controls">
+<button class="carousel__btn carousel__btn--prev" aria-label="{{ languages[page.lang].carousel.prev }}">&#8592;</button>
+<div class="carousel__dots" role="list">
+{%- for shot in screenshots %}
+<button class="carousel__dot" role="listitem" aria-label="{{ languages[page.lang].carousel.slideLabel | replace('{current}', loop.index) | replace('{total}', screenshots.length) }}"></button>
+{%- endfor %}
+</div>
+<button class="carousel__btn carousel__btn--next" aria-label="{{ languages[page.lang].carousel.next }}">&#8594;</button>
+</div>
+{%- endif %}
+<div class="carousel__announcer visually-hidden" aria-live="polite" aria-atomic="true"></div>
+</section>
+{%- endif %}

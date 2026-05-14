@@ -12,7 +12,13 @@ module.exports = {
 	skipToContent: 'Aller au contenu principal',
 	githubRepo: 'Voir le dépôt {title} sur GitHub (nouvel onglet)',
 	websiteLink: 'Visiter le site de {title} (nouvel onglet)',
-	newTab: '(nouvel onglet)'
+	newTab: '(nouvel onglet)',
+	carousel: {
+	    prev: 'Projet précédent',
+	    next: 'Projet suivant',
+	    slideLabel: '{current} sur {total}',
+	    regionLabel: 'Projets {section}'
+	}
     },
     en: {
 	availableText: 'This page is also available in:',
@@ -26,6 +32,12 @@ module.exports = {
 	skipToContent: 'Skip to main content',
 	githubRepo: 'View {title} repository on GitHub (opens in new tab)',
 	websiteLink: 'Visit {title} website (opens in new tab)',
-	newTab: '(opens in new tab)'
+	newTab: '(opens in new tab)',
+	carousel: {
+	    prev: 'Previous project',
+	    next: 'Next project',
+	    slideLabel: '{current} of {total}',
+	    regionLabel: 'Projects {section}'
+	}
     }
   };

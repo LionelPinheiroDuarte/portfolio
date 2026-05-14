@@ -7,19 +7,14 @@ tags: ["projects_en", "automatisation", "star"]
 websiteName: infra-lab
 websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
 permalink: en/project/{{title}}/
+templateEngineOverride: njk, md
 ---
 
-# **infra-lab**
+# **Infra-lab**
 
 A DevOps project documenting the deployment of a Go application across three infrastructure paradigms — VM, Docker, Kubernetes — to understand why each technology exists by experiencing the problems it solves.
 
-## Overview
-
-### Project Goal
-
-Build a complete DevOps infrastructure, progressing from local development to AWS production deployment, applying production standards from day one.
-
-### Links
+## Links
 - GitHub: [Repository](https://github.com/LionelPinheiroDuarte/infra-lab)
 - Documentation: [infra-lab](https://lionelpinheiroduarte.github.io/infra-lab/)
 
@@ -42,6 +37,22 @@ Build a complete DevOps infrastructure, progressing from local development to AW
 | Prometheus | 9090 | Metrics collection and visualization |
 
 
+## Progression
+
+**Phase 1 — Bare Metal on AWS** ✓ Complete
+Provisioned EC2 infrastructure with Terraform (VPC, security groups). Deployed the Go app manually to understand failure modes, then automated the process with a bash script.
+
+&nbsp;
+
+**Phase 2 — Containerization** *(in progress)*
+Migrated to Docker Compose with a multi-service stack (Go app, PostgreSQL, Prometheus). Separated dev and prod configurations, added data persistence via Docker volumes, backup/restore scripts, and container health checks.
+
+&nbsp;
+
+**Phase 3 — Orchestration** *(upcoming)*
+Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed monitoring.
+
+
 ## Built With
 
 - **Go 1.21** — backend API with native Prometheus instrumentation
@@ -59,13 +70,18 @@ Build a complete DevOps infrastructure, progressing from local development to AW
 ## Project Structure
 
 ```
-
-├── deployments/           # Docker Compose configurations
+├── cmd/app/               # Application entry point
+├── config/                # systemd service configuration
+├── deployments/           # Docker Compose (base, dev, prod)
+├── infrastructure/
+│   └── terraform/         # EC2 modules (ec2-basic, ec2-docker)
 ├── monitoring/            # Prometheus configuration
-├── main.go               # Instrumented Go application
-├── Dockerfile            # Optimized multi-stage build
-└── docs/
-    └── phase1/          # Learning log
+├── scripts/
+│   ├── deploy             # VM deployment automation script
+│   └── database/          # PostgreSQL backup/restore scripts
+├── docs/                  # GitHub Pages (phase1, phase2)
+├── main.go                # Instrumented Go application
+└── Dockerfile             # Optimized multi-stage build
 ```
 
 

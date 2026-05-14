@@ -9,19 +9,29 @@ websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
 permalink: fr/projet/{{title}}/
 ---
 
-# **infra-lab**
+# **Infra-lab**
 
 Un projet DevOps documentant le déploiement d'une application Go à travers trois paradigmes d'infrastructure — VM, Docker, Kubernetes — pour comprendre pourquoi chaque technologie existe en rencontrant les problèmes qu'elle résout.
 
-## Aperçu
-
-### Objectif du projet
-
-Construire une infrastructure DevOps complète, en progressant du développement local vers un déploiement AWS en production, en appliquant des standards de production dès le départ.
-
-### Liens
+## Liens
 - GitHub : [Repo](https://github.com/LionelPinheiroDuarte/infra-lab)
 - Documentation : [infra-lab](https://lionelpinheiroduarte.github.io/infra-lab/)
+
+
+## Progression
+
+**Phase 1 — Déploiement sur VM AWS** ✓ Terminée
+Infrastructure EC2 provisionnée avec Terraform (VPC, security groups). Déploiement manuel de l'application Go pour comprendre les points de friction, puis automatisation du processus via un script bash.
+
+&nbsp;
+
+**Phase 2 — Conteneurisation** *(en cours)*
+Migration vers Docker Compose avec une stack multi-services (app Go, PostgreSQL, Prometheus). Séparation des configurations dev et prod, persistance des données via volumes Docker, scripts de backup/restore et health checks sur les conteneurs.
+
+&nbsp;
+
+**Phase 3 — Orchestration** *(à venir)*
+Déploiement Kubernetes avec GitOps (ArgoCD), pipeline CI/CD et monitoring distribué.
 
 
 ## Architecture technique
@@ -59,13 +69,18 @@ Construire une infrastructure DevOps complète, en progressant du développement
 ## Structure du projet
 
 ```
-
-├── deployments/           # Configurations Docker Compose
+├── cmd/app/               # Point d'entrée de l'application
+├── config/                # Configuration du service systemd
+├── deployments/           # Docker Compose (base, dev, prod)
+├── infrastructure/
+│   └── terraform/         # Modules EC2 (ec2-basic, ec2-docker)
 ├── monitoring/            # Configuration Prometheus
-├── main.go               # Application Go instrumentée
-├── Dockerfile            # Build multi-étapes optimisé
-└── docs/
-    └── phase1/          # Journal d'apprentissage
+├── scripts/
+│   ├── deploy             # Script d'automatisation du déploiement VM
+│   └── database/          # Scripts backup/restore PostgreSQL
+├── docs/                  # GitHub Pages (phase1, phase2)
+├── main.go                # Application Go instrumentée
+└── Dockerfile             # Build multi-étapes optimisé
 ```
 
 
