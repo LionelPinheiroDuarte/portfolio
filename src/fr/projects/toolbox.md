@@ -19,6 +19,8 @@ Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs 
 | `x repos` | Cloner des repos GitHub avec des filtres |
 | `x sync` | Synchroniser la mémoire Claude et le journal vers Nextcloud |
 
+## Liens
+
 - GitHub : [Repo](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## Comment ça fonctionne

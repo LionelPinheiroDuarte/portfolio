@@ -22,9 +22,9 @@ Users can access :
 - A project page /project to show work I have done. 
 - A use page /use that show how I work or my workflow. 
 
-### Links 
-- Github link : [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
-- Project link: [Portfolio](https://lionelpinheiroduarte.com)
+## Links
+- GitHub: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
+- Website: [Portfolio](https://lionelpinheiroduarte.com)
 
 ## Build with 
 

@@ -22,9 +22,9 @@ Les utilisateurs ont accès à:
 - A une page listant mes projets /projets.
 - A une page montrant mes outils et ma manière de travaillé /use.
 
-### Liens
-- Lien Github: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
-- Lien du site: [Portfolio](https://lionelpinheiroduarte.com)
+## Liens
+- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
+- Site : [Portfolio](https://lionelpinheiroduarte.com)
 
 ## Construit avec 
 

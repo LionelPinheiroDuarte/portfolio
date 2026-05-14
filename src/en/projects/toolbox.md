@@ -19,6 +19,8 @@ A personal CLI that grows with my workflow — covering AI-powered error analysi
 | `x repos` | Clone GitHub repos with optional filters |
 | `x sync` | Sync Claude memory and journal notes to Nextcloud |
 
+## Links
+
 - GitHub: [Repository](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## How It Works

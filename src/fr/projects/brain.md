@@ -1,5 +1,5 @@
 ---
-title: Brain
+title: brain
 description: Site où je rassemble mes notes, développé avec Mkdocs. 
 layout: project.njk
 repo: brain 
@@ -19,9 +19,9 @@ Le site me permets:
  - Un lieu où j'agregges mes notes.
  - Exercer ma pratique de la documentation.
 
-### Liens
-- Lien Github: [Repo](https://github.com/LionelPinheiroDuarte/brain)
-- Lien du site: [Brain](https://lionelpinheiroduarte.github.io/brain/index.en/)
+## Liens
+- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/brain)
+- Site : [Brain](https://lionelpinheiroduarte.github.io/brain/index.en/)
 
 ## Construit avec 
 
