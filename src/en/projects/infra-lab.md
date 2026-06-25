@@ -19,24 +19,6 @@ A DevOps project documenting the deployment of a Go application across three inf
 - Documentation: [infra-lab](https://lionelpinheiroduarte.github.io/infra-lab/)
 
 
-## Technical Architecture
-
-```
-┌─────────────────┐    ┌─────────────────┐
-│   Application   │    │   Monitoring    │
-│   Go API        │◄───┤   Prometheus    │
-│   Port: 8000    │    │   Port: 9090    │
-└─────────────────┘    └─────────────────┘
-         │
-    [Docker Compose]
-```
-
-| Service | Port | Description |
-|---------|------|-------------|
-| Go Application | 8000 | API with /health and /metrics endpoints |
-| Prometheus | 9090 | Metrics collection and visualization |
-
-
 ## Progression
 
 **Phase 1 — Bare Metal on AWS** ✓ Complete
@@ -51,6 +33,11 @@ Migrated to Docker Compose with a multi-service stack (Go app, PostgreSQL, Prome
 
 **Phase 3 — Orchestration** *(upcoming)*
 Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed monitoring.
+
+
+## Technical Architecture
+
+<img src="/images/projects/infra-lab.svg" class="diagram" alt="infra-lab architecture diagram">
 
 
 ## Built With

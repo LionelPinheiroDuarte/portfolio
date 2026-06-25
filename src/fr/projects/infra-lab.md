@@ -36,20 +36,7 @@ Déploiement Kubernetes avec GitOps (ArgoCD), pipeline CI/CD et monitoring distr
 
 ## Architecture technique
 
-```
-┌─────────────────┐    ┌─────────────────┐
-│   Application   │    │  Surveillance   │
-│   Go API        │◄───┤   Prometheus    │
-│   Port: 8000    │    │   Port: 9090    │
-└─────────────────┘    └─────────────────┘
-         │
-    [Docker Compose]
-```
-
-| Service | Port | Description |
-|---------|------|-------------|
-| Application Go | 8000 | API avec endpoints /health et /metrics |
-| Prometheus | 9090 | Collecte et visualisation des métriques |
+<img src="/images/projects/infra-lab.svg" class="diagram" alt="Schéma d'architecture infra-lab">
 
 
 ## Construit avec
