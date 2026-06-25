@@ -10,6 +10,10 @@ The goals of this project are to show case my work and skills to potential recru
 - [x] Multilingual website
 - [ ] Add a summary to the project pages
 - [ ] Include images/gifs/videos to projects. 
+## Architecture
+
+<img src="diagram/portfolio.svg" width="780" alt="portfolio architecture">
+
 ## Getting start🚀
 ### Prerequisites
 - [Git](https://git-scm.com)
