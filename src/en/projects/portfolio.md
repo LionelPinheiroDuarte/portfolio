@@ -34,6 +34,10 @@ Users can access :
 - GitHub: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
 - Website: [Portfolio](https://lionelpinheiroduarte.com)
 
+## Technical Architecture
+
+<img src="/images/projects/portfolio.svg" class="diagram" alt="Portfolio architecture diagram">
+
 ## Build with 
 
 ### Front-End

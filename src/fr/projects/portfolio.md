@@ -34,6 +34,10 @@ Les utilisateurs ont accès à:
 - GitHub : [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
 - Site : [Portfolio](https://lionelpinheiroduarte.com)
 
+## Architecture technique
+
+<img src="/images/projects/portfolio.svg" class="diagram" alt="Schéma d'architecture du portfolio">
+
 ## Construit avec 
 
 ### Front-End

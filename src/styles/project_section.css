@@ -1,5 +1,14 @@
 /* project section styles */
 
+/* ---- Architecture diagram ---- */
+.diagram {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--space-5) auto;
+}
+
+
 /* ---- Carousel ---- */
 .carousel {
   position: relative;
