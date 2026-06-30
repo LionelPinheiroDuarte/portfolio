@@ -25,9 +25,11 @@ Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs 
 
 ## Comment ça fonctionne
 
-### `x sync` — Sauvegarde cloud vers Nextcloud
+### `x sync` — Sauvegarde et restauration cloud via Nextcloud
 
 Envoie les fichiers de mémoire Claude et les notes Markdown du journal vers Nextcloud via WebDAV. Les identifiants sont stockés dans le trousseau système — jamais en clair.
+
+`x sync --restore` inverse le flux : télécharge les fichiers depuis Nextcloud et les place aux bons endroits localement, en s'adaptant automatiquement au nom d'utilisateur de la machine cible. Utile pour configurer un nouvel ordinateur.
 
 <img src="/images/toolbox-sync.gif" alt="démo x sync" style="width: 100%;" />
 
@@ -68,4 +70,4 @@ toolbox/
 - [x] `x repos` — clonage de repos GitHub avec filtres
 - [x] `x sync` — synchronisation Claude et journal vers Nextcloud
 - [ ] `x history` — naviguer dans les erreurs passées
-- [ ] `install.sh` — script d'installation en une ligne
+- [x] `install.sh` — script d'installation en une ligne

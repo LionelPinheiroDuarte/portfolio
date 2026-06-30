@@ -25,9 +25,11 @@ A personal CLI that grows with my workflow — covering AI-powered error analysi
 
 ## How It Works
 
-### `x sync` — Cloud backup to Nextcloud
+### `x sync` — Cloud backup and restore via Nextcloud
 
 Uploads Claude memory files and Markdown journal notes to Nextcloud via WebDAV. Credentials are stored in the system keyring — never in plaintext.
+
+`x sync --restore` reverses the flow: downloads files from Nextcloud and places them in the correct local paths, automatically adjusted to the current machine's username. Useful when setting up a new machine.
 
 <img src="/images/toolbox-sync.gif" alt="x sync demo" style="width: 100%;" />
 
@@ -68,4 +70,4 @@ toolbox/
 - [x] `x repos` — clone GitHub repos with filters
 - [x] `x sync` — sync Claude memory and journal notes to Nextcloud
 - [ ] `x history` — browse past errors
-- [ ] `install.sh` — one-line installation script
+- [x] `install.sh` — one-line installation script
