@@ -261,6 +261,10 @@ footer a {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
 	background: var(--bck-color) !important;
 }
+/* Code blocks without a language (e.g. project trees) get no Prism overflow rule */
+pre {
+	overflow-x: auto;
+}
 
 /*--------------// Focus visible //--------------*/
 a:focus-visible,
