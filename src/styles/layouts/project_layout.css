@@ -11,12 +11,6 @@
   font-weight: 500;
 }
 
-@media only screen and (min-width: 375px) {
-  body {
-    width: 26rem;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   body {
     width: 45rem;
