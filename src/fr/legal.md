@@ -31,7 +31,7 @@ Ce site utilise [Matomo](https://matomo.org), un outil de mesure d'audience <spa
 - votre adresse IP est **anonymisée** (les deux derniers octets sont supprimés) avant tout traitement ;
 - les données servent uniquement à produire des statistiques anonymes de fréquentation (pages vues, provenance, type d'appareil) ;
 - elles ne sont **ni partagées, ni revendues**, ni recoupées avec d'autres traitements ;
-- les données brutes sont supprimées au bout de **13 mois** ;
+- les données brutes sont supprimées au bout de **12 mois** ;
 - le signal <span lang="en">« Do Not Track »</span> de votre navigateur est respecté : s'il est activé, aucune visite n'est enregistrée.
 
 ## Propriété intellectuelle

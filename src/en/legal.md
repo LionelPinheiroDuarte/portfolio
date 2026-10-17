@@ -31,7 +31,7 @@ This site uses [Matomo](https://matomo.org), an open source analytics tool, self
 - your IP address is **anonymized** (the last two bytes are removed) before any processing;
 - data is only used to produce anonymous traffic statistics (page views, referrers, device type);
 - it is **never shared or sold**, nor combined with any other processing;
-- raw data is deleted after **13 months**;
+- raw data is deleted after **12 months**;
 - your browser's "Do Not Track" setting is honored: when enabled, no visit is recorded.
 
 ## Intellectual property
