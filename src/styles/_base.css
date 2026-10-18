@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Base — page background, links, focus, accessibility helpers
+   ========================================================================== */
+
+html { font-size: 16px; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-feature-settings: var(--font-feature);
+}
+
+a { color: var(--color-text); }
+a:hover { color: var(--color-accent); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Animated underline. A background-image follows the text when a link
+   wraps on two lines, unlike an absolutely positioned ::before. */
+.link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease-in-out;
+}
+.link:hover,
+.link[aria-current="page"] { background-size: 100% 2px; }
+
+.link--muted { color: var(--color-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .link { transition: none; }
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: -9999px;
+  left: var(--space-3);
+  z-index: 100;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.skip-link:focus { top: var(--space-2); }

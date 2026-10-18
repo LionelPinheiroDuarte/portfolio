@@ -1,11 +1,25 @@
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{#- Apply a saved theme before first paint, so a dark choice never flashes white -#}
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.classList.add(t)}catch(e){}</script>
+<title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
-<meta name="language" content="{{ page.lang }}">
-<meta name="keywords" content="Developper, Golang, GO, HTML, CSS, AZURE, AWS">
 <meta name="author" content="Lionel Pinheiro Duarte">
 {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+<link rel="canonical" href="{{ meta.siteUrl }}{{ page.url }}">
+{%- set alternates = page.url | locale_links %}
+{%- if alternates.length %}
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.siteUrl }}{{ page.url }}">
+{%- for link in alternates %}
+<link rel="alternate" hreflang="{{ link.lang }}" href="{{ meta.siteUrl }}{{ link.url }}">
+{%- if link.lang == "en" %}
+<link rel="alternate" hreflang="x-default" href="{{ meta.siteUrl }}{{ link.url }}">
+{%- endif %}
+{%- endfor %}
+{%- if page.lang == "en" %}
+<link rel="alternate" hreflang="x-default" href="{{ meta.siteUrl }}{{ page.url }}">
+{%- endif %}
+{%- endif %}
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="website">
@@ -18,5 +32,4 @@
 <link rel="preload" href="/styles/fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/styles/fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<link href="{{ '/styles/styles.css' | url }}" rel="stylesheet">
-<title>{{ title }}</title>
+<link rel="stylesheet" href="{{ '/styles/styles.css' | url }}">

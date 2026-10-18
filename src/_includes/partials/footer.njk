@@ -1,11 +1,17 @@
-<footer>
-    <div></div>
-    <p>&copy; Lionel Pinheiro Duarte {% year %}</p>
-    <div>
-    {% for link in page.url | locale_links %} {%-if not loop.first %}/{% endif %}
-        <a class="animation" href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}" title="{{languages[page.lang].availableText}}">
-            {{ link.label }}
-        </a>
-    {% endfor %}
+{#- Language switch: current language first-class (aria-current), FR always before EN -#}
+{%- set alternates = page.url | locale_links -%}
+<footer class="site-footer">
+    <p class="site-footer__copy">&copy; Lionel Pinheiro Duarte {% year %}</p>
+    <div class="lang-switch" title="{{ languages[page.lang].availableText }}">
+    {%- for code in ["fr", "en"] %}
+        {%- if not loop.first %}<span class="lang-switch__sep" aria-hidden="true">/</span>{% endif %}
+        {%- if code == page.lang %}
+        <a href="{{ page.url }}" lang="{{ code }}" aria-current="page">{{ code | upper }}</a>
+        {%- else %}
+        {%- for link in alternates %}{% if link.lang == code %}
+        <a href="{{ link.url }}" lang="{{ code }}" hreflang="{{ code }}">{{ code | upper }}</a>
+        {%- endif %}{% endfor %}
+        {%- endif %}
+    {%- endfor %}
     </div>
 </footer>

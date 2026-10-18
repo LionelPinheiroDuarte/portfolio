@@ -1,6 +1,5 @@
 module.exports = {
     fr: {
-      dir: '', // stands for the direction of the language set in the head, defaults to LTR (left to right)
 	availableText: 'Cette page est disponible en:',
 	th: ['Projet', 'Description', 'Liens'],
 	sections: {
@@ -10,6 +9,8 @@ module.exports = {
 	    star: 'Projets'
 	},
 	skipToContent: 'Aller au contenu principal',
+	navLabel: 'Principale',
+	theme: { toDark: 'Passer en mode sombre', toLight: 'Passer en mode clair' },
 	githubRepo: 'Voir le dépôt {title} sur GitHub (nouvel onglet)',
 	websiteLink: 'Visiter le site de {title} (nouvel onglet)',
 	newTab: '(nouvel onglet)',
@@ -30,6 +31,8 @@ module.exports = {
 	    star: 'Projects'
 	},
 	skipToContent: 'Skip to main content',
+	navLabel: 'Primary',
+	theme: { toDark: 'Switch to dark mode', toLight: 'Switch to light mode' },
 	githubRepo: 'View {title} repository on GitHub (opens in new tab)',
 	websiteLink: 'Visit {title} website (opens in new tab)',
 	newTab: '(opens in new tab)',
