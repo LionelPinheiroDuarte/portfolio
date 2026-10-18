@@ -1,0 +1,12 @@
+/* Page transitions between pages of the site (cross-document View Transitions).
+   Browsers without support, and visitors asking for reduced motion, get a
+   plain navigation. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  /* The header stays still; only the page below it cross-fades */
+  .site-header { view-transition-name: site-header; }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation-duration: 200ms; }
+}

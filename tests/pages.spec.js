@@ -77,3 +77,19 @@ test('le thème choisi est appliqué dès le chargement de la page suivante', as
   await page.goto('/en/projects/');
   await expect(page.locator('html')).toHaveClass(/dark/);
 });
+
+// Transition entre pages (View Transitions) : présente par défaut, absente en mouvement réduit
+for (const [reducedMotion, expected] of [['no-preference', true], ['reduce', false]]) {
+  test(`transition de page avec reducedMotion=${reducedMotion}`, async ({ page }) => {
+    await page.emulateMedia({ reducedMotion });
+    // pagereveal indique si la nouvelle page arrive avec une transition
+    await page.addInitScript(() => {
+      window.addEventListener('pagereveal', e => { window.__transition = !!e.viewTransition; });
+    });
+    await page.goto('/en/home');
+    await page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'projects' }).click();
+    await expect(page).toHaveURL(/\/en\/projects\//);
+    await page.waitForFunction(() => '__transition' in window);
+    expect(await page.evaluate(() => window.__transition)).toBe(expected);
+  });
+}
