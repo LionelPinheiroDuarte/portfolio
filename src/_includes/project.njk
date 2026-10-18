@@ -1,6 +1,47 @@
 ---
 layout: base.njk
 ---
-<section id="documentation">
-    {{ content | safe }}
+{#- Project page: hero, key facts and actions come from front matter;
+    the Markdown body is the prose below them. -#}
+{%- from "partials/facts.njk" import factsBand -%}
+{%- set t = languages[page.lang] -%}
+{%- set projectsNav = navigation[page.lang][1] -%}
+{%- set arrow -%}<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>{%- endset -%}
+<a class="back-link link link--muted" href="{{ projectsNav.url }}">← {{ t.sections.star }}</a>
+
+<section class="hero">
+    <p class="eyebrow">{{ t.sections.automatisation if "automatisation" in tags else t.sections.webdev }}</p>
+    <div class="hero__title-row">
+        <h1 class="hero__title hero__title--accent">{{ title }}</h1>
+        {%- if status %}
+        <span class="badge badge--progress badge--lg">{{ status }}</span>
+        {%- endif %}
+    </div>
+    {%- if lead %}
+    <p class="lead">{{ lead | safe }}</p>
+    {%- endif %}
+    <div class="actions">
+        {%- if repo %}
+        <a class="btn btn--primary" href="{{ meta.githubUrl }}/{{ repo }}" target="_blank" rel="noopener noreferrer">{{ t.project.code }} {{ arrow | safe }}<span class="visually-hidden"> {{ t.newTab }}</span></a>
+        {%- endif %}
+        {%- if websiteUrl %}
+        <a class="btn btn--secondary" href="{{ websiteUrl }}" target="_blank" rel="noopener noreferrer">{{ t.project.docs if websiteType == "docs" else t.project.site }} {{ arrow | safe }}<span class="visually-hidden"> {{ t.newTab }}</span></a>
+        {%- endif %}
+    </div>
 </section>
+
+{{ factsBand(facts) }}
+
+<div class="prose" id="documentation">
+{{ content | safe }}
+</div>
+
+{%- set around = collections["projects_" + page.lang] | neighbors(page.url) %}
+<nav class="pager" aria-label="{{ t.project.pagerLabel }}">
+    {%- if around.prev %}
+    <a class="pager__link" href="{{ around.prev.url }}"><span class="pager__label">{{ t.project.prev }}</span><span class="pager__name">← {{ around.prev.data.title }}</span></a>
+    {%- endif %}
+    {%- if around.next %}
+    <a class="pager__link pager__link--next" href="{{ around.next.url }}"><span class="pager__label">{{ t.project.next }}</span><span class="pager__name">{{ around.next.data.title }} →</span></a>
+    {%- endif %}
+</nav>

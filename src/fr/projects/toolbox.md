@@ -1,16 +1,42 @@
 ---
 title: toolbox
 description: Un outil en ligne de commande personnel développé en Python, regroupant mes commandes d'automatisation sous un seul point d'entrée.
+lead: 'Un CLI personnel qui grandit avec mon workflow — couvrant l''analyse d''erreurs par l''IA, la navigation dans le journal, le clonage de repos GitHub et la sauvegarde cloud.'
 layout: project.njk
 repo: toolbox
 tags: ["projects_fr", "automatisation", "star"]
 order: 3
 tech: Python · CLI · Nextcloud
+builtWith:
+  - name: 'Python 3.8+'
+    role: 'Langage principal'
+  - name: 'Click'
+    role: 'Framework CLI pour les commandes et la gestion des arguments'
+  - name: 'API OpenRouter'
+    role: 'Backend IA pour <code>x wtf</code>'
+  - name: 'requests + keyring'
+    role: 'Uploads WebDAV et stockage sécurisé des identifiants pour <code>x sync</code>'
+  - name: 'batcat'
+    role: 'Affichage des notes avec coloration syntaxique pour <code>x notes</code>'
+  - name: 'gh CLI'
+    role: 'Clonage de repos GitHub pour <code>x repos</code>'
+  - name: 'Gruvbox Dark'
+    role: 'Thème de couleurs terminal pour toutes les commandes'
+roadmap:
+  - text: '<code>x wtf</code> — analyse d''erreurs par l''IA'
+    done: true
+  - text: '<code>x notes</code> — journal quotidien dans le terminal'
+    done: true
+  - text: '<code>x repos</code> — clonage de repos GitHub avec filtres'
+    done: true
+  - text: '<code>x sync</code> — synchronisation Claude, journal et projet CV vers Nextcloud'
+    done: true
+  - text: '<code>x history</code> — naviguer dans les erreurs passées'
+  - text: '<code>install.sh</code> — script d''installation en une ligne'
+    done: true
 permalink: /fr/projet/toolbox/
 ---
-
-# **Toolbox**
-Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs par l'IA, la navigation dans le journal, le clonage de repos GitHub et la sauvegarde cloud.
+{% from "partials/blocks.njk" import techList, checklist with context %}
 
 ## Aperçu
 
@@ -23,9 +49,6 @@ Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs 
 | `x setup` | Provisionner une machine depuis les dotfiles + Ansible (`--short` pour le niveau utilisateur uniquement) |
 | `x dotfiles pull` | Récupérer les derniers changements du repo dotfiles |
 
-## Liens
-
-- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## Comment ça fonctionne
 
@@ -35,17 +58,11 @@ Envoie les fichiers de mémoire Claude, les notes Markdown du journal et le proj
 
 `x sync --restore` inverse le flux : télécharge les fichiers depuis Nextcloud et les place aux bons endroits localement, en s'adaptant automatiquement au nom d'utilisateur de la machine cible. Utile pour configurer un nouvel ordinateur.
 
-<img src="/images/toolbox-sync.gif" alt="démo x sync" style="width: 100%;" />
+<img src="/images/toolbox-sync.gif" alt="démo x sync">
 
 ## Construit avec
 
-- **Python 3.8+** — langage principal
-- **Click** — framework CLI pour les commandes et la gestion des arguments
-- **API OpenRouter** — backend IA pour `x wtf`
-- **requests + keyring** — uploads WebDAV et stockage sécurisé des identifiants pour `x sync`
-- **batcat** — affichage des notes avec coloration syntaxique pour `x notes`
-- **gh CLI** — clonage de repos GitHub pour `x repos`
-- **Gruvbox Dark** — thème de couleurs terminal pour toutes les commandes
+{{ techList(builtWith) }}
 
 ## Structure du projet
 
@@ -69,9 +86,4 @@ toolbox/
 
 ## Feuille de route
 
-- [x] `x wtf` — analyse d'erreurs par l'IA
-- [x] `x notes` — journal quotidien dans le terminal
-- [x] `x repos` — clonage de repos GitHub avec filtres
-- [x] `x sync` — synchronisation Claude, journal et projet CV vers Nextcloud
-- [ ] `x history` — naviguer dans les erreurs passées
-- [x] `install.sh` — script d'installation en une ligne
+{{ checklist(roadmap) }}

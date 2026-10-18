@@ -1,10 +1,12 @@
 ---
 title: vocab
 description: Une application mobile de vocabulaire développée avec React Native et Expo — sauvegarde de mots, révision en flashcard, site vitrine et bêta Android.
+lead: 'Une application mobile de gestion de vocabulaire pour constituer et réviser une collection de mots personnelle.'
 layout: project.njk
 repo: vocab
 tags: ["projects_fr", "webdev", "star"]
 order: 2
+status: Test interne Google Play
 tech: React Native · Expo · SQLite · EAS
 websiteName: Vocab
 websiteUrl: https://vocab.lionelpinheiroduarte.com
@@ -15,19 +17,39 @@ screenshots:
     alt: "Vocab — site vitrine : « Les beaux mots ne devraient pas s’oublier. »"
   - src: "/images/projects/vocab-emails.webp"
     alt: "Vocab — e-mails de confirmation et d’invitation à la bêta"
+builtWith:
+  - name: 'React Native / Expo SDK 57'
+    role: 'Framework mobile cross-platform'
+  - name: 'expo-router'
+    role: 'Navigation basée sur le système de fichiers'
+  - name: 'expo-sqlite'
+    role: 'Stockage SQLite local (synchrone, offline-first)'
+  - name: 'Zustand'
+    role: 'Gestion d''état global légère'
+  - name: 'react-native-reanimated v4'
+    role: 'Animations et gestes'
+  - name: 'Sentry (<code>@sentry/react-native</code>)'
+    role: 'Capture des crashs et erreurs, releases liées au CI/CD pour le suivi des régressions'
+  - name: 'EAS Build, Submit + Update'
+    role: 'Builds cloud, upload Play Store et updates OTA vérifiées par fingerprint'
+  - name: 'Eleventy 3'
+    role: 'Site vitrine statique, hébergé sur o2switch'
+  - name: 'PHP 8'
+    role: 'Inscription à la bêta en double opt-in, liens signés HMAC'
+  - name: 'GitHub Actions'
+    role: 'CI (lint/typecheck/tests), pipeline de release déclenché par tag, vérification et déploiement du site'
+  - name: 'TypeScript (mode strict)'
+    role: 'Typage complet'
+  - name: 'ESLint 9 (flat config, eslint-config-expo)'
+    role: 'Qualité de code'
 permalink: /fr/projet/vocab/
 ---
+{% from "partials/blocks.njk" import techList with context %}
 
-# **Vocab**
-
-Une application mobile de gestion de vocabulaire pour constituer et réviser une collection de mots personnelle. Cherche un mot, sélectionne la définition qui correspond au contexte, sauvegarde-la en local et révise avec des flashcards. Les mots sauvegardés et les sessions de révision fonctionnent sans connexion — seule la recherche en nécessite une. L'app est en test interne sur Google Play, avec un site vitrine pour rejoindre la bêta.
+Cherche un mot, sélectionne la définition qui correspond au contexte, sauvegarde-la en local et révise avec des flashcards. Les mots sauvegardés et les sessions de révision fonctionnent sans connexion — seule la recherche en nécessite une. L'app est en test interne sur Google Play, avec un site vitrine pour rejoindre la bêta.
 
 {% include "partials/carousel.njk" %}
 
-## Liens
-
-- GitHub : [Repo](https://github.com/LionelPinheiroDuarte/vocab)
-- Site : [vocab.lionelpinheiroduarte.com](https://vocab.lionelpinheiroduarte.com)
 
 ## Architecture technique
 
@@ -104,18 +126,4 @@ crash-free par version.
 
 ## Construit avec
 
-- **React Native / Expo SDK 57** — framework mobile cross-platform
-- **expo-router** — navigation basée sur le système de fichiers
-- **expo-sqlite** — stockage SQLite local (synchrone, offline-first)
-- **Zustand** — gestion d'état global légère
-- **react-native-reanimated v4** — animations et gestes
-- **Sentry** (`@sentry/react-native`) — capture des crashs et erreurs, releases
-  liées au CI/CD pour le suivi des régressions
-- **EAS Build, Submit + Update** — builds cloud, upload Play Store et updates
-  OTA vérifiées par fingerprint
-- **Eleventy 3** — site vitrine statique, hébergé sur o2switch
-- **PHP 8** — inscription à la bêta en double opt-in, liens signés HMAC
-- **GitHub Actions** — CI (lint/typecheck/tests), pipeline de release déclenché par tag,
-  vérification et déploiement du site
-- **TypeScript** (mode strict) — typage complet
-- **ESLint 9** (flat config, eslint-config-expo) — qualité de code
+{{ techList(builtWith) }}

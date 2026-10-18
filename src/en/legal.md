@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: prose.njk
 title: Legal notice
 description: Legal notice and audience measurement for Lionel Pinheiro Duarte's portfolio.
 permalink: /en/legal-notice

@@ -1,16 +1,42 @@
 ---
 title: toolbox
 description: A personal CLI toolkit built in Python, grouping automation commands under a single entry point.
+lead: 'A personal CLI that grows with my workflow — covering AI-powered error analysis, journal browsing, GitHub repo cloning, and cloud backup.'
 layout: project.njk
 repo: toolbox
 tags: ["projects_en", "automatisation", "star"]
 order: 3
 tech: Python · CLI · Nextcloud
+builtWith:
+  - name: 'Python 3.8+'
+    role: 'Main language'
+  - name: 'Click'
+    role: 'CLI framework for commands and argument parsing'
+  - name: 'OpenRouter API'
+    role: 'AI backend for <code>x wtf</code>'
+  - name: 'requests + keyring'
+    role: 'WebDAV uploads and secure credential storage for <code>x sync</code>'
+  - name: 'batcat'
+    role: 'Syntax-highlighted note viewing for <code>x notes</code>'
+  - name: 'gh CLI'
+    role: 'GitHub repo cloning for <code>x repos</code>'
+  - name: 'Gruvbox Dark'
+    role: 'Terminal color theme across all commands'
+roadmap:
+  - text: '<code>x wtf</code> — AI-powered error analysis'
+    done: true
+  - text: '<code>x notes</code> — daily journal in the terminal'
+    done: true
+  - text: '<code>x repos</code> — clone GitHub repos with filters'
+    done: true
+  - text: '<code>x sync</code> — sync Claude memory, skills, journal notes and the CV project to Nextcloud'
+    done: true
+  - text: '<code>x history</code> — browse past errors'
+  - text: '<code>install.sh</code> — one-line installation script'
+    done: true
 permalink: /en/project/toolbox/
 ---
-
-# **Toolbox**
-A personal CLI that grows with my workflow — covering AI-powered error analysis, journal browsing, GitHub repo cloning, and cloud backup.
+{% from "partials/blocks.njk" import techList, checklist with context %}
 
 ## Overview
 
@@ -23,9 +49,6 @@ A personal CLI that grows with my workflow — covering AI-powered error analysi
 | `x setup` | Provision a machine from dotfiles + Ansible (`--short` for user-level only) |
 | `x dotfiles pull` | Pull latest changes from the dotfiles repo |
 
-## Links
-
-- GitHub: [Repository](https://github.com/LionelPinheiroDuarte/toolbox)
 
 ## How It Works
 
@@ -35,17 +58,11 @@ Uploads Claude memory files, Markdown journal notes and the CV project (profile 
 
 `x sync --restore` reverses the flow: downloads files from Nextcloud and places them in the correct local paths, automatically adjusted to the current machine's username. Useful when setting up a new machine.
 
-<img src="/images/toolbox-sync.gif" alt="x sync demo" style="width: 100%;" />
+<img src="/images/toolbox-sync.gif" alt="x sync demo">
 
 ## Built With
 
-- **Python 3.8+** — main language
-- **Click** — CLI framework for commands and argument parsing
-- **OpenRouter API** — AI backend for `x wtf`
-- **requests + keyring** — WebDAV uploads and secure credential storage for `x sync`
-- **batcat** — syntax-highlighted note viewing for `x notes`
-- **gh CLI** — GitHub repo cloning for `x repos`
-- **Gruvbox Dark** — terminal color theme across all commands
+{{ techList(builtWith) }}
 
 ## Project Structure
 
@@ -69,9 +86,4 @@ toolbox/
 
 ## Roadmap
 
-- [x] `x wtf` — AI-powered error analysis
-- [x] `x notes` — daily journal in the terminal
-- [x] `x repos` — clone GitHub repos with filters
-- [x] `x sync` — sync Claude memory, skills, journal notes and the CV project to Nextcloud
-- [ ] `x history` — browse past errors
-- [x] `install.sh` — one-line installation script
+{{ checklist(roadmap) }}

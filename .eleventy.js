@@ -9,11 +9,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: 'fr'
   });
+  const byOrder = (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99);
   eleventyConfig.addCollection("projects_en", function(collection) {
-    return collection.getFilteredByGlob("src/en/projects/*.md");
+    return collection.getFilteredByGlob("src/en/projects/*.md").sort(byOrder);
   });
   eleventyConfig.addCollection("projects_fr", function(collection) {
-    return collection.getFilteredByGlob("src/fr/projects/*.md");
+    return collection.getFilteredByGlob("src/fr/projects/*.md").sort(byOrder);
   });
   eleventyConfig.addPassthroughCopy("./src/styles/fonts");
   eleventyConfig.addPassthroughCopy("./src/images");
@@ -37,6 +38,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addFilter("isoDate", (date) => new Date(date).toISOString().substring(0, 10));
   eleventyConfig.addFilter("startsWith", (str, prefix) => str.startsWith(prefix));
+  // Previous and next items around `url` in a collection (project pager)
+  eleventyConfig.addFilter("neighbors", (collection, url) => {
+    const i = collection.findIndex(item => item.url === url);
+    return { prev: i > 0 ? collection[i - 1] : null, next: i >= 0 ? collection[i + 1] || null : null };
+  });
 
   // One collection per tag and language (e.g. star_fr, webdev_en),
   // sorted by the `order` front matter field
@@ -48,7 +54,7 @@ module.exports = function (eleventyConfig) {
       eleventyConfig.addCollection(`${category}_${lang}`, function(collectionApi) {
         return collectionApi.getFilteredByTag(category)
           .filter(item => item.url.startsWith(`/${lang}/`))
-          .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+          .sort(byOrder);
       });
     });
   });

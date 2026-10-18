@@ -1,10 +1,12 @@
 ---
 title: vocab
 description: A mobile vocabulary app built with React Native and Expo — save words, review with flashcards, with a showcase site and an Android beta.
+lead: 'A mobile vocabulary app for building and reviewing personal word collections.'
 layout: project.njk
 repo: vocab
 tags: ["projects_en", "webdev", "star"]
 order: 2
+status: Internal testing on Google Play
 tech: React Native · Expo · SQLite · EAS
 websiteName: Vocab
 websiteUrl: https://vocab.lionelpinheiroduarte.com
@@ -15,19 +17,39 @@ screenshots:
     alt: "Vocab — showcase site: “Les beaux mots ne devraient pas s’oublier.”"
   - src: "/images/projects/vocab-emails.webp"
     alt: "Vocab — beta confirmation and invitation emails"
+builtWith:
+  - name: 'React Native / Expo SDK 57'
+    role: 'Cross-platform mobile framework'
+  - name: 'expo-router'
+    role: 'File-based navigation'
+  - name: 'expo-sqlite'
+    role: 'Local SQLite storage (synchronous, offline-first)'
+  - name: 'Zustand'
+    role: 'Lightweight global state management'
+  - name: 'react-native-reanimated v4'
+    role: 'Gesture animations'
+  - name: 'Sentry (<code>@sentry/react-native</code>)'
+    role: 'Crash and error reporting, releases linked to CI/CD for regression tracking'
+  - name: 'EAS Build, Submit + Update'
+    role: 'Cloud builds, Play Store uploads, and fingerprint-checked OTA JS updates'
+  - name: 'Eleventy 3'
+    role: 'Static showcase site, hosted on o2switch'
+  - name: 'PHP 8'
+    role: 'Double opt-in beta sign-up with HMAC-signed links'
+  - name: 'GitHub Actions'
+    role: 'CI (lint/typecheck/test), a tag-triggered release pipeline, and site checks and deploys'
+  - name: 'TypeScript (strict mode)'
+    role: 'Full type safety'
+  - name: 'ESLint 9 (flat config, eslint-config-expo)'
+    role: 'Code quality'
 permalink: /en/project/vocab/
 ---
+{% from "partials/blocks.njk" import techList with context %}
 
-# **Vocab**
-
-A mobile vocabulary app for building and reviewing personal word collections. Search any French word, pick the definition that matches your context, save it locally, and practice with flashcards. Saved words and review sessions work without a connection — only search requires one. The app is in internal testing on Google Play, with a showcase site to join the beta.
+Search any French word, pick the definition that matches your context, save it locally, and practice with flashcards. Saved words and review sessions work without a connection — only search requires one. The app is in internal testing on Google Play, with a showcase site to join the beta.
 
 {% include "partials/carousel.njk" %}
 
-## Links
-
-- GitHub: [Repo](https://github.com/LionelPinheiroDuarte/vocab)
-- Website: [vocab.lionelpinheiroduarte.com](https://vocab.lionelpinheiroduarte.com)
 
 ## Technical Architecture
 
@@ -103,18 +125,4 @@ testers, for suspect-commit detection and crash-free rate per version.
 
 ## Built With
 
-- **React Native / Expo SDK 57** — cross-platform mobile framework
-- **expo-router** — file-based navigation
-- **expo-sqlite** — local SQLite storage (synchronous, offline-first)
-- **Zustand** — lightweight global state management
-- **react-native-reanimated v4** — gesture animations
-- **Sentry** (`@sentry/react-native`) — crash and error reporting, releases
-  linked to CI/CD for regression tracking
-- **EAS Build, Submit + Update** — cloud builds, Play Store uploads, and
-  fingerprint-checked OTA JS updates
-- **Eleventy 3** — static showcase site, hosted on o2switch
-- **PHP 8** — double opt-in beta sign-up with HMAC-signed links
-- **GitHub Actions** — CI (lint/typecheck/test), a tag-triggered release pipeline,
-  and site checks and deploys
-- **TypeScript** (strict mode) — full type safety
-- **ESLint 9** (flat config, eslint-config-expo) — code quality
+{{ techList(builtWith) }}

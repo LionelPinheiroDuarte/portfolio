@@ -1,0 +1,59 @@
+{#- Structured blocks for project pages, fed by front matter.
+    Import in a page: {% from "partials/blocks.njk" import timeline, techList, checklist with context %}
+    Output has no blank lines so Markdown keeps it as one HTML block.
+    Text fields may contain inline HTML (<code>, <abbr>…). -#}
+
+{#- phases: [{ label, title, text, status: done | current | next }] -#}
+{%- macro timeline(phases) -%}
+{%- set t = languages[page.lang].timeline -%}
+<ol class="timeline">
+{%- for phase in phases %}
+<li class="timeline__step{% if phase.status != 'next' %} timeline__step--{{ phase.status }}{% endif %}">
+<div class="timeline__rail" aria-hidden="true">
+<span class="timeline__dot">{% if phase.status == 'done' %}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>{% endif %}</span>
+{%- if not loop.last %}<span class="timeline__line"></span>{% endif %}
+</div>
+<div class="timeline__content">
+<p class="timeline__status">{{ phase.label }} · {{ t[phase.status] }}</p>
+<h3 class="timeline__title">{{ phase.title }}</h3>
+<p class="timeline__text">{{ phase.text | safe }}</p>
+</div>
+</li>
+{%- endfor %}
+</ol>
+{%- endmacro -%}
+
+{#- items: [{ name, role } | { name, url, urlLabel, pros: [], cons: [] }] -#}
+{%- macro techList(items) -%}
+{%- set t = languages[page.lang] -%}
+<dl class="tech-list">
+{%- for item in items %}
+<div class="tech-list__row">
+<dt>{{ item.name | safe }}{% if item.url %}<br><a class="tech-list__source link link--muted" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.urlLabel or item.url }}<span class="visually-hidden"> {{ t.newTab }}</span><span aria-hidden="true"> ↗</span></a>{% endif %}</dt>
+<dd>
+{%- if item.role %}{{ item.role | safe }}{% endif %}
+{%- if item.pros or item.cons %}
+<ul class="pros-cons">
+{%- for pro in item.pros %}
+<li><span class="pros-cons__sign pros-cons__sign--plus" aria-hidden="true">+</span><span><span class="visually-hidden">{{ t.prosCons.plus }} </span>{{ pro | safe }}</span></li>
+{%- endfor %}
+{%- for con in item.cons %}
+<li><span class="pros-cons__sign pros-cons__sign--minus" aria-hidden="true">−</span><span><span class="visually-hidden">{{ t.prosCons.minus }} </span>{{ con | safe }}</span></li>
+{%- endfor %}
+</ul>
+{%- endif %}
+</dd>
+</div>
+{%- endfor %}
+</dl>
+{%- endmacro -%}
+
+{#- items: [{ text, done }] -#}
+{%- macro checklist(items) -%}
+{%- set t = languages[page.lang].checklist -%}
+<ul class="checklist">
+{%- for item in items %}
+<li class="checklist__item{% if item.done %} checklist__item--done{% endif %}"><span class="checklist__box" aria-hidden="true">{% if item.done %}<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>{% endif %}</span><span><span class="visually-hidden">{{ t.done if item.done else t.todo }} </span>{{ item.text | safe }}</span></li>
+{%- endfor %}
+</ul>
+{%- endmacro -%}

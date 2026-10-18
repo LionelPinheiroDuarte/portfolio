@@ -1,6 +1,7 @@
 ---
 title: infra-lab
 description: A DevOps learning project documenting the progression from traditional VM deployment to container orchestration.
+lead: A DevOps project documenting the deployment of a Go application across three infrastructure paradigms — VM, Docker, Kubernetes — to understand why each technology exists by experiencing the problems it solves.
 layout: project.njk
 repo: infra-lab
 tags: ["projects_en", "automatisation", "star"]
@@ -17,49 +18,51 @@ facts:
     value: 28.8 MB
   - label: Response time
     value: "~19.7 ms · P95 < 50 ms"
+phases:
+  - label: Phase 1
+    status: done
+    title: Bare metal on AWS
+    text: Provisioned EC2 infrastructure with Terraform (VPC, security groups). Deployed the Go app manually to understand failure modes, then automated the process with a bash script.
+  - label: Phase 2
+    status: current
+    title: Containerization
+    text: Migrated to Docker Compose with a multi-service stack (Go app, PostgreSQL, Prometheus). Separated dev and prod configurations, added data persistence via Docker volumes, backup/restore scripts, and container health checks.
+  - label: Phase 3
+    status: next
+    title: Orchestration
+    text: Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed monitoring.
+builtWith:
+  - name: Go 1.21
+    role: Backend API with native Prometheus instrumentation
+  - name: Docker
+    role: Multi-stage builds with an optimized Alpine image
+  - name: Docker Compose
+    role: Local service orchestration
+  - name: Prometheus
+    role: System and business metrics, health checks
+  - name: Terraform
+    role: EC2, VPC and security group provisioning on AWS
+roadmap:
+  - text: CI/CD pipeline with GitHub Actions
+  - text: PostgreSQL database on RDS
+  - text: GitOps with ArgoCD
+  - text: Distributed monitoring with Grafana and alerting
+  - text: Log aggregation (Loki)
 permalink: /en/project/infra-lab/
 ---
-
-# **Infra-lab**
-
-A DevOps project documenting the deployment of a Go application across three infrastructure paradigms — VM, Docker, Kubernetes — to understand why each technology exists by experiencing the problems it solves.
-
-{% from "partials/facts.njk" import factsBand %}
-{{ factsBand(facts) }}
-
-## Links
-- GitHub: [Repository](https://github.com/LionelPinheiroDuarte/infra-lab)
-- Documentation: [infra-lab](https://lionelpinheiroduarte.github.io/infra-lab/)
-
+{% from "partials/blocks.njk" import timeline, techList, checklist with context %}
 
 ## Progression
 
-**Phase 1 — Bare Metal on AWS** ✓ Complete
-Provisioned EC2 infrastructure with Terraform (VPC, security groups). Deployed the Go app manually to understand failure modes, then automated the process with a bash script.
-
-&nbsp;
-
-**Phase 2 — Containerization** *(in progress)*
-Migrated to Docker Compose with a multi-service stack (Go app, PostgreSQL, Prometheus). Separated dev and prod configurations, added data persistence via Docker volumes, backup/restore scripts, and container health checks.
-
-&nbsp;
-
-**Phase 3 — Orchestration** *(upcoming)*
-Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed monitoring.
-
+{{ timeline(phases) }}
 
 ## Technical Architecture
 
 <img src="/images/projects/infra-lab.svg" class="diagram" alt="infra-lab architecture diagram">
 
-
 ## Built With
 
-- **Go 1.21** — backend API with native Prometheus instrumentation
-- **Docker** — multi-stage builds with optimized Alpine image
-- **Docker Compose** — local service orchestration
-- **Prometheus** — system and business metrics, health checks
-
+{{ techList(builtWith) }}
 
 ## Project Structure
 
@@ -78,12 +81,6 @@ Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed moni
 └── Dockerfile             # Optimized multi-stage build
 ```
 
+## Roadmap
 
-## Improvement Ideas
-
-- [ ] CI/CD pipeline with GitHub Actions
-- [ ] Infrastructure as Code with Terraform
-- [ ] PostgreSQL RDS database
-- [ ] GitOps with ArgoCD
-- [ ] Distributed monitoring with Grafana and alerting
-- [ ] Log aggregation (Loki)
+{{ checklist(roadmap) }}

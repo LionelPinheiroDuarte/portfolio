@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: prose.njk
 title: Mentions légales
 description: Mentions légales et mesure d'audience du portfolio de Lionel Pinheiro Duarte.
 permalink: /fr/mentions-legales

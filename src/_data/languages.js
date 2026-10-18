@@ -15,6 +15,17 @@ module.exports = {
         websiteLink: ' du projet {title}, nouvel onglet',
         docsLink: ' du projet {title}, nouvel onglet',
         newTab: '(nouvel onglet)',
+        project: {
+            code: 'Code sur GitHub',
+            docs: 'Documentation',
+            site: 'Voir le site',
+            prev: 'Projet précédent',
+            next: 'Projet suivant',
+            pagerLabel: 'Navigation entre projets'
+        },
+        timeline: { done: 'Terminée', current: 'En cours', next: 'À venir' },
+        checklist: { done: 'Fait :', todo: 'À faire :' },
+        prosCons: { plus: 'Avantage :', minus: 'Inconvénient :' },
         carousel: {
             prev: 'Projet précédent',
             next: 'Projet suivant',
@@ -38,6 +49,17 @@ module.exports = {
         websiteLink: ': {title}, opens in new tab',
         docsLink: ': {title} documentation, opens in new tab',
         newTab: '(opens in new tab)',
+        project: {
+            code: 'Code on GitHub',
+            docs: 'Documentation',
+            site: 'Visit the site',
+            prev: 'Previous project',
+            next: 'Next project',
+            pagerLabel: 'Project navigation'
+        },
+        timeline: { done: 'Complete', current: 'In progress', next: 'Upcoming' },
+        checklist: { done: 'Done:', todo: 'To do:' },
+        prosCons: { plus: 'Pro:', minus: 'Con:' },
         carousel: {
             prev: 'Previous project',
             next: 'Next project',

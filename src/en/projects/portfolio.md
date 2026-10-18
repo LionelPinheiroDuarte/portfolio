@@ -1,6 +1,7 @@
 ---
 title: portfolio
 description: Multilingual responsive portfolio built with Eleventy and hosted on o2switch to showcase my projects and expertise.
+lead: The site you are reading — it presents my skills and projects to recruiters, in French and English.
 layout: project.njk
 repo: portfolio
 tags: ["projects_en", "webdev"]
@@ -13,40 +14,44 @@ screenshots:
     alt: "Portfolio — home page"
   - src: "/images/projects/portfolio-project.webp"
     alt: "Portfolio — project page"
+builtWith:
+  - name: Eleventy
+    role: Static site generator; content lives in Markdown, no database
+  - name: Nunjucks
+    role: Templates, reusable macros (project row, timeline, key facts) and the FR / EN versions
+  - name: LightningCSS
+    role: Bundles and minifies the stylesheets at build time
+  - name: Playwright
+    role: End-to-end tests (navigation, content, language links)
+  - name: GitHub Actions
+    role: Build, tests and FTPS deployment to o2switch
+  - name: Matomo
+    role: Self-hosted, cookieless analytics
+roadmap:
+  - text: A multilingual website.
+    done: true
+  - text: Images, videos and GIFs on project pages.
+    done: true
+  - text: A table of contents on each project page.
 permalink: /en/project/portfolio/
 ---
-
-# **Portfolio**
-The goals of this project are to show case my work and skills to potential recruiters.
+{% from "partials/blocks.njk" import techList, checklist with context %}
 
 {% include "partials/carousel.njk" %}
 
-## Overview 
+## Overview
 
-### Goals 
-
-Users can access :
-
-- A presentation page /home where I present myself and what I can do.
-- A project page /project to show work I have done. 
-- A use page /use that show how I work or my workflow. 
-
-## Links
-- GitHub: [Repo](https://github.com/LionelPinheiroDuarte/portfolio)
-- Website: [Portfolio](https://lionelpinheiroduarte.com)
+- A home page presenting my profile, my stack and my featured projects.
+- A page listing all my projects, with a detailed page for each one.
 
 ## Technical Architecture
 
 <img src="/images/projects/portfolio.svg" class="diagram" alt="Portfolio architecture diagram">
 
-## Build with 
+## Built With
 
-### Front-End
+{{ techList(builtWith) }}
 
-- **Eleventy** Static site generator 
-    - Use of **nunjucks** has a template language. 
-    - Use of the **markdown** format that permits me to not use a database and to have a formated content. 
-### Ideas of improvment 
-- [ ] Add a summary to each project.
-- [ ] Have a multilingual website.
-- [ ] Include images/gifs/videos to projects. 
+## Roadmap
+
+{{ checklist(roadmap) }}

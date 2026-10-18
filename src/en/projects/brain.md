@@ -1,8 +1,9 @@
 ---
 title: brain
 description: A space where I keep my notes, developed with MkDocs.
+lead: The site where I gather my technical notes, built with MkDocs and published on GitHub Pages.
 layout: project.njk
-repo: brain 
+repo: brain
 tags: ["projects_en", "webdev"]
 order: 5
 tech: MkDocs · Material
@@ -13,35 +14,38 @@ screenshots:
     alt: "Brain — home page"
   - src: "/images/projects/brain-note.webp"
     alt: "Brain — note page"
+builtWith:
+  - name: MkDocs
+    url: https://www.mkdocs.org/
+    urlLabel: mkdocs.org
+    pros:
+      - Easy deployment with GitHub Pages.
+      - Plain Markdown files — no database, and the content is already formatted.
+    cons:
+      - Build time seems to grow sharply past a certain number of pages.
+  - name: Material
+    url: https://squidfunk.github.io/mkdocs-material/
+    urlLabel: mkdocs-material
+    pros:
+      - Many extensions, including search and multilingual support.
+roadmap:
+  - text: A multilingual website.
+    done: true
 permalink: /en/project/brain/
 ---
-
-# **Brain** 🧠
-A place where I put my notes.
+{% from "partials/blocks.njk" import techList, checklist with context %}
 
 {% include "partials/carousel.njk" %}
 
-## Overview 
+## Overview
 
-This websites allows me to:
+- A single place where I gather my notes.
+- A playground to practice writing documentation.
 
- - Have a place where I can group my notes.
- - Work on my documentation skill. 
+## Built With
 
-## Links
-- GitHub: [Repo](https://github.com/LionelPinheiroDuarte/brain)
-- Website: [Brain](https://lionelpinheiroduarte.github.io/brain/index.en/)
+{{ techList(builtWith) }}
 
-## Built with: 
+## Roadmap
 
-- **Mkdocs** Static site generator [link](https://www.mkdocs.org/).
-    - **+** Easy deploiment  **github page.
-    - **+** Use of the **markdown** format that permits me to not use a database and to have a formated content. 
-    - **-** It seems that after a certain number of pages the building time increase a lot.
-- **Material** as extension [link](https://squidfunk.github.io/mkdocs-material/).
-    - **+** Add extensions as 
-        - An advanced search bar.
-        - Multilingual.
-
-### Ideas of improvement
-- [x] Having a multilingual website.
+{{ checklist(roadmap) }}

@@ -1,0 +1,105 @@
+/* Markdown content (project pages, legal notice). :where() keeps these element
+   rules at zero specificity, so components placed in the prose win. */
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+}
+:where(.prose) > * + * { margin-top: var(--space-3); }
+
+:where(.prose) h1 {
+  margin-bottom: var(--space-5);
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+:where(.prose) h2 {
+  margin-top: var(--space-7);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-rule);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--color-text);
+}
+:where(.prose) h2 + * { margin-top: var(--space-4); }
+:where(.prose) > h2:first-child { margin-top: 0; }
+:where(.prose) h3 {
+  margin-top: var(--space-5);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+:where(.prose) strong { font-weight: 600; color: var(--color-text); }
+:where(.prose) :is(h1, h2, h3) strong { color: inherit; font-weight: inherit; }
+:where(.prose) a { text-underline-offset: 3px; }
+
+:where(.prose) ul,
+:where(.prose) ol { padding-left: 1.4rem; }
+:where(.prose) li + li { margin-top: var(--space-2); }
+:where(.prose) li::marker { color: var(--color-muted); }
+
+/* Inline code */
+:where(.prose) :not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+/* Code blocks: trees and listings */
+:where(.prose) pre {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+html.dark :where(.prose) pre { border: 1px solid var(--color-border); }
+@media (prefers-color-scheme: dark) {
+  html:not(.light) :where(.prose) pre { border: 1px solid var(--color-border); }
+}
+
+/* Tables scroll horizontally on narrow screens instead of overflowing */
+:where(.prose) table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+:where(.prose) th,
+:where(.prose) td {
+  padding: 10px var(--space-3) 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+:where(.prose) th { font-weight: 600; color: var(--color-text); }
+:where(.prose) td:first-child { white-space: nowrap; }
+
+:where(.prose) img { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
+
+/* Architecture diagrams have a white background: kept in dark mode too */
+:where(.prose) .diagram {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+}
+
+/* Project page bits around the prose */
+.back-link {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
+.hero__title-row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }

@@ -1,6 +1,5 @@
 /* ==========================================================================
-   Legacy — styles of the pre-redesign pages (home tables, project prose).
-   Each redesign step moves its part into a component and deletes it here.
+   Legacy — what the old carousel (step 4) and Prism still rely on.
    ========================================================================== */
 
 /* Old variable names, mapped onto the tokens so dark mode follows them */
@@ -9,57 +8,7 @@
   --accent: var(--color-accent);
   --bck-color: var(--color-code-bg);
   --border-color: var(--color-border);
-  --line-height: 1.4em;
-  --margin-bottom: 1rem;
 }
-
-/*--------------// Typography //--------------*/
-h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-h2 {
-  margin: 1rem 0;
-  font-size: 1.35rem;
-  font-weight: 500;
-}
-h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-p,
-li,
-a {
-  position: relative;
-  color: var(--color-content);
-  font-size: 1.15rem;
-  font-weight: 400;
-}
-p { line-height: var(--line-height); }
-p ~ h2 { margin: 2rem 0 0.5rem 0; }
-ul li {
-  margin-bottom: 0.8rem;
-  margin-left: 1rem;
-}
-strong { color: var(--accent); }
-p strong, li strong { font-weight: 600; }
-
-/* Project pages */
-#documentation h1 { text-transform: none; }
-#documentation h2 {
-  margin: 1rem 0 0.5rem 0;
-  font-weight: 600;
-}
-#documentation h3 {
-  margin: 1rem 0 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-/*--------------// Misc //--------------*/
-section { margin: 0 0 var(--space-5) 0; }
-figcaption { color: var(--color-content); }
 
 /*--------------// Code //--------------*/
 .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
@@ -72,5 +21,3 @@ pre, code,
 pre[class*="language-"], code[class*="language-"] {
   font-family: var(--font-mono);
 }
-/* Code blocks without a language (e.g. project trees) get no Prism overflow rule */
-pre { overflow-x: auto; }
