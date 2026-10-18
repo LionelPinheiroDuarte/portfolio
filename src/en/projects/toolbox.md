@@ -58,7 +58,7 @@ Uploads Claude memory files, Markdown journal notes and the CV project (profile 
 
 `x sync --restore` reverses the flow: downloads files from Nextcloud and places them in the correct local paths, automatically adjusted to the current machine's username. Useful when setting up a new machine.
 
-<img src="/images/toolbox-sync.gif" alt="x sync demo">
+<video class="demo" src="/images/toolbox-sync.mp4" poster="/images/toolbox-sync-poster.webp" width="800" height="400" controls muted loop playsinline preload="none" data-autoplay aria-label="x sync demo in the terminal"></video>
 
 ## Built With
 

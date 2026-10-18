@@ -1,5 +1,6 @@
-// Screenshot frames (.shots) and the shared lightbox (#lightbox, rendered by
-// base.njk on project pages). Diagrams in the prose (img.diagram) open in it too.
+// Media on project pages: screenshot frames (.shots), the shared lightbox
+// (#lightbox, rendered by base.njk) also opened by diagrams (img.diagram),
+// and demo videos that autoplay unless reduced motion is requested.
 (function () {
   var box = document.getElementById('lightbox');
   var page = document.querySelector('.container');
@@ -10,8 +11,11 @@
   // onChange(index) keeps the frame that opened the lightbox in sync.
   var lightbox = (function () {
     if (!box) return null;
-    var img = box.querySelector('.lightbox__img');
     var caption = box.querySelector('.lightbox__caption');
+    // Created here: an <img> without src in the markup would be invalid HTML
+    var img = document.createElement('img');
+    img.className = 'lightbox__img';
+    caption.parentNode.insertBefore(img, caption);
     var close = box.querySelector('.lightbox__close');
     var prev = box.querySelector('[data-lightbox-prev]');
     var next = box.querySelector('[data-lightbox-next]');
@@ -125,6 +129,17 @@
       btn.addEventListener('click', function () {
         lightbox.open([{ src: diagram.src, alt: diagram.alt }], 0, btn);
       });
+    });
+  }
+
+  // --- Demo videos -----------------------------------------------------------
+  // Muted loops start on their own unless the visitor asked for reduced motion;
+  // the native controls let anyone pause them (no autoplay without JavaScript).
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[data-autoplay]').forEach(function (video) {
+      video.preload = 'auto';
+      var played = video.play();
+      if (played && played.catch) played.catch(function () {});
     });
   }
 })();

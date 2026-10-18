@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles/fonts");
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/scripts.js");
-  eleventyConfig.addPassthroughCopy("./src/shots.js");
+  eleventyConfig.addPassthroughCopy("./src/media.js");
 
   // CSS: each entry file (no leading underscore) is bundled with its @imports
   // and minified; _partials are only inlined, never written on their own.

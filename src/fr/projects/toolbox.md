@@ -58,7 +58,7 @@ Envoie les fichiers de mémoire Claude, les notes Markdown du journal et le proj
 
 `x sync --restore` inverse le flux : télécharge les fichiers depuis Nextcloud et les place aux bons endroits localement, en s'adaptant automatiquement au nom d'utilisateur de la machine cible. Utile pour configurer un nouvel ordinateur.
 
-<img src="/images/toolbox-sync.gif" alt="démo x sync">
+<video class="demo" src="/images/toolbox-sync.mp4" poster="/images/toolbox-sync-poster.webp" width="800" height="400" controls muted loop playsinline preload="none" data-autoplay aria-label="Démonstration de x sync dans le terminal"></video>
 
 ## Construit avec
 
