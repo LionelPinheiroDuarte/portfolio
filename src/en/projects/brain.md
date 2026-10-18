@@ -12,8 +12,10 @@ websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
 screenshots:
   - src: "/images/projects/brain-home.webp"
     alt: "Brain — home page"
+    title: "Home page"
   - src: "/images/projects/brain-note.webp"
     alt: "Brain — note page"
+    title: "Note page"
 builtWith:
   - name: MkDocs
     url: https://www.mkdocs.org/
@@ -35,7 +37,7 @@ permalink: /en/project/brain/
 ---
 {% from "partials/blocks.njk" import techList, checklist with context %}
 
-{% include "partials/carousel.njk" %}
+{% include "partials/shots.njk" %}
 
 ## Overview
 

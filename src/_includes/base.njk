@@ -10,8 +10,14 @@
             <main class="page" id="main-content">{{ content | safe }}</main>
             {% include "partials/footer.njk" %}
         </div>
+        {%- if layout == "project.njk" %}
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="{{ languages[page.lang].lightbox.label }}" data-zoom-label="{{ languages[page.lang].lightbox.zoomDiagram }}" hidden>
+            <button type="button" class="lightbox__close" aria-label="{{ languages[page.lang].lightbox.close }}">×</button>
+            <img class="lightbox__img" alt="">
+        </div>
+        {%- endif %}
         <script src="/scripts.js" defer></script>
-        {% if screenshots and screenshots.length > 1 %}<script src="/carousel.js" defer></script>{% endif %}
+        {% if layout == "project.njk" %}<script src="/shots.js" defer></script>{% endif %}
         {% include "partials/matomo.njk" %}
     </body>
 </html>

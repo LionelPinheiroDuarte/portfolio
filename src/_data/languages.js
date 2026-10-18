@@ -26,12 +26,15 @@ module.exports = {
         timeline: { done: 'Terminée', current: 'En cours', next: 'À venir' },
         checklist: { done: 'Fait :', todo: 'À faire :' },
         prosCons: { plus: 'Avantage :', minus: 'Inconvénient :' },
-        carousel: {
-            prev: 'Projet précédent',
-            next: 'Projet suivant',
-            slideLabel: '{current} sur {total}',
-            regionLabel: 'Projets {section}'
-        }
+        shots: {
+            roleDescription: 'carrousel',
+            label: 'Captures d’écran de {title}',
+            prev: 'Capture précédente',
+            next: 'Capture suivante',
+            zoom: 'Agrandir la capture',
+            count: '{current} sur {total}'
+        },
+        lightbox: { label: 'Image agrandie', close: 'Fermer', zoomDiagram: 'Agrandir le schéma' }
     },
     en: {
         availableText: 'This page is also available in:',
@@ -60,11 +63,14 @@ module.exports = {
         timeline: { done: 'Complete', current: 'In progress', next: 'Upcoming' },
         checklist: { done: 'Done:', todo: 'To do:' },
         prosCons: { plus: 'Pro:', minus: 'Con:' },
-        carousel: {
-            prev: 'Previous project',
-            next: 'Next project',
-            slideLabel: '{current} of {total}',
-            regionLabel: 'Projects {section}'
-        }
+        shots: {
+            roleDescription: 'carousel',
+            label: '{title} screenshots',
+            prev: 'Previous screenshot',
+            next: 'Next screenshot',
+            zoom: 'Enlarge screenshot',
+            count: '{current} of {total}'
+        },
+        lightbox: { label: 'Enlarged image', close: 'Close', zoomDiagram: 'Enlarge diagram' }
     }
 };

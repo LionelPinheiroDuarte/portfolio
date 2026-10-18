@@ -12,8 +12,10 @@ websiteUrl: https://lionelpinheiroduarte.com
 screenshots:
   - src: "/images/projects/portfolio-home.webp"
     alt: "Portfolio — page d'accueil"
+    title: "Page d'accueil"
   - src: "/images/projects/portfolio-project.webp"
     alt: "Portfolio — page projet"
+    title: "Page projet"
 builtWith:
   - name: Eleventy
     role: Générateur de site statique ; le contenu est en Markdown, sans base de données
@@ -37,7 +39,7 @@ permalink: /fr/projet/portfolio/
 ---
 {% from "partials/blocks.njk" import techList, checklist with context %}
 
-{% include "partials/carousel.njk" %}
+{% include "partials/shots.njk" %}
 
 ## Aperçu
 

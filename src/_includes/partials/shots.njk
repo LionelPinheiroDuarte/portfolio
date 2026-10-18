@@ -1,0 +1,34 @@
+{#- Screenshots in a browser window frame. Reads `screenshots: [{ src, alt, title, url }]`;
+    the address bar shows `url` or the host of `websiteUrl`. Controls are revealed by shots.js,
+    so without JavaScript the first screenshot is shown on its own. -#}
+{%- if screenshots and screenshots.length -%}
+{%- set t = languages[page.lang].shots -%}
+{%- set first = screenshots[0] -%}
+{%- set host = (first.url or websiteUrl or "") | replace("https://", "") | replace("http://", "") | replace("/index.en/", "") -%}
+<section class="shots" aria-roledescription="{{ t.roleDescription }}" aria-label="{{ t.label | replace('{title}', title) }}" data-shots="{{ screenshots | dump }}" data-count="{{ t.count }}">
+<div class="shots__frame">
+<div class="shots__bar">
+<div class="shots__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+<p class="shots__url">{{ host }}</p>
+<button type="button" class="icon-btn icon-btn--sm" data-shots-zoom aria-label="{{ t.zoom }}" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+</div>
+<div class="shots__viewport">
+<img class="shots__img" src="{{ first.src }}" alt="{{ first.alt }}">
+</div>
+</div>
+<div class="shots__footer">
+<div>
+<p class="shots__title">{{ first.title or first.alt }}</p>
+{%- if screenshots.length > 1 %}
+<p class="shots__count" aria-live="polite">{{ t.count | replace('{current}', 1) | replace('{total}', screenshots.length) }}</p>
+{%- endif %}
+</div>
+{%- if screenshots.length > 1 %}
+<div class="shots__controls" hidden>
+<button type="button" class="icon-btn" data-shots-prev aria-label="{{ t.prev }}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+<button type="button" class="icon-btn" data-shots-next aria-label="{{ t.next }}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+</div>
+{%- endif %}
+</div>
+</section>
+{%- endif -%}

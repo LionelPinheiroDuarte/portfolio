@@ -13,10 +13,13 @@ websiteUrl: https://vocab.lionelpinheiroduarte.com
 screenshots:
   - src: "/images/projects/vocab-app.webp"
     alt: "Vocab — écrans Accueil, Fiche du mot (mode sombre) et Révision"
+    title: "Application"
   - src: "/images/projects/vocab-site.webp"
     alt: "Vocab — site vitrine : « Les beaux mots ne devraient pas s’oublier. »"
+    title: "Site vitrine"
   - src: "/images/projects/vocab-emails.webp"
     alt: "Vocab — e-mails de confirmation et d’invitation à la bêta"
+    title: "E-mails de la bêta"
 builtWith:
   - name: 'React Native / Expo SDK 57'
     role: 'Framework mobile cross-platform'
@@ -48,7 +51,7 @@ permalink: /fr/projet/vocab/
 
 Cherche un mot, sélectionne la définition qui correspond au contexte, sauvegarde-la en local et révise avec des flashcards. Les mots sauvegardés et les sessions de révision fonctionnent sans connexion — seule la recherche en nécessite une. L'app est en test interne sur Google Play, avec un site vitrine pour rejoindre la bêta.
 
-{% include "partials/carousel.njk" %}
+{% include "partials/shots.njk" %}
 
 
 ## Architecture technique

@@ -13,10 +13,13 @@ websiteUrl: https://vocab.lionelpinheiroduarte.com
 screenshots:
   - src: "/images/projects/vocab-app.webp"
     alt: "Vocab — Home, Word detail (dark mode) and Review screens"
+    title: "App"
   - src: "/images/projects/vocab-site.webp"
     alt: "Vocab — showcase site: “Les beaux mots ne devraient pas s’oublier.”"
+    title: "Showcase site"
   - src: "/images/projects/vocab-emails.webp"
     alt: "Vocab — beta confirmation and invitation emails"
+    title: "Beta emails"
 builtWith:
   - name: 'React Native / Expo SDK 57'
     role: 'Cross-platform mobile framework'
@@ -48,7 +51,7 @@ permalink: /en/project/vocab/
 
 Search any French word, pick the definition that matches your context, save it locally, and practice with flashcards. Saved words and review sessions work without a connection — only search requires one. The app is in internal testing on Google Play, with a showcase site to join the beta.
 
-{% include "partials/carousel.njk" %}
+{% include "partials/shots.njk" %}
 
 
 ## Technical Architecture

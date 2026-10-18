@@ -1,0 +1,11 @@
+/* Prism (syntax-highlighted blocks) adjusted to the tokens and the mono font */
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+  color: #fd971f !important;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: var(--color-code-bg) !important;
+}
+pre, code,
+pre[class*="language-"], code[class*="language-"] {
+  font-family: var(--font-mono);
+}
