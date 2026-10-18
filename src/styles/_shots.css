@@ -72,25 +72,46 @@
 .lightbox {
   position: fixed; inset: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: center;
-  padding: var(--space-5);
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-3) var(--space-4);
   background: rgba(0, 0, 0, .92);
-  overflow: auto;
 }
 .lightbox[hidden] { display: none; }
-.lightbox__img {
+.lightbox__figure {
+  min-width: 0;
   max-width: min(1100px, 100%);
   max-height: 100%;
-  height: auto;
+  margin: 0;
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
+}
+.lightbox__img {
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  object-fit: contain;
   border-radius: var(--radius);
   background: #ffffff;
 }
-.lightbox__close {
-  position: fixed; top: var(--space-3); right: var(--space-3);
-  width: var(--touch); height: var(--touch);
+.lightbox__caption { color: rgba(255, 255, 255, .8); font-size: 0.95rem; text-align: center; }
+.lightbox__caption:empty { display: none; }
+
+.lightbox__close,
+.lightbox__nav {
+  width: var(--touch); height: var(--touch); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
   border: 1px solid rgba(255, 255, 255, .3); border-radius: var(--radius);
-  background: none; color: #fff; font-size: 1.4rem; cursor: pointer;
+  background: none; color: #fff; cursor: pointer;
 }
-.lightbox__close:hover { border-color: #fff; }
-.lightbox__close:focus-visible { outline-color: #fff; }
+.lightbox__close { position: fixed; top: var(--space-3); right: var(--space-3); font-size: 1.4rem; }
+.lightbox__nav[hidden] { display: none; }
+.lightbox__close:hover,
+.lightbox__nav:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+.lightbox__close:focus-visible,
+.lightbox__nav:focus-visible { outline-color: #fff; }
+
+/* Small screens: arrows go under the image */
+@media (max-width: 560px) {
+  .lightbox { flex-wrap: wrap; align-content: center; }
+  .lightbox__figure { order: -1; width: 100%; }
+}
 
 @media print { .shots__controls, .shots__bar .icon-btn, .lightbox { display: none; } }

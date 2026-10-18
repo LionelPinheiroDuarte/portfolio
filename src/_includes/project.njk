@@ -7,10 +7,11 @@ layout: base.njk
 {%- set t = languages[page.lang] -%}
 {%- set projectsNav = navigation[page.lang][1] -%}
 {%- set arrow -%}<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>{%- endset -%}
-<a class="back-link link link--muted" href="{{ projectsNav.url }}">← {{ t.sections.star }}</a>
-
 <section class="hero">
-    <p class="eyebrow">{{ t.sections.automatisation if "automatisation" in tags else t.sections.webdev }}</p>
+    <div class="hero__top">
+        <p class="eyebrow">{{ t.sections.automatisation if "automatisation" in tags else t.sections.webdev }}</p>
+        <a class="back-link link link--muted" href="{{ projectsNav.url }}">← {{ t.sections.star }}</a>
+    </div>
     <div class="hero__title-row">
         <h1 class="hero__title hero__title--accent">{{ title }}</h1>
         {%- if status %}

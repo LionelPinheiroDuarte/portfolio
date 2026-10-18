@@ -13,7 +13,12 @@
         {%- if layout == "project.njk" %}
         <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="{{ languages[page.lang].lightbox.label }}" data-zoom-label="{{ languages[page.lang].lightbox.zoomDiagram }}" hidden>
             <button type="button" class="lightbox__close" aria-label="{{ languages[page.lang].lightbox.close }}">×</button>
-            <img class="lightbox__img" alt="">
+            <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="{{ languages[page.lang].shots.prev }}" hidden><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <figure class="lightbox__figure">
+                <img class="lightbox__img" alt="">
+                <figcaption class="lightbox__caption" aria-live="polite"></figcaption>
+            </figure>
+            <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="{{ languages[page.lang].shots.next }}" hidden><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
         </div>
         {%- endif %}
         <script src="/scripts.js" defer></script>
