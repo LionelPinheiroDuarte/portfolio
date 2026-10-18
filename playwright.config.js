@@ -14,7 +14,8 @@ module.exports = defineConfig({
   use: {
     // baseURL évite de répéter l'URL complète dans chaque test :
     // page.goto('/en/home') au lieu de page.goto('https://...')
-    baseURL: 'https://lionelpinheiroduarte.com',
+    // BASE_URL=http://localhost:8080 pour tester un build local au lieu de la prod
+    baseURL: process.env.BASE_URL || 'https://lionelpinheiroduarte.com',
 
     // headless: true → pas de fenêtre visible (obligatoire en CI)
     // En local, passer à false pour voir le navigateur en action

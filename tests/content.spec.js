@@ -29,7 +29,7 @@ test('la page projects liste les projets', async ({ page }) => {
   // Vérification des titres de projets attendus
   // On cible le lien dans la 1ère colonne (td:first-child) pour éviter
   // le strict mode violation avec les icônes GitHub/website qui partagent le même nom
-  for (const project of ['brain', 'infra-lab', 'toolbox']) {
+  for (const project of ['brain', 'infra-lab', 'toolbox', 'vocab']) {
     await expect(page.locator(`td:first-child a[href*="/project/${project}/"]`)).toBeVisible();
   }
 });
@@ -38,6 +38,8 @@ test('chaque projet a un lien GitHub', async ({ page }) => {
   await page.goto('/en/projects/');
   // Tous les projets ont un champ repo → tous doivent avoir une icône GitHub cliquable
   // On récupère tous les liens pointant vers github.com/lionelpinheiroduarte
+  // Autant de liens que de lignes de projet : ajouter un projet ne casse pas le test
+  const rows = await page.locator('tbody tr').count();
   const githubLinks = page.locator('a[href*="github.com/lionelpinheiroduarte"]');
-  await expect(githubLinks).toHaveCount(4);
+  await expect(githubLinks).toHaveCount(rows);
 });
