@@ -6,6 +6,13 @@ repo: infra-lab
 tags: ["projects_en", "automatisation", "star"]
 websiteName: infra-lab
 websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
+facts:
+  - label: Stack
+    value: Go · Docker · Terraform · AWS
+  - label: Docker image
+    value: 28.8 MB
+  - label: Response time
+    value: "~19.7 ms · P95 < 50 ms"
 permalink: en/project/{{title}}/
 templateEngineOverride: njk, md
 ---
@@ -13,6 +20,9 @@ templateEngineOverride: njk, md
 # **Infra-lab**
 
 A DevOps project documenting the deployment of a Go application across three infrastructure paradigms — VM, Docker, Kubernetes — to understand why each technology exists by experiencing the problems it solves.
+
+{% from "partials/facts.njk" import factsBand %}
+{{ factsBand(facts) }}
 
 ## Links
 - GitHub: [Repository](https://github.com/LionelPinheiroDuarte/infra-lab)
@@ -46,12 +56,6 @@ Kubernetes deployment with GitOps (ArgoCD), CI/CD pipeline, and distributed moni
 - **Docker** — multi-stage builds with optimized Alpine image
 - **Docker Compose** — local service orchestration
 - **Prometheus** — system and business metrics, health checks
-
-
-## Performance
-
-- **Docker image**: 28.8MB (Alpine + multi-stage optimization)
-- **Response time**: ~19.7ms average (P95 < 50ms)
 
 
 ## Project Structure

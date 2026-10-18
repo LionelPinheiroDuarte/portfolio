@@ -1,11 +1,13 @@
 /*--------------// Imports //-------------*/
 @import "reset.css";
+@import "tokens.css";
 @import "prism.css";
 
 /*---------// Components //--------*/
 @import "layouts/base_layout.css";
 @import "layouts/project_layout.css";
 @import "project_section.css";
+@import "components/facts.css";
 
 /*--------------// FONTS  //-------------*/
 @font-face {

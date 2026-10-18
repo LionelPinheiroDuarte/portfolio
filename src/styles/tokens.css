@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Design tokens — every component reads these variables, so dark mode only
+   redefines this file.
+   - prefers-color-scheme: dark  → dark, unless <html class="light">
+   - <html class="dark">         → dark forced by the toggle
+   ========================================================================== */
+
+:root {
+  /* Typography */
+  --font-family: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-feature: 'liga' 1, 'calt' 1;
+
+  /* Colors — light */
+  --color-bg: #ffffff;
+  --color-text: #000000;          /* headings, links */
+  --color-text-soft: #2b2b2b;     /* intro paragraphs */
+  --color-text-body: #3a3a3a;     /* descriptions */
+  --color-muted: #555555;         /* captions, metadata (7.5:1 on white) */
+  --color-border: #ebebeb;        /* thin separators */
+  --color-border-strong: #d6d6d6; /* secondary button outline */
+  --color-rule: #000000;          /* rule under section titles */
+  --color-surface: #f2f5fa;       /* chips, contact box */
+  --color-surface-2: #f7f8fa;     /* image backgrounds, placeholders */
+
+  --color-accent: #4e75ba;        /* brand blue */
+  --color-on-accent: #ffffff;     /* text on accent (4.8:1) */
+
+  --color-status-bg: #fff3e0;     /* "in progress" badge */
+  --color-status-text: #8a4b00;
+  --color-status-strong: #c06a00; /* timeline dot */
+
+  --color-code-bg: #1f2127;       /* former --bck-color */
+  --color-code-text: #e6e8eb;
+  --color-code-comment: #9aa3b0;
+
+  --color-plus: #2f6b3a;          /* pros */
+  --color-minus: #a3361f;         /* cons */
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 3.5rem;
+  --space-8: 4.5rem;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container: 46rem;
+  --gutter: 24px;
+  --touch: 44px;                  /* minimum touch target */
+}
+
+/* --- Dark mode: system preference -------------------------------------  */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    --color-bg: #121212;
+    --color-text: #ffffff;
+    --color-text-soft: #d0d3d8;
+    --color-text-body: #d0d3d8;
+    --color-muted: #a8acb3;
+    --color-border: #26282c;
+    --color-border-strong: #3a3d44;
+    --color-rule: #ffffff;
+    --color-surface: #1e2128;
+    --color-surface-2: #1a1c21;
+    --color-accent: #88b4e8;
+    --color-on-accent: #121212;
+    --color-status-bg: #33270f;
+    --color-status-text: #f0b56a;
+    --color-status-strong: #f0b56a;
+    --color-code-bg: #1a1c21;
+    --color-plus: #7cc48a;
+    --color-minus: #f08a74;
+  }
+}
+
+/* --- Dark mode: forced by the toggle -----------------------------------  */
+html.dark {
+  --color-bg: #121212;
+  --color-text: #ffffff;
+  --color-text-soft: #d0d3d8;
+  --color-text-body: #d0d3d8;
+  --color-muted: #a8acb3;
+  --color-border: #26282c;
+  --color-border-strong: #3a3d44;
+  --color-rule: #ffffff;
+  --color-surface: #1e2128;
+  --color-surface-2: #1a1c21;
+  --color-accent: #88b4e8;
+  --color-on-accent: #121212;
+  --color-status-bg: #33270f;
+  --color-status-text: #f0b56a;
+  --color-status-strong: #f0b56a;
+  --color-code-bg: #1a1c21;
+  --color-plus: #7cc48a;
+  --color-minus: #f08a74;
+}
