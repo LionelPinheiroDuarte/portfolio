@@ -25,7 +25,7 @@ Contact : via [LinkedIn](https://www.linkedin.com/in/lionel-pinheiro/).
 
 ## Mesure d'audience
 
-Ce site utilise [Matomo](https://matomo.org), un outil de mesure d'audience <span lang="en">open source</span>, auto-hébergé sur `stats.lionelpinheiroduarte.com` (serveurs o2switch, en France). Il est configuré conformément aux recommandations de la <abbr title="Commission Nationale de l'Informatique et des Libertés">CNIL</abbr> pour être exempté de consentement :
+Ce site utilise [Matomo](https://matomo.org), un outil de mesure d'audience <span lang="en">open source</span>, auto-hébergé sur mon serveur chez o2switch (France). Il est configuré conformément aux recommandations de la <abbr title="Commission Nationale de l'Informatique et des Libertés">CNIL</abbr> pour être exempté de consentement :
 
 - **aucun cookie** n'est déposé sur votre appareil ;
 - votre adresse IP est **anonymisée** (les deux derniers octets sont supprimés) avant tout traitement ;
