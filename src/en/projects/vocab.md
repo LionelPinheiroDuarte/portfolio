@@ -13,8 +13,7 @@ screenshots:
     alt: "Vocab — showcase site: “Les beaux mots ne devraient pas s’oublier.”"
   - src: "/images/projects/vocab-emails.webp"
     alt: "Vocab — beta confirmation and invitation emails"
-permalink: en/project/vocab/
-templateEngineOverride: njk, md
+permalink: /en/project/vocab/
 ---
 
 # **Vocab**

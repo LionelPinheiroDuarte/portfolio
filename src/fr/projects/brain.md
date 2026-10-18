@@ -11,8 +11,7 @@ screenshots:
     alt: "Brain — page d'accueil"
   - src: "/images/projects/brain-note.webp"
     alt: "Brain — page de note"
-permalink: fr/projet/brain
-templateEngineOverride: njk, md
+permalink: /fr/projet/brain/
 ---
 
 # **Brain** 🧠

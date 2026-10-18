@@ -11,8 +11,7 @@ screenshots:
     alt: "Portfolio — page d'accueil"
   - src: "/images/projects/portfolio-project.webp"
     alt: "Portfolio — page projet"
-permalink: fr/projet/{{title}}/
-templateEngineOverride: njk, md
+permalink: /fr/projet/portfolio/
 ---
 
 # **Portfolio**

@@ -4,7 +4,7 @@ description: A personal CLI toolkit built in Python, grouping automation command
 layout: project.njk
 repo: toolbox
 tags: ["projects_en", "automatisation", "star"]
-permalink: en/project/{{title}}/
+permalink: /en/project/toolbox/
 ---
 
 # **Toolbox**

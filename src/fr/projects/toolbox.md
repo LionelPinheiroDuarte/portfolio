@@ -4,7 +4,7 @@ description: Un outil en ligne de commande personnel développé en Python, regr
 layout: project.njk
 repo: toolbox
 tags: ["projects_fr", "automatisation", "star"]
-permalink: fr/projet/{{title}}/
+permalink: /fr/projet/toolbox/
 ---
 
 # **Toolbox**

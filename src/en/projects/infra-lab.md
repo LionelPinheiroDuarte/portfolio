@@ -13,8 +13,7 @@ facts:
     value: 28.8 MB
   - label: Response time
     value: "~19.7 ms · P95 < 50 ms"
-permalink: en/project/{{title}}/
-templateEngineOverride: njk, md
+permalink: /en/project/infra-lab/
 ---
 
 # **Infra-lab**
