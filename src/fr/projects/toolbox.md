@@ -17,7 +17,9 @@ Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs 
 | `x wtf` | Analyser la dernière commande shell échouée via l'IA |
 | `x notes` | Parcourir les notes de journal avec coloration syntaxique |
 | `x repos` | Cloner des repos GitHub avec des filtres |
-| `x sync` | Synchroniser la mémoire Claude et le journal vers Nextcloud |
+| `x sync` | Synchroniser la mémoire Claude, les skills, le journal et le projet CV vers Nextcloud |
+| `x setup` | Provisionner une machine depuis les dotfiles + Ansible (`--short` pour le niveau utilisateur uniquement) |
+| `x dotfiles pull` | Récupérer les derniers changements du repo dotfiles |
 
 ## Liens
 
@@ -27,7 +29,7 @@ Un CLI personnel qui grandit avec mon workflow — couvrant l'analyse d'erreurs 
 
 ### `x sync` — Sauvegarde et restauration cloud via Nextcloud
 
-Envoie les fichiers de mémoire Claude et les notes Markdown du journal vers Nextcloud via WebDAV. Les identifiants sont stockés dans le trousseau système — jamais en clair.
+Envoie les fichiers de mémoire Claude, les notes Markdown du journal et le projet CV (données de profil, template LaTeX, PDF générés et agents de génération de CV) vers Nextcloud via WebDAV. Les identifiants sont stockés dans le trousseau système — jamais en clair.
 
 `x sync --restore` inverse le flux : télécharge les fichiers depuis Nextcloud et les place aux bons endroits localement, en s'adaptant automatiquement au nom d'utilisateur de la machine cible. Utile pour configurer un nouvel ordinateur.
 
@@ -68,6 +70,6 @@ toolbox/
 - [x] `x wtf` — analyse d'erreurs par l'IA
 - [x] `x notes` — journal quotidien dans le terminal
 - [x] `x repos` — clonage de repos GitHub avec filtres
-- [x] `x sync` — synchronisation Claude et journal vers Nextcloud
+- [x] `x sync` — synchronisation Claude, journal et projet CV vers Nextcloud
 - [ ] `x history` — naviguer dans les erreurs passées
 - [x] `install.sh` — script d'installation en une ligne

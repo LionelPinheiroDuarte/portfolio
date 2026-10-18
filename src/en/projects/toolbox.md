@@ -17,7 +17,9 @@ A personal CLI that grows with my workflow — covering AI-powered error analysi
 | `x wtf` | Analyze the last failed shell command via AI |
 | `x notes` | Browse journal notes with syntax highlighting |
 | `x repos` | Clone GitHub repos with optional filters |
-| `x sync` | Sync Claude memory and journal notes to Nextcloud |
+| `x sync` | Sync Claude memory, skills, journal notes and the CV project to Nextcloud |
+| `x setup` | Provision a machine from dotfiles + Ansible (`--short` for user-level only) |
+| `x dotfiles pull` | Pull latest changes from the dotfiles repo |
 
 ## Links
 
@@ -27,7 +29,7 @@ A personal CLI that grows with my workflow — covering AI-powered error analysi
 
 ### `x sync` — Cloud backup and restore via Nextcloud
 
-Uploads Claude memory files and Markdown journal notes to Nextcloud via WebDAV. Credentials are stored in the system keyring — never in plaintext.
+Uploads Claude memory files, Markdown journal notes and the CV project (profile data, LaTeX template, generated PDFs and the CV generation agents) to Nextcloud via WebDAV. Credentials are stored in the system keyring — never in plaintext.
 
 `x sync --restore` reverses the flow: downloads files from Nextcloud and places them in the correct local paths, automatically adjusted to the current machine's username. Useful when setting up a new machine.
 
@@ -68,6 +70,6 @@ toolbox/
 - [x] `x wtf` — AI-powered error analysis
 - [x] `x notes` — daily journal in the terminal
 - [x] `x repos` — clone GitHub repos with filters
-- [x] `x sync` — sync Claude memory and journal notes to Nextcloud
+- [x] `x sync` — sync Claude memory, skills, journal notes and the CV project to Nextcloud
 - [ ] `x history` — browse past errors
 - [x] `install.sh` — one-line installation script
