@@ -10,7 +10,7 @@ test.describe('version française', () => {
 
   test('la navbar affiche les liens en français', async ({ page }) => {
     await page.goto('/fr/accueil');
-    const nav = page.getByRole('navigation');
+    const nav = page.getByRole('navigation', { name: 'Principale' });
     // On vérifie les labels FR — si un lien EN apparaît, le routing i18n est cassé
     await expect(nav.getByRole('link', { name: 'accueil' })).toBeVisible();
     await expect(nav.getByRole('link', { name: 'projets' })).toBeVisible();

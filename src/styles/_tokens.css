@@ -20,7 +20,7 @@
   --color-border: #ebebeb;        /* thin separators */
   --color-border-strong: #d6d6d6; /* secondary button outline */
   --color-rule: #000000;          /* rule under section titles */
-  --color-surface: #f2f5fa;       /* chips, contact box */
+  --color-surface: #f2f5fa;       /* chips, inline code */
   --color-surface-2: #f7f8fa;     /* image backgrounds, placeholders */
 
   --color-accent: #4e75ba;        /* brand blue */

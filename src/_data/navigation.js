@@ -1,4 +1,14 @@
+// Header navigation per language; footerLinks are the secondary pages listed
+// on the left of the footer (legal notice today, more later)
 module.exports = {
+    footerLinks: {
+        fr: [
+            { text: 'mentions légales', url: '/fr/mentions-legales' }
+        ],
+        en: [
+            { text: 'legal notice', url: '/en/legal-notice' }
+        ]
+    },
     en: [
       {
         text: 'home',

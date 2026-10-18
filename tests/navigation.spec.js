@@ -19,8 +19,8 @@ test('le titre <title> est défini et non vide', async ({ page }) => {
 
 test('la navbar contient les liens de navigation', async ({ page }) => {
   await page.goto('/en/home');
-  // getByRole('navigation') cible le <nav> — plus stable qu'un sélecteur CSS
-  const nav = page.getByRole('navigation');
+  // Deux <nav> (en-tête et pied de page) : on cible la navigation principale par son nom
+  const nav = page.getByRole('navigation', { name: 'Primary' });
   await expect(nav).toBeVisible();
 
   // getByRole('link') dans le nav — on vérifie qu'il y a au moins 2 liens
@@ -30,9 +30,16 @@ test('la navbar contient les liens de navigation', async ({ page }) => {
 
 test('le lien projects navigue vers /en/projects/', async ({ page }) => {
   await page.goto('/en/home');
-  const nav = page.getByRole('navigation');
+  const nav = page.getByRole('navigation', { name: 'Primary' });
 
   // click() simule un vrai clic — on teste le comportement réel, pas juste l'attribut href
   await nav.getByRole('link', { name: /projects/i }).click();
   await expect(page).toHaveURL(/\/en\/projects\//);
+});
+
+test('le footer donne accès aux mentions légales', async ({ page }) => {
+  await page.goto('/en/home');
+  const footerNav = page.getByRole('navigation', { name: 'Information' });
+  await footerNav.getByRole('link', { name: 'legal notice' }).click();
+  await expect(page).toHaveURL(/\/en\/legal-notice/);
 });

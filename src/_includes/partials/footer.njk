@@ -1,6 +1,12 @@
-{#- Language switch: current language first-class (aria-current), FR always before EN -#}
+{#- Footer: secondary pages on the left, copyright in the middle, language switch
+    on the right (current language marked, FR always before EN) -#}
 {%- set alternates = page.url | locale_links -%}
 <footer class="site-footer">
+    <nav class="site-footer__links" aria-label="{{ languages[page.lang].footerNavLabel }}">
+        {%- for item in navigation.footerLinks[page.lang] %}
+        <a class="link link--muted" href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.text }}</a>
+        {%- endfor %}
+    </nav>
     <p class="site-footer__copy">&copy; Lionel Pinheiro Duarte {% year %}</p>
     <div class="lang-switch" title="{{ languages[page.lang].availableText }}">
     {%- for code in ["fr", "en"] %}

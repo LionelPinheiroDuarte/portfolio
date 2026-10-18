@@ -4,10 +4,7 @@ title: Lionel Pinheiro Duarte
 description: Portfolio of Lionel Pinheiro Duarte — DevOps, automation and infrastructure.
 permalink: /en/home
 eyebrow: DevOps · Automation · Infra
-contact:
-  title: Interested in my profile?
-  text: Message me on LinkedIn, I reply quickly.
-  button: Get in touch
+contactLabel: Get in touch
 ---
 {% from "partials/project-row.njk" import projectRow with context %}
 <section class="hero">
@@ -15,7 +12,7 @@ contact:
     <h1 class="hero__title"><span class="hero__first-name">{{ meta.firstName | title }}</span><br>{{ meta.lastName | title }}</h1>
     <p class="lead">I set up <abbr title="Continuous Integration and Continuous Deployment">CI/CD</abbr> pipelines, provision cloud infrastructure, package apps in containers, and write shell tools to eliminate repetitive work.</p>
     <div class="actions">
-        <a class="btn btn--primary" href="{{ meta.linkedinUrl }}" target="_blank" rel="noopener noreferrer">{{ contact.button }}
+        <a class="btn btn--primary" href="{{ meta.linkedinUrl }}" target="_blank" rel="noopener noreferrer">{{ contactLabel }}
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> {{ languages.en.newTab }}</span></a>
         <a class="btn btn--secondary" href="{{ meta.githubUrl }}" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> {{ languages.en.newTab }}</span></a>
         <a class="link" href="/en/projects/">See the projects →</a>
@@ -30,5 +27,3 @@ contact:
     {{ projectRow(project, "en") }}
     {%- endfor %}
 </section>
-
-{% include "partials/contact-box.njk" %}
