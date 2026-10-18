@@ -1,18 +1,34 @@
 ---
 layout: base.njk
 title: Lionel Pinheiro Duarte
-description: Welcome to my portfolio, take a seat and enjoy.
-templateEngineOverride: njk, md
+description: Portfolio of Lionel Pinheiro Duarte — DevOps, automation and infrastructure.
 permalink: /en/home
+eyebrow: DevOps · Automation · Infra
+contact:
+  title: Interested in my profile?
+  text: Message me on LinkedIn, I reply quickly.
+  button: Get in touch
 ---
+{% from "partials/project-row.njk" import projectRow with context %}
+<section class="hero">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1 class="hero__title"><span class="hero__first-name">{{ meta.firstName | title }}</span><br>{{ meta.lastName | title }}</h1>
+    <p class="lead">I set up <abbr title="Continuous Integration and Continuous Deployment">CI/CD</abbr> pipelines, provision cloud infrastructure, package apps in containers, and write shell tools to eliminate repetitive work.</p>
+    <div class="actions">
+        <a class="btn btn--primary" href="{{ meta.linkedinUrl }}" target="_blank" rel="noopener noreferrer">{{ contact.button }}
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> {{ languages.en.newTab }}</span></a>
+        <a class="btn btn--secondary" href="{{ meta.githubUrl }}" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> {{ languages.en.newTab }}</span></a>
+        <a class="link" href="/en/projects/">See the projects →</a>
+    </div>
+</section>
 
-{% include "partials/hero.njk" %}
+{% include "partials/stack.njk" %}
 
-I set up <abbr title="Continuous Integration and Continuous Deployment">CI/CD</abbr> pipelines, provision cloud infrastructure, package apps in containers, and write shell tools to eliminate repetitive work.
+<section aria-labelledby="projects-title">
+    <h2 class="section-heading" id="projects-title">{{ languages.en.sections.star }}</h2>
+    {%- for project in collections.star_en %}
+    {{ projectRow(project, "en") }}
+    {%- endfor %}
+</section>
 
-**Stack:** Python · Docker · Terraform · <abbr title="Amazon Web Services">AWS</abbr> · GitHub Actions · Prometheus/Grafana
-
-{% include "partials/links.njk" %}
-
-## **Projects**
-{% include "partials/star.njk" %}
+{% include "partials/contact-box.njk" %}

@@ -1,9 +1,13 @@
 ---
 title: infra-lab
-description: A DevOps learning project documenting the progression from traditional VM deployment to container orchestration. Built with Go, Docker, Terraform, and AWS.
+description: A DevOps learning project documenting the progression from traditional VM deployment to container orchestration.
 layout: project.njk
 repo: infra-lab
 tags: ["projects_en", "automatisation", "star"]
+order: 1
+tech: Go · Docker · Terraform · AWS
+status: Phase 2 / 3 in progress
+websiteType: docs
 websiteName: infra-lab
 websiteUrl: https://lionelpinheiroduarte.github.io/infra-lab/
 facts:

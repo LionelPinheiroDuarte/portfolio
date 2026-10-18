@@ -13,33 +13,31 @@ test('le nom est visible sur la page home', async ({ page }) => {
 
 test('le lien LinkedIn est présent', async ({ page }) => {
   await page.goto('/en/home');
-  // getByRole('link') avec href — on cherche un lien pointant vers LinkedIn
-  const linkedInLink = page.getByRole('link', { name: /contact/i });
+  // Le bouton principal du hero pointe vers LinkedIn (l'encadré de fin de page aussi)
+  const linkedInLink = page.locator('.hero a.btn--primary');
   await expect(linkedInLink).toBeVisible();
   await expect(linkedInLink).toHaveAttribute('href', 'https://www.linkedin.com/in/lionel-pinheiro/');
 });
 
 test('la page projects liste les projets', async ({ page }) => {
   await page.goto('/en/projects/');
-  // On vérifie que les projets clés sont bien affichés dans le tableau
-  // locator('table') cible le <table> généré par le macro projectSection
-  const table = page.locator('table');
-  await expect(table.first()).toBeVisible();
-
-  // Vérification des titres de projets attendus
-  // On cible le lien dans la 1ère colonne (td:first-child) pour éviter
-  // le strict mode violation avec les icônes GitHub/website qui partagent le même nom
-  for (const project of ['brain', 'infra-lab', 'toolbox', 'vocab']) {
-    await expect(page.locator(`td:first-child a[href*="/project/${project}/"]`)).toBeVisible();
+  // Chaque projet est un <article class="project-row"> dont le titre pointe vers sa page
+  for (const project of ['brain', 'infra-lab', 'toolbox', 'vocab', 'portfolio']) {
+    await expect(page.locator(`.project-row__title a[href="/en/project/${project}/"]`)).toBeVisible();
   }
 });
 
 test('chaque projet a un lien GitHub', async ({ page }) => {
   await page.goto('/en/projects/');
-  // Tous les projets ont un champ repo → tous doivent avoir une icône GitHub cliquable
-  // On récupère tous les liens pointant vers github.com/lionelpinheiroduarte
-  // Autant de liens que de lignes de projet : ajouter un projet ne casse pas le test
-  const rows = await page.locator('tbody tr').count();
-  const githubLinks = page.locator('a[href*="github.com/lionelpinheiroduarte"]');
+  // Autant de liens « Code » que de lignes : ajouter un projet ne casse pas le test
+  const rows = await page.locator('.project-row').count();
+  expect(rows).toBeGreaterThan(0);
+  const githubLinks = page.locator('.project-row a[href^="https://github.com/LionelPinheiroDuarte/"]');
   await expect(githubLinks).toHaveCount(rows);
+});
+
+test('la page home met en avant les projets star', async ({ page }) => {
+  await page.goto('/en/home');
+  const titles = page.locator('.project-row__title a');
+  await expect(titles).toHaveText(['infra-lab', 'vocab', 'toolbox']);
 });

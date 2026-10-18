@@ -4,6 +4,8 @@ description: Portfolio responsive multilingue développé avec Eleventy et hébe
 layout: project.njk
 repo: portfolio
 tags: ["projects_fr", "webdev"]
+order: 4
+tech: Eleventy · Nunjucks · GitHub Actions
 websiteName: portfolio
 websiteUrl: https://lionelpinheiroduarte.com
 screenshots:

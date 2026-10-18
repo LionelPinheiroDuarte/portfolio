@@ -38,17 +38,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (date) => new Date(date).toISOString().substring(0, 10));
   eleventyConfig.addFilter("startsWith", (str, prefix) => str.startsWith(prefix));
 
-  const categories = ["webdev", "automatisation", "script"];
+  // One collection per tag and language (e.g. star_fr, webdev_en),
+  // sorted by the `order` front matter field
+  const categories = ["star", "automatisation", "webdev"];
   const languages = ["fr", "en"];
 
   categories.forEach(category => {
     languages.forEach(lang => {
       eleventyConfig.addCollection(`${category}_${lang}`, function(collectionApi) {
-        return collectionApi.getAll().filter(item => {
-          return item.data.tags &&
-                 item.data.tags.includes(category) &&
-                 item.url.startsWith(`/${lang}/`);
-        });
+        return collectionApi.getFilteredByTag(category)
+          .filter(item => item.url.startsWith(`/${lang}/`))
+          .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
       });
     });
   });

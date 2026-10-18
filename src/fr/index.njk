@@ -1,18 +1,34 @@
 ---
 layout: base.njk
 title: Lionel Pinheiro Duarte
-description: Bienvenue sur mon portfolio, installez-vous et apprenez à me connaître. 
-templateEngineOverride: njk, md
+description: Portfolio de Lionel Pinheiro Duarte — DevOps, automatisation et infrastructure.
 permalink: /fr/accueil
+eyebrow: DevOps · Automatisation · Infra
+contact:
+  title: "Mon profil vous intéresse ?"
+  text: Écrivez-moi sur LinkedIn, je réponds rapidement.
+  button: Me contacter
 ---
+{% from "partials/project-row.njk" import projectRow with context %}
+<section class="hero">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1 class="hero__title"><span class="hero__first-name">{{ meta.firstName | title }}</span><br>{{ meta.lastName | title }}</h1>
+    <p class="lead">Je mets en place des pipelines <abbr title="Intégration Continue et Déploiement Continu">CI/CD</abbr>, provisionne de l'infrastructure cloud, package des apps en conteneurs et écris des outils shell pour éliminer les tâches répétitives.</p>
+    <div class="actions">
+        <a class="btn btn--primary" href="{{ meta.linkedinUrl }}" target="_blank" rel="noopener noreferrer">{{ contact.button }}
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> {{ languages.fr.newTab }}</span></a>
+        <a class="btn btn--secondary" href="{{ meta.githubUrl }}" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> {{ languages.fr.newTab }}</span></a>
+        <a class="link" href="/fr/projets/">Voir les projets →</a>
+    </div>
+</section>
 
-{% include "partials/hero.njk" %}
+{% include "partials/stack.njk" %}
 
-Je mets en place des pipelines <abbr title="Intégration Continue et Déploiement Continu">CI/CD</abbr>, provisionne de l'infrastructure cloud, package des apps en conteneurs et écris des outils shell pour éliminer les tâches répétitives.
+<section aria-labelledby="projects-title">
+    <h2 class="section-heading" id="projects-title">{{ languages.fr.sections.star }}</h2>
+    {%- for project in collections.star_fr %}
+    {{ projectRow(project, "fr") }}
+    {%- endfor %}
+</section>
 
-**<span lang="en">Stack</span> :** Python · <span lang="en">Docker</span> · <span lang="en">Terraform</span> · <abbr title="Amazon Web Services" lang="en">AWS</abbr> · <span lang="en">GitHub Actions</span> · <span lang="en">Prometheus/Grafana</span>
-
-{% include "partials/links.njk" %}
-
-## **Projets**
-{%include 'partials/star.njk'%}
+{% include "partials/contact-box.njk" %}

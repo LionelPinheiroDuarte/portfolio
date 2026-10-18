@@ -1,0 +1,10 @@
+/* Status badge ("in progress") */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.badge--progress { background: var(--color-status-bg); color: var(--color-status-text); }
+.badge--lg { padding: 4px 12px; font-size: 0.85rem; }

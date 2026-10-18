@@ -1,0 +1,47 @@
+/* Page top: eyebrow, title, lead paragraph, actions (home and project pages) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+.hero__title--accent { color: var(--color-accent); }
+.hero__first-name { color: var(--color-accent); font-weight: 700; }
+
+.lead {
+  max-width: 38rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--space-2);
+}
+.actions .link { padding: 10px 0; font-size: 1rem; }
+
+abbr[title] { text-decoration: underline dotted; }
+
+@media (max-width: 480px) {
+  .hero__title { font-size: 2.6rem; }
+}

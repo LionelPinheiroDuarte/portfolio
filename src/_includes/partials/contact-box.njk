@@ -1,0 +1,8 @@
+{#- Closing call to action. Texts come from the page's `contact` front matter. -#}
+<section class="contact-box" aria-labelledby="contact-title">
+    <div>
+        <h2 class="contact-box__title" id="contact-title">{{ contact.title }}</h2>
+        <p class="contact-box__text">{{ contact.text }}</p>
+    </div>
+    <a class="btn btn--contrast" href="{{ meta.linkedinUrl }}" target="_blank" rel="noopener noreferrer">{{ contact.button }}<span class="visually-hidden"> {{ languages[page.lang].newTab }}</span></a>
+</section>

@@ -1,0 +1,14 @@
+/* Closing contact box (home) */
+.contact-box {
+  margin-top: var(--space-8);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-box__title { margin: 0 0 var(--space-1); font-size: 1.25rem; font-weight: 600; }
+.contact-box__text { font-size: 1.05rem; color: var(--color-text-body); }

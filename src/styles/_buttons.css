@@ -1,0 +1,22 @@
+/* Buttons — every variant is at least 44px high */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch);
+  padding: 0 20px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.btn svg { flex-shrink: 0; }
+
+.btn--primary { background: var(--color-accent); color: var(--color-on-accent); }
+.btn--primary:hover { color: var(--color-on-accent); filter: brightness(0.92); }
+
+.btn--secondary { border: 1px solid var(--color-border-strong); color: var(--color-text); }
+.btn--secondary:hover { border-color: var(--color-accent); }
+
+.btn--contrast { background: var(--color-text); color: var(--color-bg); }
+.btn--contrast:hover { color: var(--color-bg); opacity: .9; }

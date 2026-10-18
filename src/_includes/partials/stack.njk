@@ -1,0 +1,8 @@
+<section class="stack" aria-labelledby="stack-title">
+    <h2 class="stack__title" id="stack-title" lang="en">Stack</h2>
+    <ul class="chips" lang="en">
+        {%- for tech in stack %}
+        <li class="chip">{% if tech.abbr %}<abbr title="{{ tech.abbr }}">{{ tech.name }}</abbr>{% else %}{{ tech.name }}{% endif %}</li>
+        {%- endfor %}
+    </ul>
+</section>

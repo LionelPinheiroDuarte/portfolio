@@ -1,10 +1,19 @@
 ---
-title: mes projets
-description: Voici une liste de mes projets.
+title: Projets — Lionel Pinheiro Duarte
+description: Mes projets, de l'automatisation d'infrastructure aux applications web et mobile que je développe et maintiens.
 layout: base.njk
 permalink: /fr/projets/
 ---
-
-<h1 class="mb"><strong>Projets</strong></h1>
-
-{% include 'partials/projects.njk' %}
+{% from "partials/project-row.njk" import projectRow with context %}
+<section class="hero">
+    <h1 class="hero__title hero__title--accent">Projets</h1>
+    <p class="lead">Voici une liste de mes projets, de l'automatisation d'infrastructure aux applications web et mobile que je développe et maintiens.</p>
+</section>
+{% for category in ["automatisation", "webdev"] %}
+<section class="section" aria-labelledby="cat-{{ category }}">
+    <h2 class="section-title section-title--tight" id="cat-{{ category }}">{{ languages.fr.sections[category] }}</h2>
+    {%- for project in collections[category + "_fr"] %}
+    {{ projectRow(project, "fr") }}
+    {%- endfor %}
+</section>
+{% endfor %}

@@ -4,6 +4,8 @@ description: A personal CLI toolkit built in Python, grouping automation command
 layout: project.njk
 repo: toolbox
 tags: ["projects_en", "automatisation", "star"]
+order: 3
+tech: Python · CLI · Nextcloud
 permalink: /en/project/toolbox/
 ---
 

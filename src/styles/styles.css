@@ -8,5 +8,12 @@
 @import "_layout.css";
 @import "_prism.css";
 @import "_legacy.css";
+@import "_section.css";
+@import "_hero.css";
+@import "_buttons.css";
+@import "_badge.css";
+@import "_chips.css";
+@import "_project-row.css";
+@import "_contact.css";
 @import "_carousel.css";
 @import "_facts.css";

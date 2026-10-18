@@ -4,6 +4,8 @@ description: A mobile vocabulary app built with React Native and Expo — save w
 layout: project.njk
 repo: vocab
 tags: ["projects_en", "webdev", "star"]
+order: 2
+tech: React Native · Expo · SQLite · EAS
 websiteName: Vocab
 websiteUrl: https://vocab.lionelpinheiroduarte.com
 screenshots:

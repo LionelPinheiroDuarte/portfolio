@@ -1,0 +1,19 @@
+/* Section spacing and titles */
+.section { margin-bottom: var(--space-7); }
+
+/* With a thick rule (projects page, project pages) */
+.section-title {
+  margin: 0 0 var(--space-4);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-rule);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.section-title--tight { margin-bottom: var(--space-2); }
+
+/* Without a rule (home) */
+.section-heading {
+  margin: 0 0 var(--space-2);
+  font-size: 1.6rem;
+  font-weight: 600;
+}

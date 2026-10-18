@@ -57,55 +57,9 @@ p strong, li strong { font-weight: 600; }
   font-weight: 500;
 }
 
-/*--------------// Animated underline (old) //--------------*/
-.animation {
-  position: relative;
-  color: var(--color-content);
-  font-size: 1.15rem;
-}
-.animation::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 4px;
-  background-color: var(--color-content);
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
-}
-a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-@media (prefers-reduced-motion: reduce) {
-  .animation::before { transition: none; }
-}
-
-/*--------------// Tables //--------------*/
-table { border-collapse: collapse; }
-td > a { text-decoration: none; }
-th {
-  text-align: left;
-  color: var(--color-content);
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding-right: 1rem;
-}
-td {
-  padding-block: 0.5rem;
-  padding-right: 1rem;
-}
+/*--------------// Misc //--------------*/
 section { margin: 0 0 var(--space-5) 0; }
 figcaption { color: var(--color-content); }
-
-.icon {
-  font-size: 1.5rem;
-  color: var(--color-text);
-}
-.icon:hover { color: var(--accent); }
 
 /*--------------// Code //--------------*/
 .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
@@ -120,14 +74,3 @@ pre[class*="language-"], code[class*="language-"] {
 }
 /* Code blocks without a language (e.g. project trees) get no Prism overflow rule */
 pre { overflow-x: auto; }
-
-/*--------------// Utilities still used by the home page //--------------*/
-.mt { margin-top: 1rem; }
-.mb { margin-bottom: var(--margin-bottom); }
-.lh { line-height: 1em; }
-.flex-inline { display: inline-flex; }
-.unstyle-a { text-decoration: none; }
-.unstyle-li {
-  list-style: none;
-  margin-left: 0;
-}

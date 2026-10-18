@@ -4,6 +4,8 @@ description: A space where I keep my notes, developed with MkDocs.
 layout: project.njk
 repo: brain 
 tags: ["projects_en", "webdev"]
+order: 5
+tech: MkDocs · Material
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
 screenshots:

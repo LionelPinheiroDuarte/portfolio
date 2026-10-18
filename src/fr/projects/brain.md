@@ -1,9 +1,11 @@
 ---
 title: brain
-description: Site où je rassemble mes notes, développé avec Mkdocs. 
+description: Site où je rassemble mes notes, développé avec MkDocs.
 layout: project.njk
 repo: brain 
 tags: ["projects_fr", "webdev"]
+order: 5
+tech: MkDocs · Material
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
 screenshots:

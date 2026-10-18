@@ -1,0 +1,29 @@
+{#- One project as a row: title, optional status badge, description, tech line, links.
+    Reads `title`, `description`, `status`, `tech`, `repo`, `websiteUrl`, `websiteType` from front matter. -#}
+{%- macro projectRow(project, lang, headingLevel = 3) -%}
+{%- set t = languages[lang] -%}
+{%- set d = project.data -%}
+<article class="project-row">
+    <div class="project-row__body">
+        <div class="project-row__head">
+            <h{{ headingLevel }} class="project-row__title"><a href="{{ project.url }}">{{ d.title }}</a></h{{ headingLevel }}>
+            {%- if d.status %}
+            <span class="badge badge--progress">{{ d.status }}</span>
+            {%- endif %}
+        </div>
+        <p class="project-row__desc">{{ d.description }}</p>
+        {%- if d.tech %}
+        <p class="project-row__tech">{{ d.tech }}</p>
+        {%- endif %}
+    </div>
+    <div class="project-row__links">
+        {%- if d.repo %}
+        <a class="link" href="{{ meta.githubUrl }}/{{ d.repo }}" target="_blank" rel="noopener noreferrer">{{ t.links.code }}<span class="visually-hidden">{{ t.githubRepo | replace('{title}', d.title) }}</span><span aria-hidden="true"> ↗</span></a>
+        {%- endif %}
+        {%- if d.websiteUrl %}
+        {%- set isDocs = d.websiteType == "docs" %}
+        <a class="link" href="{{ d.websiteUrl }}" target="_blank" rel="noopener noreferrer">{{ t.links.docs if isDocs else t.links.site }}<span class="visually-hidden">{{ (t.docsLink if isDocs else t.websiteLink) | replace('{title}', d.title) }}</span><span aria-hidden="true"> ↗</span></a>
+        {%- endif %}
+    </div>
+</article>
+{%- endmacro -%}
