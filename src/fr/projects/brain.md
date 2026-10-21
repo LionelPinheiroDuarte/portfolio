@@ -1,12 +1,12 @@
 ---
 title: brain
-description: Site où je rassemble mes notes, développé avec MkDocs.
-lead: Le site où je rassemble mes notes techniques, développé avec MkDocs et publié sur <span lang="en">GitHub Pages</span>.
+description: Mes notes techniques rassemblées dans un site MkDocs, publié sur GitHub Pages.
+lead: Un site où je rassemble mes notes techniques, construit avec MkDocs et publié sur <span lang="en">GitHub Pages</span>.
 layout: project.njk
 repo: brain
 tags: ["projects_fr", "webdev"]
 order: 5
-tech: MkDocs · Material
+tech: MkDocs · Material · GitHub Actions
 websiteName: Brain
 websiteUrl: https://lionelpinheiroduarte.github.io/brain/index.en/
 screenshots:
@@ -18,36 +18,41 @@ screenshots:
     title: "Page de note"
 builtWith:
   - name: MkDocs
-    url: https://www.mkdocs.org/
-    urlLabel: mkdocs.org
-    pros:
-      - Déploiement facile avec <span lang="en">GitHub Pages</span>.
-      - 'Des fichiers <span lang="en">Markdown</span> : pas de base de données et un contenu déjà formaté.'
-    cons:
-      - Le temps de build semble augmenter fortement au-delà d'un certain nombre de pages.
-  - name: Material
-    url: https://squidfunk.github.io/mkdocs-material/
-    urlLabel: mkdocs-material
-    pros:
-      - De nombreuses extensions, dont la recherche et le multilingue.
+    role: Générateur de site statique à partir de fichiers Markdown
+  - name: Material for MkDocs
+    role: Thème, recherche intégrée et navigation par onglets
+  - name: <span lang="en">GitHub Pages</span>
+    role: Hébergement du site
+  - name: GitHub Actions
+    role: Publication automatique à chaque push
 roadmap:
-  - text: Avoir un site multilingue.
+  - text: Notes DevOps (Terraform, Docker, Ansible, CI/CD, observabilité)
     done: true
+  - text: Publication automatique à chaque push avec GitHub Actions
+    done: true
+  - text: Notes Kubernetes, au fil de la phase 3 d'infra-lab
 permalink: /fr/projet/brain/
 ---
 {% from "partials/blocks.njk" import techList, checklist with context %}
 
+Ce que j'apprends en construisant mes projets finit ici, écrit au moment où je rencontre le problème.
+
 {% include "partials/shots.njk" %}
 
-## Aperçu
+## Ce que j'y documente
 
-- Un lieu unique où j'agrège mes notes.
-- Un terrain pour exercer ma pratique de la documentation.
+**Des notes nées des projets.** Les pages sur Docker et Terraform viennent d'infra-lab, celles sur les builds Expo et le suivi des erreurs avec Sentry viennent de vocab. Elles gardent la trace de ce qui a bloqué et de la façon dont je l'ai résolu.
 
-## Construit avec
+**Retrouver une réponse en quelques secondes.** Les notes sont rangées par domaine (Linux, DevOps, outils), et la recherche intégrée retrouve une commande ou un concept sans que je doive me souvenir où je l'ai noté.
 
-{{ techList(builtWith) }}
+**Publié dès qu'une note est écrite.** Le site était publié à la main, et cette étape avait été oubliée pendant des mois : plusieurs notes n'étaient pas en ligne. Désormais, **GitHub Actions** reconstruit et publie le site à chaque push.
+
+**Écrire pour comprendre.** Rédiger une note m'oblige à reformuler ce que je viens d'apprendre. Si je n'arrive pas à l'expliquer simplement, c'est que je ne l'ai pas encore compris.
 
 ## Feuille de route
 
 {{ checklist(roadmap) }}
+
+## Construit avec
+
+{{ techList(builtWith) }}
