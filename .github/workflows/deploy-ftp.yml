@@ -50,6 +50,17 @@ jobs:
       env:
         BASE_URL: http://localhost:8080
 
+    # The old /fr/projet/brain page was a file; it is now a folder of the
+    # same name, which the FTP upload cannot create while the file exists
+    - name: Remove files replaced by folders
+      run: |
+        curl -sS --ssl-reqd --user "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" \
+          -Q "DELE portfolio/fr/projet/brain" -o /dev/null || echo "already removed"
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
