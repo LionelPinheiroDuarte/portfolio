@@ -19,7 +19,7 @@ builtWith:
   - name: 'batcat'
     role: 'Syntax-highlighted note viewing for <code>x notes</code>'
   - name: 'gh CLI'
-    role: 'GitHub repo cloning for <code>x repos</code>'
+    role: 'GitHub repo cloning for <code>x repos clone</code>'
   - name: 'Gruvbox Dark'
     role: 'Terminal color theme across all commands'
 roadmap:
@@ -27,7 +27,7 @@ roadmap:
     done: true
   - text: '<code>x notes</code> — daily journal in the terminal'
     done: true
-  - text: '<code>x repos</code> — clone GitHub repos with filters'
+  - text: '<code>x repos</code> — clone, pull and push GitHub repos, one or all'
     done: true
   - text: '<code>x sync</code> — sync Claude memory, skills, journal notes and the CV project to Nextcloud'
     done: true
@@ -44,10 +44,9 @@ permalink: /en/project/toolbox/
 |---------|-------------|
 | `x wtf` | Analyze the last failed shell command via AI |
 | `x notes` | Browse journal notes with syntax highlighting |
-| `x repos` | Clone GitHub repos with optional filters |
+| `x repos` | Clone, pull (fast-forward only) or push my GitHub repos — one or all, with a preview before pushing |
 | `x sync` | Sync Claude memory, skills, journal notes and the CV project to Nextcloud |
 | `x setup` | Provision a machine from dotfiles + Ansible (`--short` for user-level only) |
-| `x dotfiles pull` | Pull latest changes from the dotfiles repo |
 
 
 ## How It Works
