@@ -53,9 +53,13 @@ jobs:
     # The old /fr/projet/brain page was a file; it is now a folder of the
     # same name, which the FTP upload cannot create while the file exists
     - name: Remove files replaced by folders
+      # -k: o2switch serves a shared certificate that does not match the FTP
+      # hostname (the deploy action accepts it too). Exit 21 = file already gone.
       run: |
-        curl -sS --ssl-reqd --user "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" \
-          -Q "DELE portfolio/fr/projet/brain" -o /dev/null || echo "already removed"
+        rc=0
+        curl -sSk --ssl-reqd --user "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" \
+          -Q "DELE portfolio/fr/projet/brain" -o /dev/null || rc=$?
+        [ "$rc" -eq 0 ] || [ "$rc" -eq 21 ] || exit "$rc"
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
