@@ -35,8 +35,20 @@ jobs:
     - name: Install Playwright browsers
       run: npx playwright install --with-deps chromium
 
+    - name: Validate HTML
+      run: npm run lint:html
+
+    # Test the build about to be deployed, not the site currently in production
+    - name: Serve the build locally
+      run: |
+        npx @11ty/eleventy --serve --port 8080 > /tmp/serve.log 2>&1 &
+        for i in $(seq 1 30); do curl -sf -o /dev/null http://localhost:8080/fr/accueil && exit 0; sleep 1; done
+        cat /tmp/serve.log; exit 1
+
     - name: Run Playwright tests
       run: npx playwright test --reporter=list
+      env:
+        BASE_URL: http://localhost:8080
 
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -52,3 +64,9 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+
+    - name: Smoke test production
+      run: |
+        for path in /fr/accueil /en/home /fr/projets/; do
+          curl -sf -o /dev/null "https://lionelpinheiroduarte.com$path" || { echo "$path is down"; exit 1; }
+        done
