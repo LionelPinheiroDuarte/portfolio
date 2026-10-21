@@ -50,21 +50,6 @@ jobs:
       env:
         BASE_URL: http://localhost:8080
 
-    # The old /fr/projet/brain page was a file; it is now a folder of the
-    # same name. The upload can neither replace the file nor create the
-    # folder (its sync state takes one for the other), so do both here.
-    - name: Replace files by folders
-      # -k: o2switch serves a shared certificate that does not match the FTP
-      # hostname (the deploy action accepts it too). A leading * lets curl go
-      # on when the file is already gone or the folder already exists.
-      run: |
-        curl -sSk --ssl-reqd --user "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" \
-          -Q "*DELE portfolio/fr/projet/brain" -Q "*MKD portfolio/fr/projet/brain" -o /dev/null
-      env:
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
